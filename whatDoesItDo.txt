@@ -1,0 +1,15 @@
+createSQLDB : singleton
+
+actionWithContactsInSQLDB : abstract class : command pattern
+
+inputContact
+
+deleteContact
+
+findContact
+
+sortContacts
+
+printContact
+
+returnPreviousState : State pattern / Memento pattern
