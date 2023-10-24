@@ -2,9 +2,9 @@ createSQLDB : singleton
 
 actionWithContactsInSQLDB : abstract class : command pattern
 
-inputContact
+addContact
 
-deleteContact
+removeContact
 
 findContact
 
