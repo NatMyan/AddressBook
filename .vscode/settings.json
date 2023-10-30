@@ -70,6 +70,7 @@
         "memory": "cpp",
         "numeric": "cpp",
         "type_traits": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "fstream": "cpp"
     }
 }
