@@ -1,4 +1,0 @@
-/Users/nataliemanukyan/Desktop/AddressBook/AddrBookQtTest/build/CMakeFiles/AddressBookQtAppTest.dir
-/Users/nataliemanukyan/Desktop/AddressBook/AddrBookQtTest/build/CMakeFiles/edit_cache.dir
-/Users/nataliemanukyan/Desktop/AddressBook/AddrBookQtTest/build/CMakeFiles/rebuild_cache.dir
-/Users/nataliemanukyan/Desktop/AddressBook/AddrBookQtTest/build/CMakeFiles/AddressBookQtAppTest_autogen.dir

@@ -142,54 +142,6 @@ AddressBookQtApp_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp_autogen.dir/build.make CMakeFiles/AddressBookQtApp_autogen.dir/build
 .PHONY : AddressBookQtApp_autogen/fast
 
-AddDialog.o: AddDialog.cpp.o
-.PHONY : AddDialog.o
-
-# target to build an object file
-AddDialog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o
-.PHONY : AddDialog.cpp.o
-
-AddDialog.i: AddDialog.cpp.i
-.PHONY : AddDialog.i
-
-# target to preprocess a source file
-AddDialog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.i
-.PHONY : AddDialog.cpp.i
-
-AddDialog.s: AddDialog.cpp.s
-.PHONY : AddDialog.s
-
-# target to generate assembly for a file
-AddDialog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.s
-.PHONY : AddDialog.cpp.s
-
-AddressBook.o: AddressBook.cpp.o
-.PHONY : AddressBook.o
-
-# target to build an object file
-AddressBook.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o
-.PHONY : AddressBook.cpp.o
-
-AddressBook.i: AddressBook.cpp.i
-.PHONY : AddressBook.i
-
-# target to preprocess a source file
-AddressBook.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.i
-.PHONY : AddressBook.cpp.i
-
-AddressBook.s: AddressBook.cpp.s
-.PHONY : AddressBook.s
-
-# target to generate assembly for a file
-AddressBook.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.s
-.PHONY : AddressBook.cpp.s
-
 AddressBookQtApp_autogen/mocs_compilation.o: AddressBookQtApp_autogen/mocs_compilation.cpp.o
 .PHONY : AddressBookQtApp_autogen/mocs_compilation.o
 
@@ -214,77 +166,29 @@ AddressBookQtApp_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.s
 .PHONY : AddressBookQtApp_autogen/mocs_compilation.cpp.s
 
-AddressBookTab.o: AddressBookTab.cpp.o
-.PHONY : AddressBookTab.o
+testAddrBook.o: testAddrBook.cpp.o
+.PHONY : testAddrBook.o
 
 # target to build an object file
-AddressBookTab.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o
-.PHONY : AddressBookTab.cpp.o
+testAddrBook.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o
+.PHONY : testAddrBook.cpp.o
 
-AddressBookTab.i: AddressBookTab.cpp.i
-.PHONY : AddressBookTab.i
-
-# target to preprocess a source file
-AddressBookTab.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.i
-.PHONY : AddressBookTab.cpp.i
-
-AddressBookTab.s: AddressBookTab.cpp.s
-.PHONY : AddressBookTab.s
-
-# target to generate assembly for a file
-AddressBookTab.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.s
-.PHONY : AddressBookTab.cpp.s
-
-OpenDialog.o: OpenDialog.cpp.o
-.PHONY : OpenDialog.o
-
-# target to build an object file
-OpenDialog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o
-.PHONY : OpenDialog.cpp.o
-
-OpenDialog.i: OpenDialog.cpp.i
-.PHONY : OpenDialog.i
+testAddrBook.i: testAddrBook.cpp.i
+.PHONY : testAddrBook.i
 
 # target to preprocess a source file
-OpenDialog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.i
-.PHONY : OpenDialog.cpp.i
+testAddrBook.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.i
+.PHONY : testAddrBook.cpp.i
 
-OpenDialog.s: OpenDialog.cpp.s
-.PHONY : OpenDialog.s
-
-# target to generate assembly for a file
-OpenDialog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.s
-.PHONY : OpenDialog.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
+testAddrBook.s: testAddrBook.cpp.s
+.PHONY : testAddrBook.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/main.cpp.s
-.PHONY : main.cpp.s
+testAddrBook.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.s
+.PHONY : testAddrBook.cpp.s
 
 # Help Target
 help:
@@ -296,24 +200,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... AddressBookQtApp_autogen"
 	@echo "... AddressBookQtApp"
-	@echo "... AddDialog.o"
-	@echo "... AddDialog.i"
-	@echo "... AddDialog.s"
-	@echo "... AddressBook.o"
-	@echo "... AddressBook.i"
-	@echo "... AddressBook.s"
 	@echo "... AddressBookQtApp_autogen/mocs_compilation.o"
 	@echo "... AddressBookQtApp_autogen/mocs_compilation.i"
 	@echo "... AddressBookQtApp_autogen/mocs_compilation.s"
-	@echo "... AddressBookTab.o"
-	@echo "... AddressBookTab.i"
-	@echo "... AddressBookTab.s"
-	@echo "... OpenDialog.o"
-	@echo "... OpenDialog.i"
-	@echo "... OpenDialog.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... testAddrBook.o"
+	@echo "... testAddrBook.i"
+	@echo "... testAddrBook.s"
 .PHONY : help
 
 

@@ -83,101 +83,37 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.s:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/AddressBookQtApp_autogen/mocs_compilation.cpp -o CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.s
 
-CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o: CMakeFiles/AddressBookQtApp.dir/flags.make
-CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBookTab.cpp
-CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o: CMakeFiles/AddressBookQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o -MF CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o.d -o CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o -c /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBookTab.cpp
+CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o: CMakeFiles/AddressBookQtApp.dir/flags.make
+CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/testAddrBook.cpp
+CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o: CMakeFiles/AddressBookQtApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o -MF CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o.d -o CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o -c /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/testAddrBook.cpp
 
-CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBookTab.cpp > CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.i
+CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/testAddrBook.cpp > CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.i
 
-CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBookTab.cpp -o CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.s
-
-CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o: CMakeFiles/AddressBookQtApp.dir/flags.make
-CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddDialog.cpp
-CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o: CMakeFiles/AddressBookQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o -MF CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o.d -o CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o -c /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddDialog.cpp
-
-CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddDialog.cpp > CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.i
-
-CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddDialog.cpp -o CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.s
-
-CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o: CMakeFiles/AddressBookQtApp.dir/flags.make
-CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/OpenDialog.cpp
-CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o: CMakeFiles/AddressBookQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o -MF CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o.d -o CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o -c /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/OpenDialog.cpp
-
-CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/OpenDialog.cpp > CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.i
-
-CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/OpenDialog.cpp -o CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.s
-
-CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o: CMakeFiles/AddressBookQtApp.dir/flags.make
-CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBook.cpp
-CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o: CMakeFiles/AddressBookQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o -MF CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o.d -o CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o -c /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBook.cpp
-
-CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBook.cpp > CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.i
-
-CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBook.cpp -o CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.s
-
-CMakeFiles/AddressBookQtApp.dir/main.cpp.o: CMakeFiles/AddressBookQtApp.dir/flags.make
-CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/main.cpp
-CMakeFiles/AddressBookQtApp.dir/main.cpp.o: CMakeFiles/AddressBookQtApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AddressBookQtApp.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AddressBookQtApp.dir/main.cpp.o -MF CMakeFiles/AddressBookQtApp.dir/main.cpp.o.d -o CMakeFiles/AddressBookQtApp.dir/main.cpp.o -c /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/main.cpp
-
-CMakeFiles/AddressBookQtApp.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AddressBookQtApp.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/main.cpp > CMakeFiles/AddressBookQtApp.dir/main.cpp.i
-
-CMakeFiles/AddressBookQtApp.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AddressBookQtApp.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/main.cpp -o CMakeFiles/AddressBookQtApp.dir/main.cpp.s
+CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/testAddrBook.cpp -o CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.s
 
 # Object files for target AddressBookQtApp
 AddressBookQtApp_OBJECTS = \
 "CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o" \
-"CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o" \
-"CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o" \
-"CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o" \
-"CMakeFiles/AddressBookQtApp.dir/main.cpp.o"
+"CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o"
 
 # External object files for target AddressBookQtApp
 AddressBookQtApp_EXTERNAL_OBJECTS =
 
 AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o
-AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/AddressBookTab.cpp.o
-AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/AddDialog.cpp.o
-AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/OpenDialog.cpp.o
-AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/AddressBook.cpp.o
-AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/main.cpp.o
+AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/testAddrBook.cpp.o
 AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/build.make
 AddressBookQtApp: /opt/homebrew/lib/QtWidgets.framework/Versions/A/QtWidgets
 AddressBookQtApp: /opt/homebrew/lib/QtSql.framework/Versions/A/QtSql
 AddressBookQtApp: /opt/homebrew/lib/QtGui.framework/Versions/A/QtGui
 AddressBookQtApp: /opt/homebrew/lib/QtCore.framework/Versions/A/QtCore
 AddressBookQtApp: CMakeFiles/AddressBookQtApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable AddressBookQtApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable AddressBookQtApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AddressBookQtApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

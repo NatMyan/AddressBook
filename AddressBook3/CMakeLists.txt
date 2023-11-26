@@ -10,11 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt6 COMPONENTS Core Widgets REQUIRED)
 
 add_executable(AddressBookQtApp
-    "AddressBookTab.cpp"
-    "AddDialog.cpp"
-    "OpenDialog.cpp"
-    "AddressBook.cpp"
-    "main.cpp"
+    "testAddrBook.cpp"
 )
 
 target_link_libraries(AddressBookQtApp PRIVATE Qt6::Core Qt6::Widgets)

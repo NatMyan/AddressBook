@@ -163,7 +163,8 @@ void MainWindow::searchContacts(const QString &name, const QString &phone, const
             model->setData(model->index(row, 2), query.value("email").toString());
             ++row;
         }
-    } else {
+    } 
+    else {
         QMessageBox::critical(this, "Error", "Failed to search contacts: " + query.lastError().text());
     }
 }

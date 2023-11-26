@@ -354,33 +354,7 @@
 	"CMAKE_SOURCE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
-	"HEADERS" : 
-	[
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddDialog.hpp",
-			"MU",
-			"EWIEGA46WW/moc_AddDialog.cpp",
-			null
-		],
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBook.hpp",
-			"MU",
-			"EWIEGA46WW/moc_AddressBook.cpp",
-			null
-		],
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBookTab.hpp",
-			"MU",
-			"EWIEGA46WW/moc_AddressBookTab.cpp",
-			null
-		],
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/OpenDialog.hpp",
-			"MU",
-			"EWIEGA46WW/moc_OpenDialog.cpp",
-			null
-		]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/AddressBookQtApp_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/build/AddressBookQtApp_autogen/mocs_compilation.cpp",
@@ -449,27 +423,7 @@
 	"SOURCES" : 
 	[
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddDialog.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBook.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/AddressBookTab.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/OpenDialog.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/main.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook3/testAddrBook.cpp",
 			"MU",
 			null
 		]
