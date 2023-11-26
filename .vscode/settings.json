@@ -71,6 +71,11 @@
         "numeric": "cpp",
         "type_traits": "cpp",
         "algorithm": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "qregularexpression": "cpp",
+        "qpushbutton": "cpp",
+        "qsqlquery": "cpp",
+        "*.moc": "cpp",
+        "qitemselection": "cpp"
     }
 }

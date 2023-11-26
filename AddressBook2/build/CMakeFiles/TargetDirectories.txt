@@ -1,0 +1,4 @@
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook2/build/CMakeFiles/AddressBookQtApp.dir
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook2/build/CMakeFiles/edit_cache.dir
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook2/build/CMakeFiles/rebuild_cache.dir
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook2/build/CMakeFiles/AddressBookQtApp_autogen.dir
