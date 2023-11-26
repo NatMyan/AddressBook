@@ -44,11 +44,12 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "QItemSelection",
     "selection",
     "openFile",
-    "saveFile"
+    "saveFile",
+    "showAddressWidget"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[14];
+    uint offsetsAndSizes[16];
     char stringdata0[11];
     char stringdata1[14];
     char stringdata2[1];
@@ -56,6 +57,7 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata4[10];
     char stringdata5[9];
     char stringdata6[9];
+    char stringdata7[18];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -67,7 +69,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(26, 14),  // "QItemSelection"
         QT_MOC_LITERAL(41, 9),  // "selection"
         QT_MOC_LITERAL(51, 8),  // "openFile"
-        QT_MOC_LITERAL(60, 8)   // "saveFile"
+        QT_MOC_LITERAL(60, 8),  // "saveFile"
+        QT_MOC_LITERAL(69, 17)   // "showAddressWidget"
     },
     "MainWindow",
     "updateActions",
@@ -75,7 +78,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "QItemSelection",
     "selection",
     "openFile",
-    "saveFile"
+    "saveFile",
+    "showAddressWidget"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -87,7 +91,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -95,12 +99,14 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x08,    1 /* Private */,
-       5,    0,   35,    2, 0x08,    3 /* Private */,
-       6,    0,   36,    2, 0x08,    4 /* Private */,
+       1,    1,   38,    2, 0x08,    1 /* Private */,
+       5,    0,   41,    2, 0x08,    3 /* Private */,
+       6,    0,   42,    2, 0x08,    4 /* Private */,
+       7,    0,   43,    2, 0x08,    5 /* Private */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -122,6 +128,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'openFile'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'saveFile'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'showAddressWidget'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -136,6 +144,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 0: _t->updateActions((*reinterpret_cast< std::add_pointer_t<QItemSelection>>(_a[1]))); break;
         case 1: _t->openFile(); break;
         case 2: _t->saveFile(); break;
+        case 3: _t->showAddressWidget(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -171,13 +180,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }

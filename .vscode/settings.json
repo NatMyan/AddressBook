@@ -76,6 +76,8 @@
         "qpushbutton": "cpp",
         "qsqlquery": "cpp",
         "*.moc": "cpp",
-        "qitemselection": "cpp"
+        "qitemselection": "cpp",
+        "qsortfilterproxymodel": "cpp",
+        "qapplication": "cpp"
     }
 }

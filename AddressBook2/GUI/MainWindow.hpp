@@ -2,6 +2,8 @@
 #define MAIN_WINDOW_HPP
 
 #include "AddressWidget.hpp"
+#include "NewAddressTab.hpp"
+#include "AfterNewAddressTab.hpp"
 
 #include <QItemSelection>
 #include <QMainWindow>
@@ -16,12 +18,14 @@ class MainWindow : public QMainWindow {
         void updateActions(const QItemSelection &selection);
         void openFile();
         void saveFile();
+        void showAddressWidget();
 
     private:
         void createMenus();
 
         AddressWidget *addressWidget;
-        // BeginningMenu *startMenu;
+        AfterNewAddressTab *afterNewAddrTab;
+        NewAddressTab *startMenu;
         QAction *editAct;
         QAction *removeAct;
         QAction *saveAct; 
