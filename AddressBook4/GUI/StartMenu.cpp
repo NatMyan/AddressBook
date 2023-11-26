@@ -1,6 +1,8 @@
 #include "StartMenu.hpp"
 
-StartMenu::StartMenu(QWidget *parent = nullptr) : QWidget(parent) {
+StartMenu::StartMenu(QWidget *parent) : 
+    QWidget(parent) 
+{
     setupUi();
 }
 

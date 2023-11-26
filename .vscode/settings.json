@@ -78,6 +78,7 @@
         "*.moc": "cpp",
         "qitemselection": "cpp",
         "qsortfilterproxymodel": "cpp",
-        "qapplication": "cpp"
+        "qapplication": "cpp",
+        "qvboxlayout": "cpp"
     }
 }

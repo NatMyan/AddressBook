@@ -1,6 +1,6 @@
 #include "SearchDialog.hpp"
 
-SearchDialog::SearchDialog(QWidget *parent = nullptr) : 
+SearchDialog::SearchDialog(QWidget *parent) : 
     QDialog(parent) 
 {
     setupUi();

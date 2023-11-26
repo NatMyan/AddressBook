@@ -1,3 +1,6 @@
+#ifndef SEARCH_DIALOG_HPP
+#define SEARCH_DIALOG_HPP
+
 #include <QDialog>
 #include <QVBoxLayout>
 #include <QLabel>
@@ -36,3 +39,5 @@ if (searchDialog.exec() == QDialog::Accepted) {
     // ...
 }
 */
+
+#endif // SEARCH_DIALOG_HPP

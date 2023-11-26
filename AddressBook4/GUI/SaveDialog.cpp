@@ -5,7 +5,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-SaveDialog::SaveDialog(QWidget *parent = nullptr) : 
+SaveDialog::SaveDialog(QWidget *parent) : 
     QDialog(parent) 
 {
     setupUi();
