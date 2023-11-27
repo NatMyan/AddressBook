@@ -10,6 +10,7 @@
 #include <QObject>
 #include <QTableWidget>
 #include <QTableWidgetItem>
+#include <QSqlDatabase>
 
 class AddressBookLogic : public QObject {
     Q_OBJECT
@@ -17,6 +18,8 @@ class AddressBookLogic : public QObject {
     public:
         explicit AddressBookLogic(QObject *parent = nullptr);
 
+    public:
+        void createTable();
     public slots:
         void addContact();
         void editContact(QTableWidgetItem *item);
@@ -33,6 +36,7 @@ class AddressBookLogic : public QObject {
         void handleAddContactRequest();*/
 
     private:
+        QSqlDatabase db;
         AddDialog *addDialog; 
         OpenDialog *openDialog;
         SearchDialog *searchDialog;

@@ -12,18 +12,54 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
     searchDialog(new SearchDialog),
     saveDialog(new SaveDialog)
 {   
-    // connect(this, &AddressBookLogic::contactAdded, this, &AddressBookLogic::handleAddContactRequest);
-    // connect(addDialog, &AddDialog::accepted, this, &AddressBookLogic::handleAddContactRequest);
+    createTable();
+}
+
+void AddressBookLogic::createTable() {
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    QString fileName = "../untitled.db";  
+
+    QFileInfo fileInfo(fileName);
+    if (fileInfo.exists()) {
+        int i = 1;
+        fileName = "../untitled" + QString::number(i) + ".db";  
+        while (QFileInfo(fileName).exists()) {
+            ++i;
+            fileName = "../untitled" + QString::number(i) + ".db";
+        }
+    }
+    db.setDatabaseName(fileName);
+
+    if (!db.open()) {
+        qDebug() << "Failed to open database:" << db.lastError().text();
+        return;
+    }
+
+    QSqlQuery query;
+    query.prepare("CREATE TABLE contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, phone TEXT, email TEXT)");
+
+    if (query.exec()) {
+        qDebug() << "Table created successfully";
+    } 
+    else {
+        qDebug() << "Failed to create table:" << query.lastError().text();
+    }
 }
 
 void AddressBookLogic::addContact() {
-    addDialog->exec();
+    int result = addDialog->exec();
 
-    QString name = addDialog->name();
-    QString phone = addDialog->phone();
-    QString email = addDialog->email();
+    if (result == QDialog::Accepted) {
+        QString name = addDialog->name();
+        QString phone = addDialog->phone();
+        QString email = addDialog->email();
+        // QString tab = addDialog->tab();
 
-    addContactToDatabase(name, phone, email);
+        addContactToDatabase(name, phone, email);
+    } 
+    else {
+        qDebug() << "User canceled adding a contact.";
+    }
 }
 
 void AddressBookLogic::editContact(QTableWidgetItem *item) {
@@ -47,31 +83,18 @@ void AddressBookLogic::editContact(QTableWidgetItem *item) {
     emit contactEdited(tabIndex, rowIndex, name, phone, email);
 }
 
-/*void AddressBookLogic::handleAddContactRequest() {
-    QString name = addDialog->name();
-    QString phone = addDialog->phone();
-    QString email = addDialog->email();
-
-    emit contactAdded(name, phone, email);
-
-    addContactToDatabase(name, phone, email);
-}*/
-
 void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email) {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("Untitled");    
-    
-    QSqlQuery query2(db);
-    query2.prepare("INSERT INTO contacts (name, phone, email) VALUES (:name, :phone, :email)");
-    query2.bindValue(":name", name);
-    query2.bindValue(":phone", phone);
-    query2.bindValue(":email", email);
+    QSqlQuery query(db);
+    query.prepare("INSERT INTO contacts (name, phone, email) VALUES (:name, :phone, :email)");
+    query.bindValue(":name", name);
+    query.bindValue(":phone", phone);
+    query.bindValue(":email", email);
 
-    if (query2.exec()) {
+    if (query.exec()) {
         qDebug() << "Contact added to the database";
     } 
     else {
-        qDebug() << "Failed to add contact to the database: " << query2.lastError().text();
+        qDebug() << "Failed to add contact to the database: " << query.lastError().text();
     }
 }
 
@@ -95,7 +118,8 @@ void AddressBookLogic::openAddressBook() {
                     qDebug() << "Failed to create 'contacts' table: " << query.lastError().text();
                 }
             }
-        } else {
+        } 
+        else {
             qDebug() << "Failed to open database: " << db.lastError().text();
         }
     }
@@ -147,6 +171,16 @@ void AddressBookLogic::saveAddressBook() {
     }
 }
 
+
+/*void AddressBookLogic::handleAddContactRequest() {
+    QString name = addDialog->name();
+    QString phone = addDialog->phone();
+    QString email = addDialog->email();
+
+    emit contactAdded(name, phone, email);
+
+    addContactToDatabase(name, phone, email);
+}*/
 
 /*if (table) {
     int rowIndex = table->rowCount();

@@ -2,7 +2,6 @@
 #define ADDRESS_BOOK_INTERFACE_HPP
 
 #include "../Logic/AddressBookLogic.hpp"
-// #include "Tabs.hpp"
 
 #include <QWidget>
 #include <QTabWidget>
@@ -10,7 +9,6 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QSqlTableModel>
-// #include <QTableWidget>
 
 class AddressBookInterface : public QWidget {
     Q_OBJECT
@@ -33,7 +31,7 @@ class AddressBookInterface : public QWidget {
         void setupUi();
         void setupTabs();
         QTableWidget* createEditableTable();
-        QTableWidget* createContactTable();
+        // QTableWidget* createContactTable();
 
     private:
         QTabWidget *tabWidget;

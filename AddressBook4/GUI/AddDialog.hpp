@@ -16,8 +16,9 @@ class AddDialog : public QDialog {
         QString name() const;
         QString phone() const;
         QString email() const;
-        QString selectedTab() const;
-        void editAddress(const QString &name, const QString &phone, const QString &email);
+        QString tab() const;
+        // QString selectedTab() const;
+        void editAddress(const QString &name, const QString &phone, const QString &email, const QString& tab);
         // void updateTabs(const QTabWidget *tabs);
 
     signals:
@@ -30,6 +31,7 @@ class AddDialog : public QDialog {
         QLineEdit *nameText;
         QTextEdit *phoneText;
         QTextEdit *emailText;
+        QLineEdit *tabText;
         QComboBox *tabComboBox;
 };
 

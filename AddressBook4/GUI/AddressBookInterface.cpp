@@ -54,7 +54,7 @@ void AddressBookInterface::setupTabs() {
     tabWidget->addTab(createEditableTable(), "Co-Workers");
     tabWidget->addTab(addTabButton, "+");
 
-    connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addContactClicked);
+    connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addTabClicked);
     connect(currentTable, &QTableWidget::itemDoubleClicked, this, &AddressBookInterface::editContact);
 }
 
@@ -107,6 +107,12 @@ QTableWidget* AddressBookInterface::getCurrentTable() const {
     return currentTable;
 }
 
+
+/*QPushButton* AddressBookInterface::createAddTabButton() {
+    QPushButton* addTabButton = new QPushButton("+");
+    connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addTabClicked);
+    return addTabButton;
+}*/
 
 /*void AddressBookInterface::setupUi() {
     QHBoxLayout *layout = new QHBoxLayout(this);
