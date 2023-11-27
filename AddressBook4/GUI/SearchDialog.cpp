@@ -15,11 +15,11 @@ QString SearchDialog::getSearchOption() const {
 }
 
 void SearchDialog::onSearchButtonClicked() {
-    accept(); // Close the dialog with QDialog::Accepted status
+    accept(); 
 }
 
 void SearchDialog::onCancelButtonClicked() {
-    reject(); // Close the dialog with QDialog::Rejected status
+    reject(); 
 }
 
 void SearchDialog::setupUi() {

@@ -79,6 +79,8 @@
         "qitemselection": "cpp",
         "qsortfilterproxymodel": "cpp",
         "qapplication": "cpp",
-        "qvboxlayout": "cpp"
+        "qvboxlayout": "cpp",
+        "qinputdialog": "cpp",
+        "qsqldatabase": "cpp"
     }
 }

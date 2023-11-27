@@ -18,7 +18,7 @@ QString SaveDialog::getSelectedFilePath() const {
 void SaveDialog::onSaveButtonClicked() {
     selectedFilePath = QFileDialog::getSaveFileName(this, "Save Address Book", "", "SQLite Database (*.db *.sqlite)");
     if (!selectedFilePath.isEmpty()) {
-        accept(); // Close the dialog with QDialog::Accepted status
+        accept(); 
     } 
     else {
         QMessageBox::warning(this, "Warning", "Please select a valid file path.");
@@ -26,7 +26,7 @@ void SaveDialog::onSaveButtonClicked() {
 }
 
 void SaveDialog::onCancelButtonClicked() {
-    reject(); // Close the dialog with QDialog::Rejected status
+    reject(); 
 }
 
 void SaveDialog::setupUi() {

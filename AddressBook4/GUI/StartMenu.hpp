@@ -16,14 +16,14 @@ class StartMenu : public QWidget {
         StartMenu(QWidget *parent = nullptr);
 
     signals:
-        void addClicked();
+        // void addClicked();
         void openClicked();
 
     private:
         void setupUi();
 
     private slots:
-        void onAddClicked();
+        // void onAddClicked();
         void onOpenClicked();
 };
 

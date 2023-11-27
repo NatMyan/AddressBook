@@ -832,6 +832,8 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Database.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/OpenDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/SaveDialog.hpp \
@@ -1004,6 +1006,11 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /opt/homebrew/include/QtGui/qtransform.h \
   /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/include/QtSql/qsqldatabase.h \
+  /opt/homebrew/include/QtSql/qsqlquerymodel.h \
+  /opt/homebrew/include/QtSql/qtsql-config.h \
+  /opt/homebrew/include/QtSql/qtsqlexports.h \
+  /opt/homebrew/include/QtSql/qtsqlglobal.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractitemview.h \
@@ -1028,13 +1035,24 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QList \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlTableModel \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqltablemodel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -2700,6 +2718,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desk
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddDialog.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
+  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
   /opt/homebrew/include/QtCore/qanystringview.h \
   /opt/homebrew/include/QtCore/qarraydata.h \
@@ -2743,6 +2762,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/include/QtCore/qiterator.h \
   /opt/homebrew/include/QtCore/qline.h \
   /opt/homebrew/include/QtCore/qlist.h \
+  /opt/homebrew/include/QtCore/qlocale.h \
   /opt/homebrew/include/QtCore/qlogging.h \
   /opt/homebrew/include/QtCore/qmalloc.h \
   /opt/homebrew/include/QtCore/qmap.h \
@@ -2763,6 +2783,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/include/QtCore/qprocessordetection.h \
   /opt/homebrew/include/QtCore/qrect.h \
   /opt/homebrew/include/QtCore/qrefcount.h \
+  /opt/homebrew/include/QtCore/qregularexpression.h \
   /opt/homebrew/include/QtCore/qscopedpointer.h \
   /opt/homebrew/include/QtCore/qscopeguard.h \
   /opt/homebrew/include/QtCore/qset.h \
@@ -2836,25 +2857,37 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/include/QtGui/qtguiexports.h \
   /opt/homebrew/include/QtGui/qtguiglobal.h \
   /opt/homebrew/include/QtGui/qtransform.h \
+  /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
+  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
+  /opt/homebrew/include/QtWidgets/qabstractslider.h \
+  /opt/homebrew/include/QtWidgets/qabstractspinbox.h \
   /opt/homebrew/include/QtWidgets/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
   /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/qlayout.h \
   /opt/homebrew/include/QtWidgets/qlayoutitem.h \
+  /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
+  /opt/homebrew/include/QtWidgets/qslider.h \
+  /opt/homebrew/include/QtWidgets/qstyle.h \
+  /opt/homebrew/include/QtWidgets/qstyleoption.h \
+  /opt/homebrew/include/QtWidgets/qtabbar.h \
+  /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qtwidgets-config.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTextEdit \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
@@ -3693,6 +3726,8 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliema
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Database.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/OpenDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/SaveDialog.hpp \
@@ -3849,6 +3884,11 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliema
   /opt/homebrew/include/QtGui/qtransform.h \
   /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/include/QtSql/qsqldatabase.h \
+  /opt/homebrew/include/QtSql/qsqlquerymodel.h \
+  /opt/homebrew/include/QtSql/qtsql-config.h \
+  /opt/homebrew/include/QtSql/qtsqlexports.h \
+  /opt/homebrew/include/QtSql/qtsqlglobal.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractitemview.h \
@@ -3874,13 +3914,24 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliema
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QList \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlTableModel \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqltablemodel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHeaderView \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QInputDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
@@ -4737,6 +4788,8 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: /Users/nataliemanukyan/Des
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Database.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/OpenDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/SaveDialog.hpp \
@@ -4897,6 +4950,11 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: /Users/nataliemanukyan/Des
   /opt/homebrew/include/QtGui/qtransform.h \
   /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/include/QtSql/qsqldatabase.h \
+  /opt/homebrew/include/QtSql/qsqlquerymodel.h \
+  /opt/homebrew/include/QtSql/qtsql-config.h \
+  /opt/homebrew/include/QtSql/qtsqlexports.h \
+  /opt/homebrew/include/QtSql/qtsqlglobal.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractitemview.h \
@@ -4921,13 +4979,24 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: /Users/nataliemanukyan/Des
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QList \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlTableModel \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqltablemodel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -8729,6 +8798,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desk
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/StartMenu.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
+  /opt/homebrew/include/QtCore/qabstractitemmodel.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
   /opt/homebrew/include/QtCore/qanystringview.h \
   /opt/homebrew/include/QtCore/qarraydata.h \
@@ -8799,6 +8869,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/include/QtCore/qprocessordetection.h \
   /opt/homebrew/include/QtCore/qrect.h \
   /opt/homebrew/include/QtCore/qrefcount.h \
+  /opt/homebrew/include/QtCore/qregularexpression.h \
   /opt/homebrew/include/QtCore/qscopedpointer.h \
   /opt/homebrew/include/QtCore/qscopeguard.h \
   /opt/homebrew/include/QtCore/qset.h \
@@ -8872,22 +8943,33 @@ CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/include/QtGui/qtguiexports.h \
   /opt/homebrew/include/QtGui/qtguiglobal.h \
   /opt/homebrew/include/QtGui/qtransform.h \
+  /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
+  /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractscrollarea.h \
+  /opt/homebrew/include/QtWidgets/qabstractslider.h \
+  /opt/homebrew/include/QtWidgets/qabstractspinbox.h \
   /opt/homebrew/include/QtWidgets/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qdialog.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
   /opt/homebrew/include/QtWidgets/qgridlayout.h \
   /opt/homebrew/include/QtWidgets/qlayout.h \
   /opt/homebrew/include/QtWidgets/qlayoutitem.h \
+  /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtWidgets/qsizepolicy.h \
+  /opt/homebrew/include/QtWidgets/qslider.h \
+  /opt/homebrew/include/QtWidgets/qstyle.h \
+  /opt/homebrew/include/QtWidgets/qstyleoption.h \
+  /opt/homebrew/include/QtWidgets/qtabbar.h \
+  /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qtwidgets-config.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
@@ -8897,6 +8979,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h \
@@ -9736,6 +9819,8 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: /Users/nataliemanu
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Database.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/OpenDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/SaveDialog.hpp \
@@ -9920,12 +10005,16 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: /Users/nataliemanu
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QList \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
@@ -10781,6 +10870,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Database.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/OpenDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/SaveDialog.hpp \
@@ -10949,6 +11040,11 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
   /opt/homebrew/include/QtGui/qtransform.h \
   /opt/homebrew/include/QtGui/qvalidator.h \
   /opt/homebrew/include/QtGui/qwindowdefs.h \
+  /opt/homebrew/include/QtSql/qsqldatabase.h \
+  /opt/homebrew/include/QtSql/qsqlquerymodel.h \
+  /opt/homebrew/include/QtSql/qtsql-config.h \
+  /opt/homebrew/include/QtSql/qtsqlexports.h \
+  /opt/homebrew/include/QtSql/qtsqlglobal.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h \
   /opt/homebrew/include/QtWidgets/qabstractitemview.h \
@@ -10973,14 +11069,25 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
   /opt/homebrew/include/QtWidgets/qtwidgetsexports.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
   /opt/homebrew/include/QtWidgets/qwidget.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/QList \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlTableModel \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqltablemodel.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QApplication \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
+  /opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
@@ -11038,18 +11145,6 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddDialog.cpp:
 
-/opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/SaveDialog.cpp:
-
-/opt/homebrew/lib/QtSql.framework/Headers/QSqlError:
-
-/opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase:
-
-/opt/homebrew/include/QtSql/qsqldatabase.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Contact.hpp:
-
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/main.cpp:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h:
@@ -11084,9 +11179,23 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit:
 
+/opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout:
+
 /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog:
+
+/opt/homebrew/lib/QtSql.framework/Headers/qsqltablemodel.h:
+
+/opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h:
+
+/opt/homebrew/lib/QtSql.framework/Headers/QSqlTableModel:
+
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/SaveDialog.cpp:
+
+/opt/homebrew/lib/QtSql.framework/Headers/QSqlError:
+
+/opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase:
 
 /opt/homebrew/lib/QtCore.framework/Headers/qstring.h:
 
@@ -11121,6 +11230,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 /opt/homebrew/include/QtWidgets/qabstractitemview.h:
 
 /opt/homebrew/include/QtWidgets/qabstractitemdelegate.h:
+
+/opt/homebrew/include/QtSql/qsqldatabase.h:
 
 /opt/homebrew/include/QtGui/qwindowdefs.h:
 
@@ -11331,6 +11442,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddDialog.cpp:
 /opt/homebrew/include/QtGui/qcolor.h:
 
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/OpenDialog.hpp:
+
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/Data/Contact.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h:
 
@@ -12851,6 +12964,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_OpenDialog.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_transform.h:
+
+/opt/homebrew/include/QtSql/qsqlquerymodel.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__variant/monostate.h:
 

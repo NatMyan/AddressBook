@@ -55,11 +55,12 @@ static constexpr auto qt_meta_stringdata_CLASSAddressBookLogicENDCLASS = QtMocHe
     "openAddressBook",
     "searchContacts",
     "saveAddressBook",
+    "addContactToDatabase",
     "handleAddContactRequest"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSAddressBookLogicENDCLASS_t {
-    uint offsetsAndSizes[34];
+    uint offsetsAndSizes[36];
     char stringdata0[17];
     char stringdata1[13];
     char stringdata2[1];
@@ -76,7 +77,8 @@ struct qt_meta_stringdata_CLASSAddressBookLogicENDCLASS_t {
     char stringdata13[16];
     char stringdata14[15];
     char stringdata15[16];
-    char stringdata16[24];
+    char stringdata16[21];
+    char stringdata17[24];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSAddressBookLogicENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -98,7 +100,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSAddressBookLogicENDCLASS_t qt_m
         QT_MOC_LITERAL(126, 15),  // "openAddressBook"
         QT_MOC_LITERAL(142, 14),  // "searchContacts"
         QT_MOC_LITERAL(157, 15),  // "saveAddressBook"
-        QT_MOC_LITERAL(173, 23)   // "handleAddContactRequest"
+        QT_MOC_LITERAL(173, 20),  // "addContactToDatabase"
+        QT_MOC_LITERAL(194, 23)   // "handleAddContactRequest"
     },
     "AddressBookLogic",
     "contactAdded",
@@ -116,6 +119,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSAddressBookLogicENDCLASS_t qt_m
     "openAddressBook",
     "searchContacts",
     "saveAddressBook",
+    "addContactToDatabase",
     "handleAddContactRequest"
 };
 #undef QT_MOC_LITERAL
@@ -128,7 +132,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSAddressBookLogicENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   14, // methods
+       9,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -136,16 +140,17 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSAddressBookLogicENDCLASS[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    3,   62,    2, 0x06,    1 /* Public */,
-       6,    5,   69,    2, 0x06,    5 /* Public */,
+       1,    3,   68,    2, 0x06,    1 /* Public */,
+       6,    5,   75,    2, 0x06,    5 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       9,    0,   80,    2, 0x0a,   11 /* Public */,
-      10,    1,   81,    2, 0x0a,   12 /* Public */,
-      13,    0,   84,    2, 0x0a,   14 /* Public */,
-      14,    0,   85,    2, 0x0a,   15 /* Public */,
-      15,    0,   86,    2, 0x0a,   16 /* Public */,
-      16,    0,   87,    2, 0x08,   17 /* Private */,
+       9,    0,   86,    2, 0x0a,   11 /* Public */,
+      10,    1,   87,    2, 0x0a,   12 /* Public */,
+      13,    0,   90,    2, 0x0a,   14 /* Public */,
+      14,    0,   91,    2, 0x0a,   15 /* Public */,
+      15,    0,   92,    2, 0x0a,   16 /* Public */,
+      16,    3,   93,    2, 0x0a,   17 /* Public */,
+      17,    0,  100,    2, 0x08,   21 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,
@@ -157,6 +162,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSAddressBookLogicENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,
     QMetaType::Void,
 
        0        // eod
@@ -194,6 +200,11 @@ Q_CONSTINIT const QMetaObject AddressBookLogic::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'saveAddressBook'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'addContactToDatabase'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'handleAddContactRequest'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -213,7 +224,8 @@ void AddressBookLogic::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int
         case 4: _t->openAddressBook(); break;
         case 5: _t->searchContacts(); break;
         case 6: _t->saveAddressBook(); break;
-        case 7: _t->handleAddContactRequest(); break;
+        case 7: _t->addContactToDatabase((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
+        case 8: _t->handleAddContactRequest(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -254,13 +266,13 @@ int AddressBookLogic::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 9)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 9;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 9)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }

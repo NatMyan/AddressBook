@@ -25,6 +25,21 @@ QString AddDialog::email() const {
     return emailText->toPlainText();
 }
 
+QString AddDialog::selectedTab() const {
+    return tabComboBox->currentText();
+}
+
+/*void AddDialog::updateTabs(const QTabWidget *tabs) {
+    if (!tabs) {
+        return;
+    }
+    tabComboBox->clear();
+    for (int i = 0; i < tabs->count(); ++i) {
+        QString tabText = tabs->tabText(i);
+        tabComboBox->addItem(tabText);
+    }
+}*/
+
 void AddDialog::editAddress(const QString &name, const QString &phone, const QString &email) {
     // nameText->setReadOnly(true);
     nameText->setText(name);
@@ -65,12 +80,23 @@ void AddDialog::setupUi() {
 
     gLayout->addLayout(buttonLayout, 3, 1, Qt::AlignRight);
 
+    tabComboBox = new QComboBox(this);  
+
     auto mainLayout = new QVBoxLayout;
     mainLayout->addLayout(gLayout);
+    mainLayout->addWidget(tabComboBox);
     setLayout(mainLayout);
 
-    connect(okButton, &QAbstractButton::clicked, this, &QDialog::accept);
+    connect(okButton, &QAbstractButton::clicked, this, [this]() {
+        emit contactAdded(name(), phone(), email(), selectedTab());
+        accept();
+    });
     connect(cancelButton, &QAbstractButton::clicked, this, &QDialog::reject);
 
     setWindowTitle(tr("Add a Contact"));
+
+    // connect(okButton, &QAbstractButton::clicked, this, &QDialog::accept);
+    // connect(cancelButton, &QAbstractButton::clicked, this, &QDialog::reject);
+
+    // setWindowTitle(tr("Add a Contact"));
 }

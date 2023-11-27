@@ -2,11 +2,14 @@
 #define ADDRESS_BOOK_INTERFACE_HPP
 
 #include "../Logic/AddressBookLogic.hpp"
+// #include "Tabs.hpp"
 
 #include <QWidget>
 #include <QTabWidget>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QSqlTableModel>
 // #include <QTableWidget>
 
 class AddressBookInterface : public QWidget {
@@ -34,12 +37,14 @@ class AddressBookInterface : public QWidget {
 
     private:
         QTabWidget *tabWidget;
+        // Tabs *tabsWidget;
         QPushButton *addTabButton;
         QPushButton *addContactButton;
         QPushButton *openButton;
         QPushButton *searchButton;
         QPushButton *saveButton;
         QTableWidget *currentTable;
+        // QSqlTableModel *currentTableModel;
         AddressBookLogic *logic;
 };
 

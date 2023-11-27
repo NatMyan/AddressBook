@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QLineEdit>
 #include <QTextEdit>
+#include <QComboBox>
 
 class AddDialog : public QDialog {
     Q_OBJECT
@@ -15,8 +16,13 @@ class AddDialog : public QDialog {
         QString name() const;
         QString phone() const;
         QString email() const;
+        QString selectedTab() const;
         void editAddress(const QString &name, const QString &phone, const QString &email);
+        // void updateTabs(const QTabWidget *tabs);
 
+    signals:
+        void contactAdded(const QString &name, const QString &phone, const QString &email, const QString &tab);
+    
     private:
         void setupUi();
     
@@ -24,6 +30,7 @@ class AddDialog : public QDialog {
         QLineEdit *nameText;
         QTextEdit *phoneText;
         QTextEdit *emailText;
+        QComboBox *tabComboBox;
 };
 
 #endif // ADD_DIALOG_HPP

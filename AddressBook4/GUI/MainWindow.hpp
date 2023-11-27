@@ -11,23 +11,23 @@
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
-public:
-    MainWindow(QWidget *parent = nullptr);
+    public:
+        MainWindow(QWidget *parent = nullptr);
 
-private slots:
-    void onAddClicked();
-    void onOpenClicked();
-    void onContactAdded(const QString &name, const QString &phone, const QString &email);
-    void onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email);
+    private slots:
+        void onAddClicked();
+        void onOpenClicked();
+        void onContactAdded(const QString &name, const QString &phone, const QString &email);
+        void onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email);
 
-private:
-    void setupUi();
+    private:
+        void setupUi();
 
-private:
-    QStackedWidget *stackedWidget;
-    StartMenu *startMenu;
-    AddressBookInterface *addressBookInterface;
-    AddressBookLogic *addressBookLogic;
+    private:
+        QStackedWidget *stackedWidget;
+        StartMenu *startMenu;
+        AddressBookInterface *addressBookInterface;
+        AddressBookLogic *addressBookLogic;
 };
 
 #endif // MAINWINDOW_HPP

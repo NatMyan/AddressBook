@@ -1,7 +1,5 @@
 #include "MainWindow.hpp"
 
-#include "MainWindow.hpp"
-
 MainWindow::MainWindow(QWidget *parent) : 
     QMainWindow(parent) 
 {
@@ -14,7 +12,7 @@ void MainWindow::setupUi() {
     addressBookLogic = new AddressBookLogic;
     addressBookInterface = new AddressBookInterface(addressBookLogic);
 
-    connect(startMenu, &StartMenu::addClicked, this, &MainWindow::onAddClicked);
+    // connect(startMenu, &StartMenu::addClicked, this, &MainWindow::onAddClicked);
     connect(startMenu, &StartMenu::openClicked, this, &MainWindow::onOpenClicked);
     connect(addressBookLogic, &AddressBookLogic::contactAdded, this, &MainWindow::onContactAdded);
     connect(addressBookLogic, &AddressBookLogic::contactEdited, this, &MainWindow::onContactEdited);
@@ -40,7 +38,7 @@ void MainWindow::onOpenClicked() {
 void MainWindow::onContactAdded(const QString &name, const QString &phone, const QString &email) {
     // Show the AddressBookInterface when a contact is added
     stackedWidget->setCurrentIndex(1);
-    addressBookInterface->addTabClicked();
+    addressBookInterface->addContactClicked();
 }
 
 void MainWindow::onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email) {
