@@ -6,7 +6,7 @@
 AddressBookInterface::AddressBookInterface(AddressBookLogic *logic, QWidget *parent) :
     QWidget(parent),
     tabWidget(new QTabWidget),
-    addTabButton(new QPushButton("+")),
+    addTabButton(new QPushButton("Add Tab")),
     addContactButton(new QPushButton("Add")),
     openButton(new QPushButton("Open")),
     searchButton(new QPushButton("Search")),

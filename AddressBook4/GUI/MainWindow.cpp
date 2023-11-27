@@ -33,23 +33,25 @@ void MainWindow::onOpenClicked() {
     addressBookInterface->openAddressBook();
 }
 
-void MainWindow::onContactAdded(const QString &name, const QString &phone, const QString &email) {
+void MainWindow::onContactAdded() {
     stackedWidget->setCurrentIndex(1);
     addressBookInterface->addContactClicked();
 }
 
-void MainWindow::onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email) {
+void MainWindow::onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email, const QString &tab) {
     QTableWidget *editedTable = addressBookInterface->getCurrentTable();
 
     if (editedTable && rowIndex >= 0 && rowIndex < editedTable->rowCount()) {
         QTableWidgetItem *nameItem = editedTable->item(rowIndex, 0);
         QTableWidgetItem *phoneItem = editedTable->item(rowIndex, 1);
         QTableWidgetItem *emailItem = editedTable->item(rowIndex, 2);
+        QTableWidgetItem *tabItem = editedTable->item(rowIndex, 3);
 
-        if (nameItem && phoneItem && emailItem) {
+        if (nameItem && phoneItem && emailItem && tabItem) {
             nameItem->setText(name);
             phoneItem->setText(phone);
             emailItem->setText(email);
+            tabItem->setText(tab);
         }
     }
 }

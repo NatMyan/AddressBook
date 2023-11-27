@@ -36,7 +36,7 @@ void AddressBookLogic::createTable() {
     }
 
     QSqlQuery query;
-    query.prepare("CREATE TABLE contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, phone TEXT, email TEXT)");
+    query.prepare("CREATE TABLE contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, phone TEXT, email TEXT, tab TEXT)");
 
     if (query.exec()) {
         qDebug() << "Table created successfully";
@@ -53,9 +53,9 @@ void AddressBookLogic::addContact() {
         QString name = addDialog->name();
         QString phone = addDialog->phone();
         QString email = addDialog->email();
-        // QString tab = addDialog->tab();
+        QString tab = addDialog->tab();
 
-        addContactToDatabase(name, phone, email);
+        addContactToDatabase(name, phone, email, tab);
     } 
     else {
         qDebug() << "User canceled adding a contact.";
@@ -69,6 +69,7 @@ void AddressBookLogic::editContact(QTableWidgetItem *item) {
     QString name = item->tableWidget()->item(rowIndex, 0)->text();
     QString phone = item->tableWidget()->item(rowIndex, 1)->text();
     QString email = item->tableWidget()->item(rowIndex, 2)->text();
+    QString tab = item->tableWidget()->item(rowIndex, 3)->text();
 
     bool ok;
     name = QInputDialog::getText(nullptr, "Edit Contact", "Name:", QLineEdit::Normal, name, &ok);
@@ -80,17 +81,22 @@ void AddressBookLogic::editContact(QTableWidgetItem *item) {
     email = QInputDialog::getText(nullptr, "Edit Contact", "Email:", QLineEdit::Normal, email, &ok);
     if (!ok) return;
 
-    emit contactEdited(tabIndex, rowIndex, name, phone, email);
+    tab = QInputDialog::getText(nullptr, "Edit Contact", "Tab:", QLineEdit::Normal, tab, &ok);
+    if (!ok) return;
+
+    emit contactEdited(tabIndex, rowIndex, name, phone, email, tab);
 }
 
-void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email) {
+void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab) {
     QSqlQuery query(db);
-    query.prepare("INSERT INTO contacts (name, phone, email) VALUES (:name, :phone, :email)");
+    query.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
     query.bindValue(":name", name);
     query.bindValue(":phone", phone);
     query.bindValue(":email", email);
+    query.bindValue(":tab", tab);
 
     if (query.exec()) {
+        emit contactAdded(name, phone, email, tab);
         qDebug() << "Contact added to the database";
     } 
     else {

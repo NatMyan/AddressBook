@@ -17,8 +17,8 @@ class MainWindow : public QMainWindow {
     private slots:
         void onAddClicked();
         void onOpenClicked();
-        void onContactAdded(const QString &name, const QString &phone, const QString &email);
-        void onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email);
+        void onContactAdded();
+        void onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email, const QString &tab);
 
     private:
         void setupUi();

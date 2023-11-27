@@ -20,17 +20,18 @@ class AddressBookLogic : public QObject {
 
     public:
         void createTable();
+        
     public slots:
         void addContact();
         void editContact(QTableWidgetItem *item);
         void openAddressBook();
         void searchContacts();
         void saveAddressBook();
-        void addContactToDatabase(const QString &name, const QString &phone, const QString &email);
+        void addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab);
 
     signals:
-        void contactAdded(const QString &name, const QString &phone, const QString &email);
-        void contactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email);
+        void contactAdded(const QString &name, const QString &phone, const QString &email, const QString &tab);
+        void contactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email, const QString &tab);
 
     /*private slots:
         void handleAddContactRequest();*/
