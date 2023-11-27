@@ -4,6 +4,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent) 
 {
     setupUi();
+    showDatabaseContents();
 }
 
 void MainWindow::setupUi() {
@@ -21,6 +22,10 @@ void MainWindow::setupUi() {
     stackedWidget->addWidget(addressBookInterface);
 
     setCentralWidget(stackedWidget);
+}
+
+void MainWindow::showDatabaseContents() {
+    addressBookInterface->showDatabaseContents();
 }
 
 void MainWindow::onAddClicked() {

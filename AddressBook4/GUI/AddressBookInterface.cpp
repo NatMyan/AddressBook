@@ -16,6 +16,7 @@ AddressBookInterface::AddressBookInterface(AddressBookLogic *logic, QWidget *par
 {
     setupUi();
     setupTabs();
+    showDatabaseContents();
 }
 
 void AddressBookInterface::setupUi() {
@@ -38,6 +39,52 @@ void AddressBookInterface::setupUi() {
     connect(saveButton, &QPushButton::clicked, this, &AddressBookInterface::saveAddressBook);
 }
 
+/*
+
+void AddressWidget::showAddEntryDialog() {
+    AddDialog aDialog;
+
+    if (aDialog.exec())
+        addEntry(aDialog.name(), aDialog.phone(), aDialog.email());
+}
+
+void AddressWidget::showOpenEntryDialog() {
+    OpenDialog oDialog;
+
+    if (oDialog.exec())
+        openEntry(oDialog.getSelectedFilePath());
+}
+
+void AddressWidget::addEntry(const QString &name, const QString &phone, const QString &email) {
+    if (!table->getContacts().contains({ name, phone, email })) {
+        table->insertRows(0, 1, QModelIndex());
+
+        QModelIndex index = table->index(0, 0, QModelIndex());
+        table->setData(index, name, Qt::EditRole);
+
+        index = table->index(0, 1, QModelIndex());
+        table->setData(index, phone, Qt::EditRole);
+
+        index = table->index(0, 2, QModelIndex());
+        table->setData(index, email, Qt::EditRole);
+
+        removeTab(indexOf(newAddressTab));
+    } 
+    else {
+        QMessageBox::information(this, tr("Duplicate Name"), tr("The name \"%1\" already exists.").arg(name));
+    }
+}
+
+void AddressWidget::openEntry(const QString &filePath) {
+    if (dbManager->openDatabase(filePath)) {
+        readFromDatabase();
+    } 
+    else {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the database."));
+    }
+}
+*/
+
 void AddressBookInterface::setupTabs() {
     /*connect(tabWidget, &QTabWidget::currentChanged, [this](int index) {
         if (index == tabWidget->count() - 1) {
@@ -54,6 +101,16 @@ void AddressBookInterface::setupTabs() {
     tabWidget->addTab(createEditableTable(), "Co-Workers");
     tabWidget->addTab(addTabButton, "+");
 
+    connect(tabWidget, &QTabWidget::currentChanged, [this](int index) {
+        if (index == tabWidget->count() - 1) {
+            addTabClicked();
+        } 
+        else {
+            currentTable = qobject_cast<QTableWidget*>(tabWidget->widget(index));
+            currentTable->setProperty("TabName", tabWidget->tabText(index));
+        }
+    });
+
     connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addTabClicked);
     connect(currentTable, &QTableWidget::itemDoubleClicked, this, &AddressBookInterface::editContact);
 }
@@ -69,9 +126,44 @@ void AddressBookInterface::addTabClicked() {
     }
 }
 
+void AddressBookInterface::showDatabaseContents() {
+    if (currentTable) {
+        currentTable->clearContents();
+        currentTable->setRowCount(0);
+
+        QSqlTableModel model(nullptr, logic->getDB());
+        model.setTable("contacts");
+        model.setFilter("tab = '" + currentTable->property("TabName").toString() + "'");
+
+        if (model.select()) {
+            int rowCount = model.rowCount();
+            int columnCount = model.columnCount();
+            qDebug() << rowCount << columnCount;
+
+            currentTable->setRowCount(rowCount);
+            currentTable->setColumnCount(columnCount);
+
+            for (int row = 0; row < rowCount; ++row) {
+                for (int col = 0; col < columnCount; ++col) {
+                    QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                    currentTable->setItem(row, col, item);
+                }
+
+                QTableWidgetItem *tabItem = new QTableWidgetItem(currentTable->property("TabName").toString());
+                currentTable->setItem(row, columnCount, tabItem);
+            }
+        } 
+        else {
+            qDebug() << "Failed to fetch database contents: " << model.lastError().text();
+        }
+    }
+}
+
 void AddressBookInterface::addContactClicked() {
-    if (currentTable)
+    if (currentTable) {
         logic->addContact();
+        showDatabaseContents();
+    }
 }
 
 void AddressBookInterface::editContact(QTableWidgetItem *item) {

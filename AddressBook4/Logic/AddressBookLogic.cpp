@@ -46,6 +46,10 @@ void AddressBookLogic::createTable() {
     }
 }
 
+QSqlDatabase AddressBookLogic::getDB() {
+    return db;
+}
+
 void AddressBookLogic::addContact() {
     int result = addDialog->exec();
 
@@ -88,20 +92,24 @@ void AddressBookLogic::editContact(QTableWidgetItem *item) {
 }
 
 void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab) {
-    QSqlQuery query(db);
-    query.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
-    query.bindValue(":name", name);
-    query.bindValue(":phone", phone);
-    query.bindValue(":email", email);
-    query.bindValue(":tab", tab);
+    AddDialog aDialog;
+    if (aDialog.exec()) {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
+        query.bindValue(":name", name);
+        query.bindValue(":phone", phone);
+        query.bindValue(":email", email);
+        query.bindValue(":tab", tab);
 
-    if (query.exec()) {
-        emit contactAdded(name, phone, email, tab);
-        qDebug() << "Contact added to the database";
-    } 
-    else {
-        qDebug() << "Failed to add contact to the database: " << query.lastError().text();
+        if (query.exec()) {
+            emit contactAdded(name, phone, email, tab);
+            qDebug() << "Contact added to the database";
+        } 
+        else {
+            qDebug() << "Failed to add contact to the database: " << query.lastError().text();
+        }
     }
+    
 }
 
 void AddressBookLogic::openAddressBook() {

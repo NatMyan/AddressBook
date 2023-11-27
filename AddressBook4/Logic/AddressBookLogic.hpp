@@ -20,7 +20,8 @@ class AddressBookLogic : public QObject {
 
     public:
         void createTable();
-        
+        QSqlDatabase getDB();
+
     public slots:
         void addContact();
         void editContact(QTableWidgetItem *item);

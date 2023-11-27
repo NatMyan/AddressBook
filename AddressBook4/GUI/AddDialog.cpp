@@ -109,6 +109,7 @@ void AddDialog::setupUi() {
             emit contactAdded(name(), phone(), email(), tab());
         }
     });*/
+    
 
     setWindowTitle(tr("Add a Contact"));
 

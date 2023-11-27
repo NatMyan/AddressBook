@@ -19,6 +19,7 @@ class MainWindow : public QMainWindow {
         void onOpenClicked();
         void onContactAdded();
         void onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email, const QString &tab);
+        void showDatabaseContents();
 
     private:
         void setupUi();

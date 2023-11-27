@@ -44,27 +44,31 @@ static constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers:
     "",
     "onOpenClicked",
     "onContactAdded",
+    "onContactEdited",
+    "tabIndex",
+    "rowIndex",
     "name",
     "phone",
     "email",
-    "onContactEdited",
-    "tabIndex",
-    "rowIndex"
+    "tab",
+    "showDatabaseContents"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[26];
     char stringdata0[11];
     char stringdata1[13];
     char stringdata2[1];
     char stringdata3[14];
     char stringdata4[15];
-    char stringdata5[5];
-    char stringdata6[6];
-    char stringdata7[6];
-    char stringdata8[16];
-    char stringdata9[9];
-    char stringdata10[9];
+    char stringdata5[16];
+    char stringdata6[9];
+    char stringdata7[9];
+    char stringdata8[5];
+    char stringdata9[6];
+    char stringdata10[6];
+    char stringdata11[4];
+    char stringdata12[21];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -75,24 +79,28 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(24, 0),  // ""
         QT_MOC_LITERAL(25, 13),  // "onOpenClicked"
         QT_MOC_LITERAL(39, 14),  // "onContactAdded"
-        QT_MOC_LITERAL(54, 4),  // "name"
-        QT_MOC_LITERAL(59, 5),  // "phone"
-        QT_MOC_LITERAL(65, 5),  // "email"
-        QT_MOC_LITERAL(71, 15),  // "onContactEdited"
-        QT_MOC_LITERAL(87, 8),  // "tabIndex"
-        QT_MOC_LITERAL(96, 8)   // "rowIndex"
+        QT_MOC_LITERAL(54, 15),  // "onContactEdited"
+        QT_MOC_LITERAL(70, 8),  // "tabIndex"
+        QT_MOC_LITERAL(79, 8),  // "rowIndex"
+        QT_MOC_LITERAL(88, 4),  // "name"
+        QT_MOC_LITERAL(93, 5),  // "phone"
+        QT_MOC_LITERAL(99, 5),  // "email"
+        QT_MOC_LITERAL(105, 3),  // "tab"
+        QT_MOC_LITERAL(109, 20)   // "showDatabaseContents"
     },
     "MainWindow",
     "onAddClicked",
     "",
     "onOpenClicked",
     "onContactAdded",
+    "onContactEdited",
+    "tabIndex",
+    "rowIndex",
     "name",
     "phone",
     "email",
-    "onContactEdited",
-    "tabIndex",
-    "rowIndex"
+    "tab",
+    "showDatabaseContents"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -104,7 +112,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -112,16 +120,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   38,    2, 0x08,    1 /* Private */,
-       3,    0,   39,    2, 0x08,    2 /* Private */,
-       4,    3,   40,    2, 0x08,    3 /* Private */,
-       8,    5,   47,    2, 0x08,    7 /* Private */,
+       1,    0,   44,    2, 0x08,    1 /* Private */,
+       3,    0,   45,    2, 0x08,    2 /* Private */,
+       4,    0,   46,    2, 0x08,    3 /* Private */,
+       5,    6,   47,    2, 0x08,    4 /* Private */,
+      12,    0,   60,    2, 0x08,   11 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,    5,    6,    7,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::QString,    9,   10,    5,    6,    7,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    6,    7,    8,    9,   10,   11,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -141,16 +151,16 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onContactAdded'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'onContactEdited'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'showDatabaseContents'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -163,8 +173,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->onAddClicked(); break;
         case 1: _t->onOpenClicked(); break;
-        case 2: _t->onContactAdded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
-        case 3: _t->onContactEdited((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5]))); break;
+        case 2: _t->onContactAdded(); break;
+        case 3: _t->onContactEdited((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[5])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[6]))); break;
+        case 4: _t->showDatabaseContents(); break;
         default: ;
         }
     }
@@ -189,13 +200,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

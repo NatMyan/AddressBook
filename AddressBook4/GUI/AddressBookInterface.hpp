@@ -26,7 +26,8 @@ class AddressBookInterface : public QWidget {
         void openAddressBook();
         void searchContacts();
         void saveAddressBook();
-
+        void showDatabaseContents();
+        
     private:
         void setupUi();
         void setupTabs();

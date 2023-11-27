@@ -81,6 +81,9 @@
         "qapplication": "cpp",
         "qvboxlayout": "cpp",
         "qinputdialog": "cpp",
-        "qsqldatabase": "cpp"
+        "qsqldatabase": "cpp",
+        "qtprintsupport": "cpp",
+        "qtsql": "cpp",
+        "filesystem": "cpp"
     }
 }
