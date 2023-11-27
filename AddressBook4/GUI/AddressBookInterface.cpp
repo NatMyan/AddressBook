@@ -39,52 +39,6 @@ void AddressBookInterface::setupUi() {
     connect(saveButton, &QPushButton::clicked, this, &AddressBookInterface::saveAddressBook);
 }
 
-/*
-
-void AddressWidget::showAddEntryDialog() {
-    AddDialog aDialog;
-
-    if (aDialog.exec())
-        addEntry(aDialog.name(), aDialog.phone(), aDialog.email());
-}
-
-void AddressWidget::showOpenEntryDialog() {
-    OpenDialog oDialog;
-
-    if (oDialog.exec())
-        openEntry(oDialog.getSelectedFilePath());
-}
-
-void AddressWidget::addEntry(const QString &name, const QString &phone, const QString &email) {
-    if (!table->getContacts().contains({ name, phone, email })) {
-        table->insertRows(0, 1, QModelIndex());
-
-        QModelIndex index = table->index(0, 0, QModelIndex());
-        table->setData(index, name, Qt::EditRole);
-
-        index = table->index(0, 1, QModelIndex());
-        table->setData(index, phone, Qt::EditRole);
-
-        index = table->index(0, 2, QModelIndex());
-        table->setData(index, email, Qt::EditRole);
-
-        removeTab(indexOf(newAddressTab));
-    } 
-    else {
-        QMessageBox::information(this, tr("Duplicate Name"), tr("The name \"%1\" already exists.").arg(name));
-    }
-}
-
-void AddressWidget::openEntry(const QString &filePath) {
-    if (dbManager->openDatabase(filePath)) {
-        readFromDatabase();
-    } 
-    else {
-        QMessageBox::critical(this, tr("Error"), tr("Failed to open the database."));
-    }
-}
-*/
-
 void AddressBookInterface::setupTabs() {
     /*connect(tabWidget, &QTabWidget::currentChanged, [this](int index) {
         if (index == tabWidget->count() - 1) {
@@ -199,6 +153,52 @@ QTableWidget* AddressBookInterface::getCurrentTable() const {
     return currentTable;
 }
 
+
+/*
+
+void AddressWidget::showAddEntryDialog() {
+    AddDialog aDialog;
+
+    if (aDialog.exec())
+        addEntry(aDialog.name(), aDialog.phone(), aDialog.email());
+}
+
+void AddressWidget::showOpenEntryDialog() {
+    OpenDialog oDialog;
+
+    if (oDialog.exec())
+        openEntry(oDialog.getSelectedFilePath());
+}
+
+void AddressWidget::addEntry(const QString &name, const QString &phone, const QString &email) {
+    if (!table->getContacts().contains({ name, phone, email })) {
+        table->insertRows(0, 1, QModelIndex());
+
+        QModelIndex index = table->index(0, 0, QModelIndex());
+        table->setData(index, name, Qt::EditRole);
+
+        index = table->index(0, 1, QModelIndex());
+        table->setData(index, phone, Qt::EditRole);
+
+        index = table->index(0, 2, QModelIndex());
+        table->setData(index, email, Qt::EditRole);
+
+        removeTab(indexOf(newAddressTab));
+    } 
+    else {
+        QMessageBox::information(this, tr("Duplicate Name"), tr("The name \"%1\" already exists.").arg(name));
+    }
+}
+
+void AddressWidget::openEntry(const QString &filePath) {
+    if (dbManager->openDatabase(filePath)) {
+        readFromDatabase();
+    } 
+    else {
+        QMessageBox::critical(this, tr("Error"), tr("Failed to open the database."));
+    }
+}
+*/
 
 /*QPushButton* AddressBookInterface::createAddTabButton() {
     QPushButton* addTabButton = new QPushButton("+");
