@@ -37,14 +37,12 @@ class AddressBookInterface : public QWidget {
 
     private:
         QTabWidget *tabWidget;
-        // Tabs *tabsWidget;
         QPushButton *addTabButton;
         QPushButton *addContactButton;
         QPushButton *openButton;
         QPushButton *searchButton;
         QPushButton *saveButton;
         QTableWidget *currentTable;
-        // QSqlTableModel *currentTableModel;
         AddressBookLogic *logic;
 };
 

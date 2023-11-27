@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_HPP
-#define MAINWINDOW_HPP
+#ifndef MAIN_WINDOW_HPP
+#define MAIN_WINDOW_HPP
 
 #include "StartMenu.hpp"
 #include "AddressBookInterface.hpp"
@@ -30,5 +30,5 @@ class MainWindow : public QMainWindow {
         AddressBookLogic *addressBookLogic;
 };
 
-#endif // MAINWINDOW_HPP
+#endif // MAIN_WINDOW_HPP
 

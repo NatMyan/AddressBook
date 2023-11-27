@@ -29,8 +29,8 @@ class AddressBookLogic : public QObject {
         void contactAdded(const QString &name, const QString &phone, const QString &email);
         void contactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email);
 
-    private slots:
-        void handleAddContactRequest();
+    /*private slots:
+        void handleAddContactRequest();*/
 
     private:
         AddDialog *addDialog; 

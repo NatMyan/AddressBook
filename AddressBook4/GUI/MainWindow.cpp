@@ -12,7 +12,7 @@ void MainWindow::setupUi() {
     addressBookLogic = new AddressBookLogic;
     addressBookInterface = new AddressBookInterface(addressBookLogic);
 
-    // connect(startMenu, &StartMenu::addClicked, this, &MainWindow::onAddClicked);
+    connect(startMenu, &StartMenu::addClicked, this, &MainWindow::onAddClicked);
     connect(startMenu, &StartMenu::openClicked, this, &MainWindow::onOpenClicked);
     connect(addressBookLogic, &AddressBookLogic::contactAdded, this, &MainWindow::onContactAdded);
     connect(addressBookLogic, &AddressBookLogic::contactEdited, this, &MainWindow::onContactEdited);
@@ -24,25 +24,21 @@ void MainWindow::setupUi() {
 }
 
 void MainWindow::onAddClicked() {
-    // Show the AddressBookInterface when the 'Add' button is clicked
     stackedWidget->setCurrentIndex(1);
     addressBookInterface->addContactClicked();
 }
 
 void MainWindow::onOpenClicked() {
-    // Show the AddressBookInterface when the 'Open' button is clicked
     stackedWidget->setCurrentIndex(1);
     addressBookInterface->openAddressBook();
 }
 
 void MainWindow::onContactAdded(const QString &name, const QString &phone, const QString &email) {
-    // Show the AddressBookInterface when a contact is added
     stackedWidget->setCurrentIndex(1);
     addressBookInterface->addContactClicked();
 }
 
 void MainWindow::onContactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email) {
-    // Handle contact editing logic
     QTableWidget *editedTable = addressBookInterface->getCurrentTable();
 
     if (editedTable && rowIndex >= 0 && rowIndex < editedTable->rowCount()) {

@@ -11,7 +11,6 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
     openDialog(new OpenDialog),
     searchDialog(new SearchDialog),
     saveDialog(new SaveDialog)
-    // addressBookInterface (new AddressBookInterface(this))
 {   
     // connect(this, &AddressBookLogic::contactAdded, this, &AddressBookLogic::handleAddContactRequest);
     // connect(addDialog, &AddDialog::accepted, this, &AddressBookLogic::handleAddContactRequest);
@@ -25,17 +24,6 @@ void AddressBookLogic::addContact() {
     QString email = addDialog->email();
 
     addContactToDatabase(name, phone, email);
-
-    /*if (table) {
-        int rowIndex = table->rowCount();
-        table->insertRow(rowIndex);
-        table->setItem(rowIndex, 0, new QTableWidgetItem(name));
-        table->setItem(rowIndex, 1, new QTableWidgetItem(phone));
-        table->setItem(rowIndex, 2, new QTableWidgetItem(email));
-    }*/
-    
-    // connect(this, &AddressBookInterface::contactAdded, this, &AddressBookInterface::addContact);
-    // connect(addDialog, &AddDialog::accepted, this, &AddressBookLogic::handleAddContactRequest);
 }
 
 void AddressBookLogic::editContact(QTableWidgetItem *item) {
@@ -59,7 +47,7 @@ void AddressBookLogic::editContact(QTableWidgetItem *item) {
     emit contactEdited(tabIndex, rowIndex, name, phone, email);
 }
 
-void AddressBookLogic::handleAddContactRequest() {
+/*void AddressBookLogic::handleAddContactRequest() {
     QString name = addDialog->name();
     QString phone = addDialog->phone();
     QString email = addDialog->email();
@@ -67,11 +55,11 @@ void AddressBookLogic::handleAddContactRequest() {
     emit contactAdded(name, phone, email);
 
     addContactToDatabase(name, phone, email);
-}
+}*/
 
 void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email) {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("UntitledAddressBook");    
+    db.setDatabaseName("Untitled");    
     
     QSqlQuery query2(db);
     query2.prepare("INSERT INTO contacts (name, phone, email) VALUES (:name, :phone, :email)");
@@ -113,26 +101,6 @@ void AddressBookLogic::openAddressBook() {
     }
 }
 
-/*void AddressBookLogic::openAddressBook() {
-    qDebug() << "Open button clicked";
-
-    QString filePath = QFileDialog::getOpenFileName(nullptr, "Open Address Book", "", "SQLite Database (*.db *.sqlite)");
-
-    if (!filePath.isEmpty()) {
-        qDebug() << "Selected File: " << filePath;
-
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName(filePath);
-
-        if (db.open()) {
-            qDebug() << "Database opened successfully";
-        } 
-        else {
-            qDebug() << "Failed to open database: " << db.lastError().text();
-        }
-    }
-}*/
-
 void AddressBookLogic::searchContacts() {
     qDebug() << "Search button clicked";
 
@@ -151,7 +119,6 @@ void AddressBookLogic::searchContacts() {
                 QString phone = query.value("phone").toString();
                 QString email = query.value("email").toString();
                 qDebug() << "Result: Name=" << name << ", Phone=" << phone << ", Email=" << email;
-                // Handle the search result as needed
             }
         } 
         else {
@@ -173,7 +140,6 @@ void AddressBookLogic::saveAddressBook() {
 
         if (db.open()) {
             qDebug() << "Database opened successfully for saving";
-            // Save data to the database if needed
         } 
         else {
             qDebug() << "Failed to open database for saving: " << db.lastError().text();
@@ -181,6 +147,37 @@ void AddressBookLogic::saveAddressBook() {
     }
 }
 
+
+/*if (table) {
+    int rowIndex = table->rowCount();
+    table->insertRow(rowIndex);
+    table->setItem(rowIndex, 0, new QTableWidgetItem(name));
+    table->setItem(rowIndex, 1, new QTableWidgetItem(phone));
+    table->setItem(rowIndex, 2, new QTableWidgetItem(email));
+}*/
+
+// connect(this, &AddressBookInterface::contactAdded, this, &AddressBookInterface::addContact);
+// connect(addDialog, &AddDialog::accepted, this, &AddressBookLogic::handleAddContactRequest);
+
+/*void AddressBookLogic::openAddressBook() {
+    qDebug() << "Open button clicked";
+
+    QString filePath = QFileDialog::getOpenFileName(nullptr, "Open Address Book", "", "SQLite Database (*.db *.sqlite)");
+
+    if (!filePath.isEmpty()) {
+        qDebug() << "Selected File: " << filePath;
+
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName(filePath);
+
+        if (db.open()) {
+            qDebug() << "Database opened successfully";
+        } 
+        else {
+            qDebug() << "Failed to open database: " << db.lastError().text();
+        }
+    }
+}*/
 
 /*
 // AddressBookLogic.cpp
@@ -208,7 +205,6 @@ void AddressBookLogic::handleAddContactRequest() {
     emit contactAdded(name, phone, email);
 }
 */
-
 
 /*void AddressBookLogic::addContact() {
     qDebug() << "Add button clicked";
