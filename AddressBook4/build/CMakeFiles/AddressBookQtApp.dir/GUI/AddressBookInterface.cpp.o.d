@@ -1059,4 +1059,6 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qinputdialog.h \
   /opt/homebrew/include/QtWidgets/qlineedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QHeaderView \
-  /opt/homebrew/lib/QtWidgets.framework/Headers/qheaderview.h
+  /opt/homebrew/lib/QtWidgets.framework/Headers/qheaderview.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QStandardItemModel \
+  /opt/homebrew/lib/QtGui.framework/Headers/qstandarditemmodel.h

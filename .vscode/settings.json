@@ -84,6 +84,12 @@
         "qsqldatabase": "cpp",
         "qtprintsupport": "cpp",
         "qtsql": "cpp",
-        "filesystem": "cpp"
+        "filesystem": "cpp",
+        "functional": "cpp",
+        "memory_resource": "cpp",
+        "iterator": "cpp",
+        "random": "cpp",
+        "utility": "cpp",
+        "qstring": "cpp"
     }
 }

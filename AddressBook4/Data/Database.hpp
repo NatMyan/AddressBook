@@ -8,9 +8,13 @@
 #include <QSqlQuery>
 #include <QList>
 
-class Database {
+class Database : public QSqlDatabase {
+   /*Q_OBJECT
+   
     public:
-        // Database(QObject *parent = nullptr);
+        Database(QObject *parent = nullptr);*/
+
+    public:
         bool openDatabase(const QString &databaseName);
         void closeDatabase();
         bool createTable();

@@ -3920,6 +3920,8 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliema
   /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtGui.framework/Headers/QStandardItemModel \
+  /opt/homebrew/lib/QtGui.framework/Headers/qstandarditemmodel.h \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
@@ -11137,6 +11139,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/MainWindow.cpp:
 
+/opt/homebrew/lib/QtGui.framework/Headers/QStandardItemModel:
+
 /opt/homebrew/include/QtWidgets/qlineedit.h:
 
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook4/GUI/AddressBookInterface.cpp:
@@ -12130,6 +12134,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_MainWindow.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__memory_resource/memory_resource.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/cstddef:
+
+/opt/homebrew/lib/QtGui.framework/Headers/qstandarditemmodel.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__algorithm/ranges_set_difference.h:
 

@@ -2,6 +2,8 @@
 
 #include <QInputDialog>
 #include <QHeaderView>
+#include <QSqlTableModel>
+#include <QStandardItemModel>
 
 AddressBookInterface::AddressBookInterface(AddressBookLogic *logic, QWidget *parent) :
     QWidget(parent),
@@ -30,7 +32,14 @@ void AddressBookInterface::setupUi() {
     
     mainLayout->addLayout(buttonLayout);
     mainLayout->addWidget(addTabButton);
+
+    tabWidget->addTab(currentTable, "I am table");
+
+    // tabWidget->addTab(tabW);
+    
     mainLayout->addWidget(tabWidget);
+    // mainLayout->addWidget(currentTable);
+    // qDebug()  << "current Table: " << currentTable.col
 
     connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addTabClicked);
     connect(addContactButton, &QPushButton::clicked, this, &AddressBookInterface::addContactClicked);
@@ -80,15 +89,41 @@ void AddressBookInterface::addTabClicked() {
     }
 }
 
+/*QStandardItemModel* convertToStandardItemModel(QSqlTableModel* tableModel) {
+    QStandardItemModel* standardModel = new QStandardItemModel();
+
+    standardModel->setRowCount(tableModel->rowCount());
+    standardModel->setColumnCount(tableModel->columnCount());
+
+    for (int row = 0; row < tableModel->rowCount(); ++row) {
+        for (int column = 0; column < tableModel->columnCount(); ++column) {
+            QModelIndex index = tableModel->index(row, column);
+            QVariant data = tableModel->data(index);
+            QStandardItem* item = new QStandardItem(data.toString());
+            standardModel->setItem(row, column, item);
+        }
+    }
+    return standardModel;
+}*/
+
 void AddressBookInterface::showDatabaseContents() {
+    /*if (currentTable) {
+        currentTable->clearContents();
+        currentTable->setRowCount(0);
+        QSqlTableModel model(nullptr, logic->getDB());
+        model.setTable("contacts");
+        model.setFilter("tab = '" + currentTable->property("TabName").toString() + "'");
+
+        auto tmodel = convertToStandardItemModel(&model);
+        // currentTable->setItem();
+    }*/
     if (currentTable) {
         currentTable->clearContents();
         currentTable->setRowCount(0);
 
         QSqlTableModel model(nullptr, logic->getDB());
         model.setTable("contacts");
-        model.setFilter("tab = '" + currentTable->property("TabName").toString() + "'");
-
+        // model.setFilter("tab = '" + currentTable->property("TabName").toString() + "'");
         if (model.select()) {
             int rowCount = model.rowCount();
             int columnCount = model.columnCount();
@@ -96,6 +131,8 @@ void AddressBookInterface::showDatabaseContents() {
 
             currentTable->setRowCount(rowCount);
             currentTable->setColumnCount(columnCount);
+
+            qDebug() << rowCount << columnCount;
 
             for (int row = 0; row < rowCount; ++row) {
                 for (int col = 0; col < columnCount; ++col) {

@@ -1,9 +1,7 @@
 #include "Database.hpp"
 
 /// NOTE: back to this when DBManager is DB somehow
-/*Database::Database() {
-
-}*/
+// Database::Database(QObject *parent) {}
 
 bool Database::openDatabase(const QString &databaseName) {
     db = QSqlDatabase::addDatabase("QSQLITE");
