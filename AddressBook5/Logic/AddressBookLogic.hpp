@@ -28,7 +28,7 @@ class AddressBookLogic : public QObject {
         void openAddressBook();
         void searchContacts();
         void saveAddressBook();
-        void addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab);
+        // void addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab);
 
     signals:
         void contactAdded(const QString &name, const QString &phone, const QString &email, const QString &tab);
@@ -38,7 +38,7 @@ class AddressBookLogic : public QObject {
         void handleAddContactRequest();*/
 
     private:
-        QSqlDatabase db;
+        Database db;
         AddDialog *addDialog; 
         OpenDialog *openDialog;
         SearchDialog *searchDialog;

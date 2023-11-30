@@ -16,7 +16,9 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
 }
 
 void AddressBookLogic::createTable() {
-    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.makeDatabase();
+    db.createTable();
+    /* db = QSqlDatabase::addDatabase("QSQLITE");
     QString fileName = "../untitled.db";  
 
     QFileInfo fileInfo(fileName);
@@ -43,11 +45,11 @@ void AddressBookLogic::createTable() {
     } 
     else {
         qDebug() << "Failed to create table:" << query.lastError().text();
-    }
+    }*/
 }
 
 QSqlDatabase AddressBookLogic::getDB() {
-    return db;
+    return db.getDatabase();
 }
 
 void AddressBookLogic::addContact() {
@@ -59,7 +61,24 @@ void AddressBookLogic::addContact() {
         QString email = addDialog->email();
         QString tab = addDialog->tab();
 
-        addContactToDatabase(name, phone, email, tab);
+        QSqlQuery query(db.getDatabase());
+        query.prepare("INSERT INTO contacts (name, phone, email, belonging) VALUES (:name, :phone, :email, :belonging)");
+        query.bindValue(":name", name);
+        query.bindValue(":phone", phone);
+        query.bindValue(":email", email);
+        query.bindValue(":belonging", tab);
+
+        //qDebug() << "Test: " << name;          
+        // qDebug() << "Last query: " << query.lastQuery();
+        if (query.exec()) {
+            emit contactAdded(name, phone, email, tab);
+            qDebug() << "Contact added to the database";
+        } 
+        else {
+            qDebug() << "Failed to add contact to the database: " << query.lastError().text();
+        }
+        // QSqlQuery query2(db);
+        // qDebug() <<"DB query"<< query2.lastQuery();
     } 
     else {
         qDebug() << "User canceled adding a contact.";
@@ -91,40 +110,13 @@ void AddressBookLogic::editContact(QTableWidgetItem *item) {
     emit contactEdited(tabIndex, rowIndex, name, phone, email, tab);
 }
 
-void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab) {
-    AddDialog aDialog;
-    if (aDialog.exec()) {
-        QSqlQuery query(db);
-        query.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
-        query.bindValue(":name", name);
-        query.bindValue(":phone", phone);
-        query.bindValue(":email", email);
-        query.bindValue(":tab", tab);
-
-        //qDebug() << "Test: " << name;          
-        qDebug() << "Last query: " << query.lastQuery();
-        if (query.exec()) {
-            emit contactAdded(name, phone, email, tab);
-            qDebug() << "Contact added to the database";
-        } 
-        else {
-            qDebug() << "Failed to add contact to the database: " << query.lastError().text();
-        }
-
-         QSqlQuery query2(db);
-        qDebug() <<"DB query"<< query2.lastQuery();
-        
-
-    }
-    
-}
-
 void AddressBookLogic::openAddressBook() {
     qDebug() << "Open button clicked";
 
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open Address Book", "", "SQLite Database (*.db *.sqlite)");
 
-    if (!filePath.isEmpty()) {
+    db.openDatabase(filePath);
+    /*if (!filePath.isEmpty()) {
         qDebug() << "Selected File: " << filePath;
 
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -143,7 +135,7 @@ void AddressBookLogic::openAddressBook() {
         else {
             qDebug() << "Failed to open database: " << db.lastError().text();
         }
-    }
+    }*/
 }
 
 void AddressBookLogic::searchContacts() {
@@ -180,7 +172,8 @@ void AddressBookLogic::saveAddressBook() {
     if (!saveFilePath.isEmpty()) {
         qDebug() << "Save File Path: " << saveFilePath;
 
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
+        // QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
+        db.setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
         db.setDatabaseName(saveFilePath);
 
         if (db.open()) {
@@ -192,6 +185,29 @@ void AddressBookLogic::saveAddressBook() {
     }
 }
 
+/*void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab) {
+    AddDialog aDialog;
+    if (aDialog.exec()) {
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
+        query.bindValue(":name", name);
+        query.bindValue(":phone", phone);
+        query.bindValue(":email", email);
+        query.bindValue(":tab", tab);
+
+        //qDebug() << "Test: " << name;          
+        // qDebug() << "Last query: " << query.lastQuery();
+        if (query.exec()) {
+            emit contactAdded(name, phone, email, tab);
+            qDebug() << "Contact added to the database";
+        } 
+        else {
+            qDebug() << "Failed to add contact to the database: " << query.lastError().text();
+        }
+        // QSqlQuery query2(db);
+        // qDebug() <<"DB query"<< query2.lastQuery();
+    } 
+}*/
 
 /*void AddressBookLogic::handleAddContactRequest() {
     QString name = addDialog->name();

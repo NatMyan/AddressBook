@@ -9,20 +9,25 @@
 #include <QList>
 
 class Database : public QSqlDatabase {
-   /*Q_OBJECT
-   
+    // Q_OBJECT
+    
     public:
-        Database(QObject *parent = nullptr);*/
+        Database();
+        ~Database();
 
     public:
-        bool openDatabase(const QString &databaseName);
+        void makeDatabase();
+        void openDatabase(const QString &filePath);
         void closeDatabase();
         bool createTable();
         QList<Contact> readContacts();
         bool writeContacts(const QList<Contact> &contacts);
+        QSqlDatabase getDatabase();
+        void setDatabase(const QSqlDatabase& db);
 
     private:
         QSqlDatabase db_;
+        QString fileName_;
 };
 
 #endif // DATABASE_HPP

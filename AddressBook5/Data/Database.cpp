@@ -1,10 +1,47 @@
 #include "Database.hpp"
 
-/// NOTE: back to this when DBManager is DB somehow
-// Database::Database(QObject *parent) {}
+#include <QFileInfo>
 
-bool Database::openDatabase(const QString &databaseName) {
-    db_ = QSqlDatabase::addDatabase("QSQLITE");
+/// NOTE: back to this when DBManager is DB somehow
+Database::Database() {
+    makeDatabase();
+    createTable();
+}
+
+Database::~Database() {
+    closeDatabase();
+}
+
+void Database::setDatabase(const QSqlDatabase& db) {
+    db_ = db;
+}
+
+QSqlDatabase Database::getDatabase() {
+    return db_;
+}
+
+void Database::openDatabase(const QString &filePath) {
+    if (!filePath.isEmpty()) {
+        qDebug() << "Selected File: " << filePath;
+
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName(filePath);
+
+        if (db.open()) {
+            qDebug() << "Database opened successfully";
+
+            QSqlQuery query;
+            if (!query.exec("SELECT * FROM contacts")) {
+                if (!query.exec("CREATE TABLE contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)")) {
+                    qDebug() << "Failed to create 'contacts' table: " << query.lastError().text();
+                }
+            }
+        } 
+        else {
+            qDebug() << "Failed to open database: " << db.lastError().text();
+        }
+    }
+    /*db_ = QSqlDatabase::addDatabase("QSQLITE");
     db_.setDatabaseName(databaseName);
     
     if (!db_.open()) {
@@ -12,7 +49,7 @@ bool Database::openDatabase(const QString &databaseName) {
         return false;
     }
 
-    return true;
+    return true;*/
 }
 
 void Database::closeDatabase() {
@@ -21,9 +58,32 @@ void Database::closeDatabase() {
     }
 }
 
+void Database::makeDatabase() {
+    db_ = QSqlDatabase::addDatabase("QSQLITE");
+    fileName_ = "../untitled.db";  
+
+    QFileInfo fileInfo(fileName_);
+    if (fileInfo.exists()) {
+        int i = 1;
+        fileName_ = "../untitled" + QString::number(i) + ".db";  
+        while (QFileInfo(fileName_).exists()) {
+            ++i;
+            fileName_ = "../untitled" + QString::number(i) + ".db";
+        }
+    }
+    db_.setDatabaseName(fileName_);
+}
+
 bool Database::createTable() {
     QSqlQuery query;
     return query.exec("CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)");
+
+    if (query.exec()) {
+        qDebug() << "Table created successfully";
+    } 
+    else {
+        qDebug() << "Failed to create table:" << query.lastError().text();
+    }
 }
 
 QList<Contact> Database::readContacts() {
