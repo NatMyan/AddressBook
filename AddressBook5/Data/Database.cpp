@@ -23,7 +23,8 @@ QSqlDatabase Database::getDatabase() {
 void Database::changeDatabaseName(const QString& fileName) {
     db_.close();
     db_.setDatabaseName(fileName);
-    db_.open();
+    // db_.open();
+    openDatabase(fileName);
 }
 
 void Database::openDatabase(const QString &filePath) {
