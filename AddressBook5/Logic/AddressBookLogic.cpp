@@ -179,11 +179,14 @@ void AddressBookLogic::saveAddressBook() {
     if (!saveFilePath.isEmpty()) {
         qDebug() << "Save File Path: " << saveFilePath;
 
-        // QSqlDatabase db2 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
+        /*QSqlDatabase db22 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
         Database db2; // = new Database;
         db2.makeDatabase(saveFilePath);
         db2.createTable();
-        db2.setDatabase(db->getDatabase());
+        db2.setDatabase(db->getDatabase());*/
+
+        db->setDatabaseName(saveFilePath);
+        
         /*db->closeDatabase();
         Database* db2 = new Database;
         db2->setDatabase(db->getDatabase().addDatabase("QSQLITE", "saveConnection"));
