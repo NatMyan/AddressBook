@@ -224,7 +224,7 @@ void AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb
     destDb.makeDatabase(filePath);  // This assumes makeDatabase initializes the destination database
 
     // Copy the contents from the source to the destination
-    QSqlQuery sourceQuery(sourceDb.getDatabase());
+    QSqlQuery sourceQuery(sourceDb.getDatabase()); 
     QSqlQuery destQuery(destDb.getDatabase());
 
     sourceQuery.exec("SELECT * FROM contacts");
