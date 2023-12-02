@@ -12,7 +12,7 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
     openDialog(new OpenDialog),
     searchDialog(new SearchDialog),
     saveDialog(new SaveDialog),
-    db (new Database)
+    db (new Database(""))
 {   
     // connect(addDialog, &AddDialog::accepted, this, &AddressBookLogic::handleAddContactRequest);
     // createTable();
@@ -187,8 +187,10 @@ void AddressBookLogic::saveAddressBook() {
         db2.setDatabase(db->getDatabase());*/
 
         // db->setDatabaseName(saveFilePath);
-        Database db2;
-        copyDatabaseContents(*db, db2, saveFilePath);
+        Database db2(saveFilePath);
+        db2.addDatabase("QSQLITE", "saveConnection");
+        db2.setDatabase(db->getDatabase());
+        // copyDatabaseContents(*db, db2, saveFilePath);
         /*db->closeDatabase();
         Database* db2 = new Database;
         db2->setDatabase(db->getDatabase().addDatabase("QSQLITE", "saveConnection"));
