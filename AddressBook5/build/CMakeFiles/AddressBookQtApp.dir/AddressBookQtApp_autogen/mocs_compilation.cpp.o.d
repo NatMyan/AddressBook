@@ -1033,6 +1033,7 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/SaveDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/SearchResultDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../Data/Database.hpp \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \

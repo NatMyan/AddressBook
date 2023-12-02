@@ -1029,6 +1029,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../GUI/SaveDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../GUI/SearchResultDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../Data/Database.hpp \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \

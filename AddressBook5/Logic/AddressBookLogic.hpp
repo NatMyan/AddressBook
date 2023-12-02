@@ -5,6 +5,7 @@
 #include "../GUI/OpenDialog.hpp"
 #include "../GUI/SearchDialog.hpp"
 #include "../GUI/SaveDialog.hpp"
+#include "../GUI/SearchResultDialog.hpp"
 #include "../Data/Database.hpp"
 
 #include <QObject>
@@ -39,7 +40,8 @@ class AddressBookLogic : public QObject {
         void handleAddContactRequest();*/
 
     private:
-        void copyDatabaseContents(Database& sourceDb, Database& destDb, const QString& filePath);
+        void showSearchResult(const QVector<Contact>& qVec);
+        // void copyDatabaseContents(Database& sourceDb, Database& destDb, const QString& filePath);
         // void copyDatabaseContents(Database& sourceDb, const QString& destFilePath);
 
     private:

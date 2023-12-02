@@ -334,6 +334,30 @@ GUI/SearchDialog.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.s
 .PHONY : GUI/SearchDialog.cpp.s
 
+GUI/SearchResultDialog.o: GUI/SearchResultDialog.cpp.o
+.PHONY : GUI/SearchResultDialog.o
+
+# target to build an object file
+GUI/SearchResultDialog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o
+.PHONY : GUI/SearchResultDialog.cpp.o
+
+GUI/SearchResultDialog.i: GUI/SearchResultDialog.cpp.i
+.PHONY : GUI/SearchResultDialog.i
+
+# target to preprocess a source file
+GUI/SearchResultDialog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.i
+.PHONY : GUI/SearchResultDialog.cpp.i
+
+GUI/SearchResultDialog.s: GUI/SearchResultDialog.cpp.s
+.PHONY : GUI/SearchResultDialog.s
+
+# target to generate assembly for a file
+GUI/SearchResultDialog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AddressBookQtApp.dir/build.make CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.s
+.PHONY : GUI/SearchResultDialog.cpp.s
+
 GUI/StartMenu.o: GUI/StartMenu.cpp.o
 .PHONY : GUI/StartMenu.o
 
@@ -464,6 +488,9 @@ help:
 	@echo "... GUI/SearchDialog.o"
 	@echo "... GUI/SearchDialog.i"
 	@echo "... GUI/SearchDialog.s"
+	@echo "... GUI/SearchResultDialog.o"
+	@echo "... GUI/SearchResultDialog.i"
+	@echo "... GUI/SearchResultDialog.s"
 	@echo "... GUI/StartMenu.o"
 	@echo "... GUI/StartMenu.i"
 	@echo "... GUI/StartMenu.s"

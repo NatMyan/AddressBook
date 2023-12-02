@@ -769,6 +769,7 @@
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/OpenDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SaveDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchResultDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/TabNames.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/Logic/AddressBookLogic.hpp \
   /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/QList \

@@ -399,6 +399,12 @@
 			null
 		],
 		[
+			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchResultDialog.hpp",
+			"MU",
+			"2LCCYRVYXB/moc_SearchResultDialog.cpp",
+			null
+		],
+		[
 			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/StartMenu.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_StartMenu.cpp",
@@ -516,6 +522,11 @@
 		],
 		[
 			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchDialog.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchResultDialog.cpp",
 			"MU",
 			null
 		],

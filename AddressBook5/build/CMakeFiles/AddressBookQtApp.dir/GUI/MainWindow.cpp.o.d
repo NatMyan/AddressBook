@@ -1035,6 +1035,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../GUI/OpenDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../GUI/SearchDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../GUI/SaveDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../GUI/SearchResultDialog.hpp \
   /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/../Logic/../Data/Database.hpp \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \

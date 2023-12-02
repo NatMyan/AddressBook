@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/OpenDialog.cpp" "CMakeFiles/AddressBookQtApp.dir/GUI/OpenDialog.cpp.o" "gcc" "CMakeFiles/AddressBookQtApp.dir/GUI/OpenDialog.cpp.o.d"
   "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SaveDialog.cpp" "CMakeFiles/AddressBookQtApp.dir/GUI/SaveDialog.cpp.o" "gcc" "CMakeFiles/AddressBookQtApp.dir/GUI/SaveDialog.cpp.o.d"
   "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchDialog.cpp" "CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o" "gcc" "CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o.d"
+  "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchResultDialog.cpp" "CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o" "gcc" "CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o.d"
   "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/StartMenu.cpp" "CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o" "gcc" "CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o.d"
   "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/TabNames.cpp" "CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o" "gcc" "CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o.d"
   "/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/Logic/AddressBookLogic.cpp" "CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o" "gcc" "CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o.d"

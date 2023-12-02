@@ -83,6 +83,7 @@ void AddressBookInterface::addTabClicked() {
         QTableWidget *newTable = new QTableWidget;
         tabWidget->insertTab(tabWidget->count() - 1, newTable, tabName);
         tabWidget->setCurrentIndex(tabWidget->count() - 2);
+        tabNames.addTabName(tabName);
     }
 }
 

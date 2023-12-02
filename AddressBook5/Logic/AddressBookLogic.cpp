@@ -61,6 +61,7 @@ QSqlDatabase AddressBookLogic::getDB() {
 }*/
 
 void AddressBookLogic::addContact() {
+    addDialog->updateTabs2();
     int result = addDialog->exec();
 
     if (result == QDialog::Accepted) {
@@ -147,6 +148,16 @@ void AddressBookLogic::openAddressBook() {
     }*/
 }
 
+void AddressBookLogic::showSearchResult(const QVector<Contact>& qVec) {
+    SearchResultDialog searchResultDialog(qVec);
+    if (searchResultDialog.exec()) {
+        qDebug() << "Contact found";
+    }
+    else {
+        qDebug() << "Contact not found";
+    }
+}
+
 void AddressBookLogic::searchContacts() {
     qDebug() << "Search button clicked";
 
@@ -155,18 +166,23 @@ void AddressBookLogic::searchContacts() {
         QString searchName = searchDialog.getSearchName();
         QString searchOption = searchDialog.getSearchOption();
 
-        qDebug() << "Search Criteria - Name: " << searchName << ", Option: " << searchOption;
+        qDebug() << "Search Criteria: " << searchName << ", Option: " << searchOption;
 
         QSqlQuery query;
         QString queryString = "SELECT * FROM contacts WHERE " + searchOption + " LIKE '%" + searchName + "%'";
         if (query.exec(queryString)) {
+            QVector<Contact> qVec;
             while (query.next()) {
                 QString name = query.value("name").toString();
                 QString phone = query.value("phone").toString();
                 QString email = query.value("email").toString();
-                QString tab = query.value("tab").toString();
+                QString tab = query.value("belonging").toString();
                 qDebug() << "Result: Name = " << name << ", Phone = " << phone << ", Email = " << email << ", Tab = " << tab;
+                Contact contact = {name, phone, email, tab};
+                qVec.append(contact);
+                // showSearchResult(name, phone, email, tab);
             }
+            showSearchResult(qVec);
         } 
         else {
             qDebug() << "Search failed: " << query.lastError().text();
@@ -197,10 +213,10 @@ void AddressBookLogic::saveAddressBook() {
         qDebug() << saveFilePath;
         
         if (db->getDatabase().open()) {
-            qDebug() << "2: db1 is still open";
+            qDebug() << "Database is open for copy";
         }
         else {
-            qDebug() << "2: db1 isn't open";
+            qDebug() << "Database isn't open for copy";
         } 
 
         QSqlDatabase db2 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
@@ -253,7 +269,7 @@ void AddressBookLogic::saveAddressBook() {
     }
 }
 
-void AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb, const QString& filePath) {
+/*void AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb, const QString& filePath) {
     // Open the source database and read its contents
     sourceDb.readContacts();
 
@@ -290,7 +306,7 @@ void AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb
     // Save the destination database
     destDb.getDatabase().commit();
     // destDb.setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
-}
+}*/
 
 /*void AddressBookLogic::copyDatabaseContents(Database& sourceDb, const QString& destFilePath) {
     // Open the source database and read its contents

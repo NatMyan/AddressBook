@@ -90,6 +90,7 @@
         "iterator": "cpp",
         "random": "cpp",
         "utility": "cpp",
-        "qstring": "cpp"
+        "qstring": "cpp",
+        "qhboxlayout": "cpp"
     }
 }

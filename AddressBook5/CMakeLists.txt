@@ -16,6 +16,7 @@ add_executable(AddressBookQtApp
     "GUI/OpenDialog.cpp"
     "GUI/SaveDialog.cpp"
     "GUI/SearchDialog.cpp"
+    "GUI/SearchResultDialog.cpp"
     "GUI/AddressBookInterface.cpp"
     "GUI/StartMenu.cpp"
     "Logic/AddressBookLogic.cpp"

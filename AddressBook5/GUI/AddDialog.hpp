@@ -21,6 +21,7 @@ class AddDialog : public QDialog {
         QString phone() const;
         QString email() const;
         QString selectedTab() const;
+        void updateTabs2();
         void updateTabs(const TabNames& tabNames);
         void updateTabNames(const QString& tabName);
         // QString tab() const;

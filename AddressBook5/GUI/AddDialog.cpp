@@ -17,6 +17,8 @@ AddDialog::AddDialog(QWidget *parent) :
     setupUi();
 }
 
+// QComboBox *AddDialog::tabComboBox_ = new QComboBox;
+
 QString AddDialog::name() const {
     return nameText_->text();
 }
@@ -48,8 +50,16 @@ void AddDialog::updateTabs(const TabNames& tabNames) {
     }
 }
 
+void AddDialog::updateTabs2() {
+    tabComboBox_->clear();
+    for (const auto& tabName : tabNames_.getTabNames()) {
+        tabComboBox_->addItem(tabName);
+    }
+}
+
 void AddDialog::updateTabNames(const QString& tabName) {
     tabComboBox_->addItem(tabName);
+    // tabNames_.addTabName(tabName);
 }
 
 void AddDialog::editAddress(const Contact& contact) {

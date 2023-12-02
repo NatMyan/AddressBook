@@ -20,6 +20,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AddressBookQtApp.dir/GUI/SaveDialog.cpp.o.d"
   "CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o"
   "CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o.d"
+  "CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o"
+  "CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o.d"
   "CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o"
   "CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o.d"
   "CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o"
