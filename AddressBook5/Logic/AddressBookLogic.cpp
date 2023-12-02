@@ -2,6 +2,7 @@
 
 #include <QInputDialog>
 #include <QFileDialog>
+#include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlRecord>
