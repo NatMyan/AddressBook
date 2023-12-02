@@ -86,35 +86,45 @@ void AddressBookInterface::addTabClicked() {
 }
 
 void AddressBookInterface::showDatabaseContents() {
-    if (currentTable) {
-        currentTable->clearContents();
-        currentTable->setRowCount(0);
+    for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
+        QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
 
-        QSqlTableModel model(nullptr, logic->getDB());
-        model.setTable("contacts");
-        // model.setFilter("tab = '" + currentTable->property("TabName").toString() + "'");
-        if (model.select()) {
-            int rowCount = model.rowCount();
-            int columnCount = model.columnCount();
-            qDebug() << rowCount << columnCount;
+        if (table) {
+            table->clearContents();
+            table->setRowCount(0);
 
-            currentTable->setRowCount(rowCount);
-            currentTable->setColumnCount(columnCount);
+            QSqlTableModel model(nullptr, logic->getDB());
+            model.setTable("contacts");
+            // model.setFilter("tab = '" + tabWidget->tabText(tabIndex) + "'");
 
-            qDebug() << rowCount << columnCount;
+            if (model.select()) {
+                int rowCount = model.rowCount();
+                int columnCount = model.columnCount();
 
-            for (int row = 0; row < rowCount; ++row) {
-                for (int col = 0; col < columnCount; ++col) {
-                    QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
-                    currentTable->setItem(row, col, item);
+                qDebug() << rowCount << columnCount;
+
+                table->setRowCount(rowCount);
+                table->setColumnCount(columnCount);
+
+                /*for (int row = 0; row < rowCount; ++row) {
+                    for (int col = 0; col < columnCount; ++col) {
+                        QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                        table->setItem(row, col, item);
+                    }
+                }*/
+                for (int row = 0; row < rowCount; ++row) {
+                    QString tabNameFromData = model.data(model.index(row, 3)).toString(); 
+                    if (tabNameFromData == tabWidget->tabText(tabIndex)) {
+                        for (int col = 0; col < columnCount; ++col) {
+                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                            table->setItem(row, col, item);
+                        }
+                    }
                 }
-
-                QTableWidgetItem *tabItem = new QTableWidgetItem(currentTable->property("TabName").toString());
-                currentTable->setItem(row, columnCount, tabItem);
+            } 
+            else {
+                qDebug() << "Failed to fetch database contents: " << model.lastError().text();
             }
-        } 
-        else {
-            qDebug() << "Failed to fetch database contents: " << model.lastError().text();
         }
     }
 }
@@ -159,6 +169,40 @@ QTableWidget* AddressBookInterface::getCurrentTable() const {
     return currentTable;
 }
 
+
+/*void AddressBookInterface::showDatabaseContents() {
+    if (currentTable) {
+        currentTable->clearContents();
+        currentTable->setRowCount(0);
+
+        QSqlTableModel model(nullptr, logic->getDB());
+        model.setTable("contacts");
+        // model.setFilter("tab = '" + currentTable->property("TabName").toString() + "'");
+        if (model.select()) {
+            int rowCount = model.rowCount();
+            int columnCount = model.columnCount();
+            // qDebug() << rowCount << columnCount;
+
+            currentTable->setRowCount(rowCount);
+            currentTable->setColumnCount(columnCount);
+
+            qDebug() << rowCount << columnCount;
+
+            for (int row = 0; row < rowCount; ++row) {
+                for (int col = 0; col < columnCount; ++col) {
+                    QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                    currentTable->setItem(row, col, item);
+                }
+
+                QTableWidgetItem *tabItem = new QTableWidgetItem(currentTable->property("TabName").toString());
+                currentTable->setItem(row, columnCount, tabItem);
+            }
+        } 
+        else {
+            qDebug() << "Failed to fetch database contents: " << model.lastError().text();
+        }
+    }
+}*/
 
 /*QStandardItemModel* convertToStandardItemModel(QSqlTableModel* tableModel) {
     QStandardItemModel* standardModel = new QStandardItemModel();
