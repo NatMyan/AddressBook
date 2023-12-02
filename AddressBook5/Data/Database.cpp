@@ -72,6 +72,11 @@ void Database::makeDatabase() {
         }
     }
     db_.setDatabaseName(fileName_);
+
+    if (!db_.open()) {
+        qDebug() << "Failed to open database:" << db_.lastError().text();
+        return;
+    }
 }
 
 bool Database::createTable() {

@@ -40,7 +40,7 @@ void AddressBookInterface::setupUi() {
     }
     tabWidget->addTab(addTabButton, "+");
 
-    currentTable = qobject_cast<QTableWidget*>(tabWidget->widget(0));
+    // currentTable = qobject_cast<QTableWidget*>(tabWidget->widget(0));
 
     // tabWidget->addTab(currentTable, "I am table");
     // tabWidget->addTab(tabW);
