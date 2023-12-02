@@ -170,7 +170,8 @@ void AddressBookLogic::searchContacts() {
                 QString name = query.value("name").toString();
                 QString phone = query.value("phone").toString();
                 QString email = query.value("email").toString();
-                qDebug() << "Result: Name=" << name << ", Phone=" << phone << ", Email=" << email;
+                QString tab = query.value("tab").toString();
+                qDebug() << "Result: Name = " << name << ", Phone = " << phone << ", Email = " << email << ", Tab = " << tab;
             }
         } 
         else {
