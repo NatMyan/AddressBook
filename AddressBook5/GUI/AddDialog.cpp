@@ -48,6 +48,10 @@ void AddDialog::updateTabs(const TabNames& tabNames) {
     }
 }
 
+void AddDialog::updateTabs(const QString& tabName) {
+    tabComboBox_->addItem(tabName);
+}
+
 void AddDialog::editAddress(const Contact& contact) {
     // nameText_->setReadOnly(true);
     nameText_->setText(contact.name);

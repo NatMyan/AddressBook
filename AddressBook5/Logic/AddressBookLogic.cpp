@@ -53,6 +53,10 @@ QSqlDatabase AddressBookLogic::getDB() {
     return db->getDatabase();
 }
 
+AddDialog* AddressBookLogic::getAddDialog() {
+    return addDialog;
+}
+
 void AddressBookLogic::addContact() {
     int result = addDialog->exec();
 

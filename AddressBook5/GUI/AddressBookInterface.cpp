@@ -52,6 +52,7 @@ void AddressBookInterface::setupUi() {
     connect(openButton, &QPushButton::clicked, this, &AddressBookInterface::openAddressBook);
     connect(searchButton, &QPushButton::clicked, this, &AddressBookInterface::searchContacts);
     connect(saveButton, &QPushButton::clicked, this, &AddressBookInterface::saveAddressBook);
+    
 }
 
 void AddressBookInterface::setupTabs() {

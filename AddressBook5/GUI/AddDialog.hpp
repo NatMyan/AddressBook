@@ -27,6 +27,8 @@ class AddDialog : public QDialog {
         // QString contact() const;
         // void updateTabs(const QTabWidget *tabs);
         // void updateTabs(const Tables& tables);
+    public slots:
+        void updateTabs(const QString& tabName);
 
     signals:
         void contactAdded(const QString &name, const QString &phone, const QString &email, const QString &tab);

@@ -20,6 +20,9 @@ class AddressBookInterface : public QWidget {
     public:
         QTableWidget* getCurrentTable() const;
 
+    signals:
+        void tabAdded(const QString& tabName);
+
     public slots:
         void addTabClicked();
         void addContactClicked();
