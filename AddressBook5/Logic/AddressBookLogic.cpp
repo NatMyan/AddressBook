@@ -186,7 +186,7 @@ void AddressBookLogic::saveAddressBook() {
         db2.setDatabase(db->getDatabase());*/
 
         db->setDatabaseName(saveFilePath);
-        
+
         /*db->closeDatabase();
         Database* db2 = new Database;
         db2->setDatabase(db->getDatabase().addDatabase("QSQLITE", "saveConnection"));
@@ -197,13 +197,13 @@ void AddressBookLogic::saveAddressBook() {
         // db->setDatabaseName(saveFilePath);
         // db2->readContacts();
 
-        if (db2.open()) {
+        if (db->open()) {
         // if (db->open()) {
             qDebug() << "Database opened successfully for saving";
         } 
         else {
             // qDebug() << "Failed to open database for saving: " << db->lastError().text();
-            qDebug() << "Failed to open database for saving: " << db2.lastError().text();
+            qDebug() << "Failed to open database for saving: " << db->lastError().text();
         }
     }
 }
