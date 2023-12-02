@@ -56,9 +56,9 @@ QSqlDatabase AddressBookLogic::getDB() {
     return db->getDatabase();
 }
 
-AddDialog* AddressBookLogic::getAddDialog() {
+/*AddDialog* AddressBookLogic::getAddDialog() {
     return addDialog;
-}
+}*/
 
 void AddressBookLogic::addContact() {
     int result = addDialog->exec();
@@ -67,6 +67,7 @@ void AddressBookLogic::addContact() {
         QString name = addDialog->name();
         QString phone = addDialog->phone();
         QString email = addDialog->email();
+        // addDialog->updateTabNames();
         QString tab = addDialog->selectedTab();
 
         QSqlQuery query(getDB());

@@ -20,7 +20,7 @@ class AddressBookLogic : public QObject {
 
     public:
         QSqlDatabase getDB();
-        AddDialog *getAddDialog();
+        // AddDialog *getAddDialog();
         // void createTable();
 
     public slots:
