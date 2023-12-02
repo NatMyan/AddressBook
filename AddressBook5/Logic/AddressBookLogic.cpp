@@ -195,12 +195,28 @@ void AddressBookLogic::saveAddressBook() {
         // db->changeDatabaseName(saveFilePath);
         qDebug() << saveFilePath;
         QSqlQuery sourceQuery(db->getDatabase()); 
+        if (db->open()) {
+            qDebug() << "db1 is still open";
+        }
+        else {
+            qDebug() << "db1 isn't open";
+        } 
+
+        db->getDatabase().open();
+        if (db->getDatabase().open()) {
+            qDebug() << "2: db1 is still open";
+        }
+        else {
+            qDebug() << "2: db1 isn't open";
+        } 
 
         QSqlDatabase db2 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
         db2.setDatabaseName(saveFilePath);
+        db2.open();
 
         // QSqlQuery sourceQuery(db->getDatabase()); 
         QSqlQuery destQuery(db2);
+        destQuery.exec("CREATE TABLE contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)");
 
         sourceQuery.exec("SELECT * FROM contacts");
 
@@ -210,13 +226,13 @@ void AddressBookLogic::saveAddressBook() {
             QString name = record.value("name").toString();
             QString phone = record.value("phone").toString();
             QString email = record.value("email").toString();
-            QString tab = record.value("tab").toString();
+            QString tab = record.value("belonging").toString();
 
-            destQuery.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
+            destQuery.prepare("INSERT INTO contacts (name, phone, email, belonging) VALUES (:name, :phone, :email, :belonging)");
             destQuery.bindValue(":name", name);
             destQuery.bindValue(":phone", phone);
             destQuery.bindValue(":email", email);
-            destQuery.bindValue(":tab", tab);
+            destQuery.bindValue(":belonging", tab);
 
             if (!destQuery.exec()) {
                 qDebug() << "Failed to insert record into destination database:" << destQuery.lastError().text();
