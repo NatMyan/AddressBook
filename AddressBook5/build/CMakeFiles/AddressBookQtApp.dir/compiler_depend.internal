@@ -1927,6 +1927,7 @@ CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o
  /opt/homebrew/include/QtCore/qatomic.h
  /opt/homebrew/include/QtCore/qatomic_cxx11.h
  /opt/homebrew/include/QtCore/qbasicatomic.h
+ /opt/homebrew/include/QtCore/qbasictimer.h
  /opt/homebrew/include/QtCore/qbindingstorage.h
  /opt/homebrew/include/QtCore/qbytearray.h
  /opt/homebrew/include/QtCore/qbytearrayalgorithms.h
@@ -2031,9 +2032,11 @@ CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o
  /opt/homebrew/lib/QtCore.framework/Headers/QFileInfo
  /opt/homebrew/lib/QtCore.framework/Headers/QList
  /opt/homebrew/lib/QtCore.framework/Headers/QString
+ /opt/homebrew/lib/QtCore.framework/Headers/QTimer
  /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h
  /opt/homebrew/lib/QtCore.framework/Headers/qlist.h
  /opt/homebrew/lib/QtCore.framework/Headers/qstring.h
+ /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h
  /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase
  /opt/homebrew/lib/QtSql.framework/Headers/QSqlError
  /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery

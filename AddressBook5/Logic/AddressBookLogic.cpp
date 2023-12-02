@@ -206,13 +206,11 @@ void AddressBookLogic::saveAddressBook() {
         while (sourceQuery.next()) {
             QSqlRecord record = sourceQuery.record();
 
-            // Assuming contacts table has columns: name, phone, email, tab
             QString name = record.value("name").toString();
             QString phone = record.value("phone").toString();
             QString email = record.value("email").toString();
             QString tab = record.value("tab").toString();
 
-            // Insert the data into the destination database
             destQuery.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
             destQuery.bindValue(":name", name);
             destQuery.bindValue(":phone", phone);
@@ -234,7 +232,7 @@ void AddressBookLogic::saveAddressBook() {
         // db->setDatabaseName(saveFilePath);
         // db2->readContacts();
 
-        if (db2.open()) {
+        if (db2.open() && db->open()) {
         // if (db->open()) {
             qDebug() << "Database opened successfully for saving";
         } 

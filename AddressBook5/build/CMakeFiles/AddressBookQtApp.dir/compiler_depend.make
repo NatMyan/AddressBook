@@ -1925,6 +1925,7 @@ CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/include/QtCore/qatomic.h \
   /opt/homebrew/include/QtCore/qatomic_cxx11.h \
   /opt/homebrew/include/QtCore/qbasicatomic.h \
+  /opt/homebrew/include/QtCore/qbasictimer.h \
   /opt/homebrew/include/QtCore/qbindingstorage.h \
   /opt/homebrew/include/QtCore/qbytearray.h \
   /opt/homebrew/include/QtCore/qbytearrayalgorithms.h \
@@ -2029,9 +2030,11 @@ CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/lib/QtCore.framework/Headers/QFileInfo \
   /opt/homebrew/lib/QtCore.framework/Headers/QList \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
+  /opt/homebrew/lib/QtCore.framework/Headers/QTimer \
   /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qlist.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
+  /opt/homebrew/lib/QtCore.framework/Headers/qtimer.h \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
@@ -12093,6 +12096,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout:
 
+/opt/homebrew/lib/QtCore.framework/Headers/QTimer:
+
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/Data/Database.cpp:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h:
@@ -12112,6 +12117,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 /opt/homebrew/lib/QtWidgets.framework/Headers/qcombobox.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h:
+
+/opt/homebrew/lib/QtCore.framework/Headers/qtimer.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout:
 
@@ -13290,6 +13297,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_MainWindow.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/_ctermid.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__format/formatter.h:
+
+/opt/homebrew/include/QtCore/qbasictimer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__format/format_parse_context.h:
 
