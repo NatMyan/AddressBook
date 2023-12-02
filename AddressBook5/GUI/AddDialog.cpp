@@ -100,10 +100,6 @@ void AddDialog::setupUi() {
 
     // tabComboBox = new QComboBox(this);  
 
-    auto mainLayout = new QVBoxLayout;
-    mainLayout->addLayout(gLayout);
-    setLayout(mainLayout);
-
     connect(okButton, &QAbstractButton::clicked, this, &QDialog::accept);
 
     /*connect(okButton, &QAbstractButton::clicked, this, [this]() {
@@ -112,6 +108,10 @@ void AddDialog::setupUi() {
     });*/
 
     connect(cancelButton, &QAbstractButton::clicked, this, &QDialog::reject);
+
+    auto mainLayout = new QVBoxLayout;
+    mainLayout->addLayout(gLayout);
+    setLayout(mainLayout);
 
     setWindowTitle(tr("Add a Contact"));
 
