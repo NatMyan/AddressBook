@@ -13,7 +13,17 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
     saveDialog(new SaveDialog),
     db (new Database)
 {   
+    connect(addDialog, &AddDialog::accepted, this, &AddressBookLogic::handleAddContactRequest);
     // createTable();
+}
+
+void AddressBookLogic::handleAddContactRequest() {
+    QString name = addDialog->name();
+    QString phone = addDialog->phone();
+    QString email = addDialog->email();
+    QString tab = addDialog->selectedTab();
+
+    emit contactAdded(name, phone, email, tab);
 }
 
 // void AddressBookLogic::createTable() {
