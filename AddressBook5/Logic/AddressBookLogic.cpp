@@ -194,11 +194,12 @@ void AddressBookLogic::saveAddressBook() {
         copyDatabaseContents(*db, saveFilePath);*/
         // db->changeDatabaseName(saveFilePath);
         qDebug() << saveFilePath;
+        QSqlQuery sourceQuery(db->getDatabase()); 
 
         QSqlDatabase db2 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
         db2.setDatabaseName(saveFilePath);
 
-        QSqlQuery sourceQuery(db->getDatabase()); 
+        // QSqlQuery sourceQuery(db->getDatabase()); 
         QSqlQuery destQuery(db2);
 
         sourceQuery.exec("SELECT * FROM contacts");
@@ -232,7 +233,7 @@ void AddressBookLogic::saveAddressBook() {
         // db->setDatabaseName(saveFilePath);
         // db2->readContacts();
 
-        if (db2.open() && db->open()) {
+        if (db2.open()) {
         // if (db->open()) {
             qDebug() << "Database opened successfully for saving";
         } 
