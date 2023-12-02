@@ -10951,9 +10951,11 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: /Users/nataliemanu
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlError \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlRecord \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlrecord.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog \
@@ -12069,6 +12071,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /opt/homebrew/include/QtCore/qcoreapplication.h:
 
+/opt/homebrew/lib/QtSql.framework/Headers/qsqlrecord.h:
+
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/Logic/AddressBookLogic.cpp:
 
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/TabNames.cpp:
@@ -12764,6 +12768,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddDialog.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__utility/cmp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_cv.h:
+
+/opt/homebrew/lib/QtSql.framework/Headers/QSqlRecord:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h:
 

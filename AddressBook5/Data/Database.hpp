@@ -12,7 +12,7 @@ class Database : public QSqlDatabase {
     // Q_OBJECT
     
     public:
-        Database();
+        Database(const QString &fileName);
         ~Database();
 
     public:

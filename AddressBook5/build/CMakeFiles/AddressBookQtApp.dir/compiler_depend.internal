@@ -10962,9 +10962,11 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o
  /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase
  /opt/homebrew/lib/QtSql.framework/Headers/QSqlError
  /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery
+ /opt/homebrew/lib/QtSql.framework/Headers/QSqlRecord
  /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h
  /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h
  /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h
+ /opt/homebrew/lib/QtSql.framework/Headers/qsqlrecord.h
  /opt/homebrew/lib/QtWidgets.framework/Headers/QComboBox
  /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog
  /opt/homebrew/lib/QtWidgets.framework/Headers/QFileDialog

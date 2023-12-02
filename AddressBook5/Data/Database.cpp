@@ -3,8 +3,8 @@
 #include <QFileInfo>
 
 /// NOTE: back to this when DBManager is DB somehow
-Database::Database() {
-    makeDatabase("");
+Database::Database(const QString &fileName) {
+    makeDatabase(fileName);
     createTable();
 }
 

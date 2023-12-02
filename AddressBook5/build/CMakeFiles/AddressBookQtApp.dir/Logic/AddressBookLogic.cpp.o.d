@@ -1051,4 +1051,6 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidgetItem \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QInputDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qinputdialog.h \
-  /opt/homebrew/include/QtWidgets/qlineedit.h
+  /opt/homebrew/include/QtWidgets/qlineedit.h \
+  /opt/homebrew/lib/QtSql.framework/Headers/QSqlRecord \
+  /opt/homebrew/lib/QtSql.framework/Headers/qsqlrecord.h
