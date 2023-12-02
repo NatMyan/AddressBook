@@ -20,15 +20,15 @@ class AddDialog : public QDialog {
         QString name() const;
         QString phone() const;
         QString email() const;
-        // QString tab() const;
         QString selectedTab() const;
-        // void updateTabs(const QString& tabText);
         void updateTabs(const TabNames& tabNames);
+        void updateTabNames(const QString& tabName);
+        // QString tab() const;
+        // void updateTabs(const QString& tabText);
         // QString contact() const;
         // void updateTabs(const QTabWidget *tabs);
         // void updateTabs(const Tables& tables);
-    // public slots:
-        void updateTabNames(const QString& tabName);
+        // public slots:
 
     signals:
         void contactAdded(const QString &name, const QString &phone, const QString &email, const QString &tab);
