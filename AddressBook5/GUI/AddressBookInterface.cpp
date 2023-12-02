@@ -113,7 +113,7 @@ void AddressBookInterface::showDatabaseContents() {
                             QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
                             table->setItem(row, col, item);
                         }
-                        tabWidget->setCurrentIndex(currentColNameIndex);
+                        tabWidget->setCurrentIndex(tabIndex);
                     }
                 }
                 /*int row = 0;
