@@ -17,15 +17,6 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
     // createTable();
 }
 
-/*void AddressBookLogic::handleAddContactRequest() {
-    QString name = addDialog->name();
-    QString phone = addDialog->phone();
-    QString email = addDialog->email();
-    QString tab = addDialog->selectedTab();
-
-    emit contactAdded(name, phone, email, tab);
-}*/
-
 // void AddressBookLogic::createTable() {
     // db.makeDatabase();
     // db.createTable();
@@ -200,6 +191,15 @@ void AddressBookLogic::saveAddressBook() {
         }
     }
 }
+
+/*void AddressBookLogic::handleAddContactRequest() {
+    QString name = addDialog->name();
+    QString phone = addDialog->phone();
+    QString email = addDialog->email();
+    QString tab = addDialog->selectedTab();
+
+    emit contactAdded(name, phone, email, tab);
+}*/
 
 /*void AddressBookLogic::addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab) {
     AddDialog aDialog;
