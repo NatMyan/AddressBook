@@ -63,6 +63,7 @@ void AddressBookInterface::setupTabs() {
     connect(tabWidget, &QTabWidget::currentChanged, [this](int index) {
         if (index == tabWidget->count() - 1) {
             addTabClicked();
+            logic->addContact();
         } 
         else {
             currentTable = qobject_cast<QTableWidget*>(tabWidget->widget(index));

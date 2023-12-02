@@ -104,10 +104,12 @@ void AddDialog::setupUi() {
     mainLayout->addLayout(gLayout);
     setLayout(mainLayout);
 
-    connect(okButton, &QAbstractButton::clicked, this, [this]() {
+    connect(okButton, &QAbstractButton::clicked, this, &QDialog::accept);
+
+    /*connect(okButton, &QAbstractButton::clicked, this, [this]() {
         emit contactAdded(name(), phone(), email(), selectedTab());
         accept();
-    });
+    });*/
 
     connect(cancelButton, &QAbstractButton::clicked, this, &QDialog::reject);
 
