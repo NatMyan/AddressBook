@@ -4,7 +4,7 @@
 
 /// NOTE: back to this when DBManager is DB somehow
 Database::Database() {
-    makeDatabase();
+    makeDatabase("");
     createTable();
 }
 
@@ -58,8 +58,34 @@ void Database::closeDatabase() {
     }
 }
 
-void Database::makeDatabase() {
+void Database::makeDatabase(const QString &fileName) {
     db_ = QSqlDatabase::addDatabase("QSQLITE");
+
+    if (!fileName.isEmpty()) {
+        fileName_ = fileName;
+    } 
+    else {
+        fileName_ = "../untitled.db";
+
+        QFileInfo fileInfo(fileName_);
+        if (fileInfo.exists()) {
+            int i = 1;
+            fileName_ = "../untitled" + QString::number(i) + ".db";  
+            while (QFileInfo(fileName_).exists()) {
+                ++i;
+                fileName_ = "../untitled" + QString::number(i) + ".db";
+            }
+        }
+    }
+
+    db_.setDatabaseName(fileName_);
+
+    if (!db_.open()) {
+        qDebug() << "Failed to open database:" << db_.lastError().text();
+        return;
+    }
+
+/*db_ = QSqlDatabase::addDatabase("QSQLITE");
     fileName_ = "../untitled.db";  
 
     QFileInfo fileInfo(fileName_);
@@ -76,7 +102,7 @@ void Database::makeDatabase() {
     if (!db_.open()) {
         qDebug() << "Failed to open database:" << db_.lastError().text();
         return;
-    }
+    }*/
 }
 
 bool Database::createTable() {

@@ -16,7 +16,7 @@ class Database : public QSqlDatabase {
         ~Database();
 
     public:
-        void makeDatabase();
+        void makeDatabase(const QString &fileName);
         void openDatabase(const QString &filePath);
         void closeDatabase();
         bool createTable();
