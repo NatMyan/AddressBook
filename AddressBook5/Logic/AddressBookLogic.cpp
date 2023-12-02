@@ -194,15 +194,7 @@ void AddressBookLogic::saveAddressBook() {
         copyDatabaseContents(*db, saveFilePath);*/
         // db->changeDatabaseName(saveFilePath);
         qDebug() << saveFilePath;
-        QSqlQuery sourceQuery(db->getDatabase()); 
-        if (db->open()) {
-            qDebug() << "db1 is still open";
-        }
-        else {
-            qDebug() << "db1 isn't open";
-        } 
-
-        db->getDatabase().open();
+        
         if (db->getDatabase().open()) {
             qDebug() << "2: db1 is still open";
         }
@@ -214,7 +206,7 @@ void AddressBookLogic::saveAddressBook() {
         db2.setDatabaseName(saveFilePath);
         db2.open();
 
-        // QSqlQuery sourceQuery(db->getDatabase()); 
+        QSqlQuery sourceQuery(db->getDatabase()); 
         QSqlQuery destQuery(db2);
         destQuery.exec("CREATE TABLE contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)");
 
@@ -299,7 +291,7 @@ void AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb
     // destDb.setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
 }
 
-void AddressBookLogic::copyDatabaseContents(Database& sourceDb, const QString& destFilePath) {
+/*void AddressBookLogic::copyDatabaseContents(Database& sourceDb, const QString& destFilePath) {
     // Open the source database and read its contents
     sourceDb.readContacts();
 
@@ -318,7 +310,7 @@ void AddressBookLogic::copyDatabaseContents(Database& sourceDb, const QString& d
 
     // Detach the destination database
     attachQuery.exec("DETACH DATABASE dest_database");
-}
+}*/
 
 /*void AddressBookLogic::handleAddContactRequest() {
     QString name = addDialog->name();
