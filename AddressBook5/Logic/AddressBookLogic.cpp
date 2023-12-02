@@ -180,10 +180,10 @@ void AddressBookLogic::saveAddressBook() {
         qDebug() << "Save File Path: " << saveFilePath;
 
         // QSqlDatabase db2 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
-        Database* db2 = new Database;
-        db2->makeDatabase(saveFilePath);
-        db2->createTable();
-        db2->setDatabase(db->getDatabase());
+        Database db2; // = new Database;
+        db2.makeDatabase(saveFilePath);
+        db2.createTable();
+        db2.setDatabase(db->getDatabase());
         /*db->closeDatabase();
         Database* db2 = new Database;
         db2->setDatabase(db->getDatabase().addDatabase("QSQLITE", "saveConnection"));
