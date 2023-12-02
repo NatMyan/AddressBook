@@ -40,6 +40,7 @@ class AddressBookLogic : public QObject {
 
     private:
         void copyDatabaseContents(Database& sourceDb, Database& destDb, const QString& filePath);
+        void copyDatabaseContents(Database& sourceDb, const QString& destFilePath);
 
     private:
         Database *db;

@@ -187,10 +187,12 @@ void AddressBookLogic::saveAddressBook() {
         db2.setDatabase(db->getDatabase());*/
 
         // db->setDatabaseName(saveFilePath);
-        Database db2(saveFilePath);
+        /*Database db2(saveFilePath);
         db2.addDatabase("QSQLITE", "saveConnection");
         db2.setDatabase(db->getDatabase());
-        // copyDatabaseContents(*db, db2, saveFilePath);
+        copyDatabaseContents(*db, saveFilePath);*/
+        db->changeDatabaseName(saveFilePath);
+        qDebug() << saveFilePath;
         /*db->closeDatabase();
         Database* db2 = new Database;
         db2->setDatabase(db->getDatabase().addDatabase("QSQLITE", "saveConnection"));
@@ -251,6 +253,26 @@ void AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb
     // destDb.setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
 }
 
+void AddressBookLogic::copyDatabaseContents(Database& sourceDb, const QString& destFilePath) {
+    // Open the source database and read its contents
+    sourceDb.readContacts();
+
+    // Attach the destination database
+    QSqlQuery attachQuery(sourceDb.getDatabase());
+    attachQuery.exec("ATTACH DATABASE '" + destFilePath + "' AS dest_database");
+
+    // Copy the contents from the source to the destination
+    QSqlQuery copyQuery(sourceDb.getDatabase());
+
+    copyQuery.exec("INSERT INTO dest_database.contacts SELECT * FROM contacts");
+
+    if (copyQuery.lastError().isValid()) {
+        qDebug() << "Failed to copy database contents:" << copyQuery.lastError().text();
+    }
+
+    // Detach the destination database
+    attachQuery.exec("DETACH DATABASE dest_database");
+}
 
 /*void AddressBookLogic::handleAddContactRequest() {
     QString name = addDialog->name();

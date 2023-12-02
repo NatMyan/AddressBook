@@ -24,6 +24,7 @@ class Database : public QSqlDatabase {
         bool writeContacts(const QList<Contact> &contacts);
         QSqlDatabase getDatabase();
         void setDatabase(const QSqlDatabase& db);
+        void changeDatabaseName(const QString& fileName);
 
     private:
         QSqlDatabase db_;

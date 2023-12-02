@@ -20,6 +20,10 @@ QSqlDatabase Database::getDatabase() {
     return db_;
 }
 
+void Database::changeDatabaseName(const QString& fileName) {
+    db_.setDatabaseName(fileName);
+}
+
 void Database::openDatabase(const QString &filePath) {
     if (!filePath.isEmpty()) {
         qDebug() << "Selected File: " << filePath;
