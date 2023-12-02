@@ -105,13 +105,7 @@ void AddressBookInterface::showDatabaseContents() {
 
                 table->setRowCount(rowCount);
                 table->setColumnCount(columnCount);
-
-                /*for (int row = 0; row < rowCount; ++row) {
-                    for (int col = 0; col < columnCount; ++col) {
-                        QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
-                        table->setItem(row, col, item);
-                    }
-                }*/
+                
                 for (int row = 0; row < rowCount; ++row) {
                     QString tabNameFromData = model.data(model.index(row, 3)).toString(); 
                     if (tabNameFromData == tabWidget->tabText(tabIndex)) {
@@ -119,8 +113,22 @@ void AddressBookInterface::showDatabaseContents() {
                             QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
                             table->setItem(row, col, item);
                         }
+                        tabWidget->setCurrentIndex(currentColNameIndex);
                     }
                 }
+                /*int row = 0;
+                while (row < rowCount) {
+                    QString tabNameFromData = model.data(model.index(row, 3)).toString(); 
+                    int tRow = 0;
+                    if (tabNameFromData == tabWidget->tabText(tabIndex)) {
+                        for (int col = 0; col < columnCount; ++col) {
+                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                            table->setItem(tRow, col, item);
+                        }  
+                        ++tRow; 
+                    }
+                    ++row;
+                }*/
             } 
             else {
                 qDebug() << "Failed to fetch database contents: " << model.lastError().text();
