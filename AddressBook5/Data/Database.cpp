@@ -1,6 +1,7 @@
 #include "Database.hpp"
 
 #include <QFileInfo>
+#include <QTimer>
 
 /// NOTE: back to this when DBManager is DB somehow
 Database::Database(const QString &fileName) {
@@ -24,7 +25,6 @@ void Database::changeDatabaseName(const QString& fileName) {
     db_.close();
     db_.setDatabaseName(fileName);
     db_.open();
-    // openDatabase(fileName);
 }
 
 void Database::openDatabase(const QString &filePath) {
