@@ -19,7 +19,7 @@ class AddressBookLogic : public QObject {
         explicit AddressBookLogic(QObject *parent = nullptr);
 
     public:
-        void createTable();
+        // void createTable();
         QSqlDatabase getDB();
 
     public slots:
@@ -38,7 +38,7 @@ class AddressBookLogic : public QObject {
         void handleAddContactRequest();*/
 
     private:
-        Database db;
+        Database *db;
         AddDialog *addDialog; 
         OpenDialog *openDialog;
         SearchDialog *searchDialog;

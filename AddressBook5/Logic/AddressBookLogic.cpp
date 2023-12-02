@@ -10,14 +10,15 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
     addDialog(new AddDialog),
     openDialog(new OpenDialog),
     searchDialog(new SearchDialog),
-    saveDialog(new SaveDialog)
+    saveDialog(new SaveDialog),
+    db (new Database)
 {   
-    createTable();
+    // createTable();
 }
 
-void AddressBookLogic::createTable() {
-    db.makeDatabase();
-    db.createTable();
+// void AddressBookLogic::createTable() {
+    // db.makeDatabase();
+    // db.createTable();
     /* db = QSqlDatabase::addDatabase("QSQLITE");
     QString fileName = "../untitled.db";  
 
@@ -46,10 +47,10 @@ void AddressBookLogic::createTable() {
     else {
         qDebug() << "Failed to create table:" << query.lastError().text();
     }*/
-}
+// }
 
 QSqlDatabase AddressBookLogic::getDB() {
-    return db.getDatabase();
+    return db->getDatabase();
 }
 
 void AddressBookLogic::addContact() {
@@ -59,9 +60,9 @@ void AddressBookLogic::addContact() {
         QString name = addDialog->name();
         QString phone = addDialog->phone();
         QString email = addDialog->email();
-        QString tab = addDialog->tab();
+        QString tab = addDialog->selectedTab();
 
-        QSqlQuery query(db.getDatabase());
+        QSqlQuery query(getDB());
         query.prepare("INSERT INTO contacts (name, phone, email, belonging) VALUES (:name, :phone, :email, :belonging)");
         query.bindValue(":name", name);
         query.bindValue(":phone", phone);
@@ -115,7 +116,7 @@ void AddressBookLogic::openAddressBook() {
 
     QString filePath = QFileDialog::getOpenFileName(nullptr, "Open Address Book", "", "SQLite Database (*.db *.sqlite)");
 
-    db.openDatabase(filePath);
+    db->openDatabase(filePath);
     /*if (!filePath.isEmpty()) {
         qDebug() << "Selected File: " << filePath;
 
@@ -173,14 +174,14 @@ void AddressBookLogic::saveAddressBook() {
         qDebug() << "Save File Path: " << saveFilePath;
 
         // QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
-        db.setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
-        db.setDatabaseName(saveFilePath);
+        db->setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
+        db->setDatabaseName(saveFilePath);
 
-        if (db.open()) {
+        if (db->open()) {
             qDebug() << "Database opened successfully for saving";
         } 
         else {
-            qDebug() << "Failed to open database for saving: " << db.lastError().text();
+            qDebug() << "Failed to open database for saving: " << db->lastError().text();
         }
     }
 }

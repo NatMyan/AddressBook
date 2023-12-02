@@ -9,7 +9,7 @@ AddDialog::AddDialog(QWidget *parent) :
     nameText_(new QLineEdit),
     phoneText_(new QTextEdit),
     emailText_(new QTextEdit),
-    tabText_(new QLineEdit),
+    // tabText_(new QLineEdit),
     tabComboBox_(new QComboBox)
     // tables_(new Tables(nullptr, {"Family", "Friends", "Co-workers"}))
 {   
@@ -29,9 +29,9 @@ QString AddDialog::email() const {
     return emailText_->toPlainText();
 }
 
-QString AddDialog::tab() const {
+/*QString AddDialog::tab() const {
     return tabText_->text();
-}
+}*/
 
 QString AddDialog::selectedTab() const {
     return tabComboBox_->currentText();
@@ -105,7 +105,7 @@ void AddDialog::setupUi() {
     setLayout(mainLayout);
 
     connect(okButton, &QAbstractButton::clicked, this, [this]() {
-        emit contactAdded(name(), phone(), email(), tab());
+        emit contactAdded(name(), phone(), email(), selectedTab());
         accept();
     });
 

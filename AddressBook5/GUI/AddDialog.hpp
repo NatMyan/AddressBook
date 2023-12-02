@@ -20,7 +20,7 @@ class AddDialog : public QDialog {
         QString name() const;
         QString phone() const;
         QString email() const;
-        QString tab() const;
+        // QString tab() const;
         QString selectedTab() const;
         void updateTabs(const QString& tabText);
         void updateTabs(const TabNames& tabNames);
@@ -38,7 +38,7 @@ class AddDialog : public QDialog {
         QLineEdit *nameText_;
         QTextEdit *phoneText_;
         QTextEdit *emailText_;
-        QLineEdit *tabText_;
+        // QLineEdit *tabText_;
         QComboBox *tabComboBox_;
         TabNames tabNames_;
         // Tables tables_;

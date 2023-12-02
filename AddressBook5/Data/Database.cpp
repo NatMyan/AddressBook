@@ -30,7 +30,7 @@ void Database::openDatabase(const QString &filePath) {
         if (db.open()) {
             qDebug() << "Database opened successfully";
 
-            QSqlQuery query;
+            QSqlQuery query(db_);
             if (!query.exec("SELECT * FROM contacts")) {
                 if (!query.exec("CREATE TABLE contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)")) {
                     qDebug() << "Failed to create 'contacts' table: " << query.lastError().text();
@@ -75,21 +75,24 @@ void Database::makeDatabase() {
 }
 
 bool Database::createTable() {
-    QSqlQuery query;
-    return query.exec("CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)");
+    QSqlQuery query(db_);
+    
+    query.exec("CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)");
 
     if (query.exec()) {
         qDebug() << "Table created successfully";
+        return true;
     } 
     else {
         qDebug() << "Failed to create table:" << query.lastError().text();
+        return false;
     }
 }
 
 QList<Contact> Database::readContacts() {
     QList<Contact> contacts;
 
-    QSqlQuery query;
+    QSqlQuery query(db_);
     if (query.exec("SELECT name, phone, email, belonging FROM contacts")) {
         while (query.next()) {
             Contact contact;
@@ -108,7 +111,7 @@ QList<Contact> Database::readContacts() {
 }
 
 bool Database::writeContacts(const QList<Contact> &contacts) {
-    QSqlQuery query;
+    QSqlQuery query(db_);
 
     if (!query.exec("DELETE FROM contacts")) {
         qDebug() << "Error clearing contacts:" << query.lastError().text();
