@@ -39,6 +39,9 @@ class AddressBookLogic : public QObject {
         void handleAddContactRequest();*/
 
     private:
+        void  AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb, const QString& filePath);
+
+    private:
         Database *db;
         AddDialog *addDialog; 
         OpenDialog *openDialog;

@@ -4,6 +4,7 @@
 #include <QFileDialog>
 #include <QSqlQuery>
 #include <QSqlError>
+#include <QSqlRecord>
 
 AddressBookLogic::AddressBookLogic(QObject *parent) : 
     QObject(parent),
@@ -207,6 +208,46 @@ void AddressBookLogic::saveAddressBook() {
         }
     }
 }
+
+void AddressBookLogic::copyDatabaseContents(Database& sourceDb, Database& destDb, const QString& filePath) {
+    // Open the source database and read its contents
+    sourceDb.readContacts();
+
+    // Open the destination database
+    destDb.makeDatabase(filePath);  // This assumes makeDatabase initializes the destination database
+
+    // Copy the contents from the source to the destination
+    QSqlQuery sourceQuery(sourceDb.getDatabase());
+    QSqlQuery destQuery(destDb.getDatabase());
+
+    sourceQuery.exec("SELECT * FROM contacts");
+
+    while (sourceQuery.next()) {
+        QSqlRecord record = sourceQuery.record();
+
+        // Assuming contacts table has columns: name, phone, email, tab
+        QString name = record.value("name").toString();
+        QString phone = record.value("phone").toString();
+        QString email = record.value("email").toString();
+        QString tab = record.value("tab").toString();
+
+        // Insert the data into the destination database
+        destQuery.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
+        destQuery.bindValue(":name", name);
+        destQuery.bindValue(":phone", phone);
+        destQuery.bindValue(":email", email);
+        destQuery.bindValue(":tab", tab);
+
+        if (!destQuery.exec()) {
+            qDebug() << "Failed to insert record into destination database:" << destQuery.lastError().text();
+        }
+    }
+
+    // Save the destination database
+    destDb.getDatabase().commit();
+    // destDb.setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
+}
+
 
 /*void AddressBookLogic::handleAddContactRequest() {
     QString name = addDialog->name();
