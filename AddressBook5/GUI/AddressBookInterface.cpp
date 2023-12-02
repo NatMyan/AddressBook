@@ -115,12 +115,12 @@ void AddressBookInterface::showDatabaseContents() {
                 for (int row = 0; row < rowCount; ++row) {
                     QString tabNameFromData = model.data(model.index(row, 3)).toString(); 
                     if (tabNameFromData == tabWidget->tabText(tabIndex)) {
-                        for (int r = 0; r < rowCount; ++r) {
+                        // for (int r = 0; r < rowCount; ++r) {
                             for (int col = 0; col < columnCount; ++col) {
-                                QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(r, col)).toString());
+                                QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
                                 table->setItem(row, col, item);
                             }
-                        }
+                        // }
                     }
                 }
             } 
