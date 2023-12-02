@@ -192,8 +192,37 @@ void AddressBookLogic::saveAddressBook() {
         db2.addDatabase("QSQLITE", "saveConnection");
         db2.setDatabase(db->getDatabase());
         copyDatabaseContents(*db, saveFilePath);*/
-        db->changeDatabaseName(saveFilePath);
+        // db->changeDatabaseName(saveFilePath);
         qDebug() << saveFilePath;
+
+        QSqlDatabase db2 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
+        db2.setDatabaseName(saveFilePath);
+
+        QSqlQuery sourceQuery(db->getDatabase()); 
+        QSqlQuery destQuery(db2);
+
+        sourceQuery.exec("SELECT * FROM contacts");
+
+        while (sourceQuery.next()) {
+            QSqlRecord record = sourceQuery.record();
+
+            // Assuming contacts table has columns: name, phone, email, tab
+            QString name = record.value("name").toString();
+            QString phone = record.value("phone").toString();
+            QString email = record.value("email").toString();
+            QString tab = record.value("tab").toString();
+
+            // Insert the data into the destination database
+            destQuery.prepare("INSERT INTO contacts (name, phone, email, tab) VALUES (:name, :phone, :email, :tab)");
+            destQuery.bindValue(":name", name);
+            destQuery.bindValue(":phone", phone);
+            destQuery.bindValue(":email", email);
+            destQuery.bindValue(":tab", tab);
+
+            if (!destQuery.exec()) {
+                qDebug() << "Failed to insert record into destination database:" << destQuery.lastError().text();
+            }
+        }
 
         /*db->closeDatabase();
         Database* db2 = new Database;
@@ -205,13 +234,13 @@ void AddressBookLogic::saveAddressBook() {
         // db->setDatabaseName(saveFilePath);
         // db2->readContacts();
 
-        if (db->open()) {
+        if (db2.open()) {
         // if (db->open()) {
             qDebug() << "Database opened successfully for saving";
         } 
         else {
             // qDebug() << "Failed to open database for saving: " << db->lastError().text();
-            qDebug() << "Failed to open database for saving: " << db->lastError().text();
+            qDebug() << "Failed to open database for saving: " << db2.lastError().text();
         }
     }
 }
