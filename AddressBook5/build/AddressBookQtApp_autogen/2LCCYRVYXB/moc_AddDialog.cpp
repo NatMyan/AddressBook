@@ -46,7 +46,7 @@ static constexpr auto qt_meta_stringdata_CLASSAddDialogENDCLASS = QtMocHelpers::
     "phone",
     "email",
     "tab",
-    "updateTabs",
+    "updateTabNames",
     "tabName"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
@@ -59,7 +59,7 @@ struct qt_meta_stringdata_CLASSAddDialogENDCLASS_t {
     char stringdata4[6];
     char stringdata5[6];
     char stringdata6[4];
-    char stringdata7[11];
+    char stringdata7[15];
     char stringdata8[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
@@ -73,8 +73,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSAddDialogENDCLASS_t qt_meta_str
         QT_MOC_LITERAL(29, 5),  // "phone"
         QT_MOC_LITERAL(35, 5),  // "email"
         QT_MOC_LITERAL(41, 3),  // "tab"
-        QT_MOC_LITERAL(45, 10),  // "updateTabs"
-        QT_MOC_LITERAL(56, 7)   // "tabName"
+        QT_MOC_LITERAL(45, 14),  // "updateTabNames"
+        QT_MOC_LITERAL(60, 7)   // "tabName"
     },
     "AddDialog",
     "contactAdded",
@@ -83,7 +83,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSAddDialogENDCLASS_t qt_meta_str
     "phone",
     "email",
     "tab",
-    "updateTabs",
+    "updateTabNames",
     "tabName"
 };
 #undef QT_MOC_LITERAL
@@ -133,7 +133,7 @@ Q_CONSTINIT const QMetaObject AddDialog::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        // method 'updateTabs'
+        // method 'updateTabNames'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
     >,
@@ -147,7 +147,7 @@ void AddDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         (void)_t;
         switch (_id) {
         case 0: _t->contactAdded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
-        case 1: _t->updateTabs((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->updateTabNames((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
