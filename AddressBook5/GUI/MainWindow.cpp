@@ -17,7 +17,7 @@ void MainWindow::setupUi() {
     connect(startMenu, &StartMenu::openClicked, this, &MainWindow::onOpenClicked);
     connect(addressBookLogic, &AddressBookLogic::contactAdded, this, &MainWindow::onContactAdded);
     connect(addressBookLogic, &AddressBookLogic::contactEdited, this, &MainWindow::onContactEdited);
-    connect(addressBookInterface, &AddressBookInterface::tabAdded, addressBookLogic->getAddDialog(), &AddDialog::updateTabs);
+    connect(addressBookInterface, &AddressBookInterface::tabAdded, addressBookLogic->getAddDialog(), &AddDialog::updateTabNames);
 
     stackedWidget->addWidget(startMenu);
     stackedWidget->addWidget(addressBookInterface);

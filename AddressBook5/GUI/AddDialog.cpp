@@ -37,9 +37,9 @@ QString AddDialog::selectedTab() const {
     return tabComboBox_->currentText();
 }
 
-void AddDialog::updateTabs(const QString& tabText) {
+/*void AddDialog::updateTabs(const QString& tabText) {
     tabComboBox_->addItem(tabText);
-}
+}*/
 
 void AddDialog::updateTabs(const TabNames& tabNames) {
     tabComboBox_->clear();
@@ -48,7 +48,7 @@ void AddDialog::updateTabs(const TabNames& tabNames) {
     }
 }
 
-void AddDialog::updateTabs(const QString& tabName) {
+void AddDialog::updateTabNames(const QString& tabName) {
     tabComboBox_->addItem(tabName);
 }
 

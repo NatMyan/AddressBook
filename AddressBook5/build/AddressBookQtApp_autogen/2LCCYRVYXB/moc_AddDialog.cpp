@@ -45,11 +45,13 @@ static constexpr auto qt_meta_stringdata_CLASSAddDialogENDCLASS = QtMocHelpers::
     "name",
     "phone",
     "email",
-    "tab"
+    "tab",
+    "updateTabs",
+    "tabName"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSAddDialogENDCLASS_t {
-    uint offsetsAndSizes[14];
+    uint offsetsAndSizes[18];
     char stringdata0[10];
     char stringdata1[13];
     char stringdata2[1];
@@ -57,6 +59,8 @@ struct qt_meta_stringdata_CLASSAddDialogENDCLASS_t {
     char stringdata4[6];
     char stringdata5[6];
     char stringdata6[4];
+    char stringdata7[11];
+    char stringdata8[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSAddDialogENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -68,7 +72,9 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSAddDialogENDCLASS_t qt_meta_str
         QT_MOC_LITERAL(24, 4),  // "name"
         QT_MOC_LITERAL(29, 5),  // "phone"
         QT_MOC_LITERAL(35, 5),  // "email"
-        QT_MOC_LITERAL(41, 3)   // "tab"
+        QT_MOC_LITERAL(41, 3),  // "tab"
+        QT_MOC_LITERAL(45, 10),  // "updateTabs"
+        QT_MOC_LITERAL(56, 7)   // "tabName"
     },
     "AddDialog",
     "contactAdded",
@@ -76,7 +82,9 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSAddDialogENDCLASS_t qt_meta_str
     "name",
     "phone",
     "email",
-    "tab"
+    "tab",
+    "updateTabs",
+    "tabName"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -88,7 +96,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSAddDialogENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -96,10 +104,16 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSAddDialogENDCLASS[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    4,   20,    2, 0x06,    1 /* Public */,
+       1,    4,   26,    2, 0x06,    1 /* Public */,
+
+ // slots: name, argc, parameters, tag, flags, initial metatype offsets
+       7,    1,   35,    2, 0x0a,    6 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString, QMetaType::QString,    3,    4,    5,    6,
+
+ // slots: parameters
+    QMetaType::Void, QMetaType::QString,    8,
 
        0        // eod
 };
@@ -118,6 +132,9 @@ Q_CONSTINIT const QMetaObject AddDialog::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'updateTabs'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
     >,
     nullptr
@@ -130,6 +147,7 @@ void AddDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         (void)_t;
         switch (_id) {
         case 0: _t->contactAdded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[4]))); break;
+        case 1: _t->updateTabs((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -163,13 +181,13 @@ int AddDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

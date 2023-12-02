@@ -22,13 +22,13 @@ class AddDialog : public QDialog {
         QString email() const;
         // QString tab() const;
         QString selectedTab() const;
-        void updateTabs(const QString& tabText);
+        // void updateTabs(const QString& tabText);
         void updateTabs(const TabNames& tabNames);
         // QString contact() const;
         // void updateTabs(const QTabWidget *tabs);
         // void updateTabs(const Tables& tables);
     public slots:
-        void updateTabs(const QString& tabName);
+        void updateTabNames(const QString& tabName);
 
     signals:
         void contactAdded(const QString &name, const QString &phone, const QString &email, const QString &tab);
