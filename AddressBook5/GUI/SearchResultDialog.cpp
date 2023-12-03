@@ -15,7 +15,7 @@ void SearchResultDialog::showSearchResultDialog() {
     setWindowTitle("Search Result");
 
     QVBoxLayout* fullLayout = new QVBoxLayout(this);
-    if (!qVec.empty()) {
+    if (!qVec_.empty()) {
         for (qsizetype i = 0; i < qVec_.size(); ++i) {
             QHBoxLayout* layout = new QHBoxLayout(this);
             

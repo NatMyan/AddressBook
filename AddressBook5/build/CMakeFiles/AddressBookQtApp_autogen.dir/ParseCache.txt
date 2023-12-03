@@ -6630,8 +6630,10 @@
  mdp:/opt/homebrew/Cellar/qt/6.5.2/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/Logic/AddressBookLogic.cpp
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchResultDialog.hpp
-/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/AddDialog.cpp
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/OpenDialog.cpp
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/AddDialog.cpp
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/TabNames.cpp
+/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/StartMenu.cpp
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/AddressBookInterface.cpp
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchDialog.hpp
  mmc:Q_OBJECT
@@ -7495,6 +7497,4 @@
  mdp:/opt/homebrew/Cellar/qt/6.5.2/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h
  mdp:/opt/homebrew/Cellar/qt/6.5.2/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/Tables.cpp
-/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/StartMenu.cpp
-/Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/TabNames.cpp
 /Users/nataliemanukyan/Desktop/AddressBook/AddressBook5/GUI/SearchDialog.cpp
