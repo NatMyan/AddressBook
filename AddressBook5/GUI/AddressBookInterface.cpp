@@ -117,20 +117,27 @@ void AddressBookInterface::showDatabaseContents() {
                             table->setItem(row, col, item);
                         }
                     }
-                }
-                /*int row = 0;
-                while (row < rowCount) {
-                    QString tabNameFromData = model.data(model.index(row, 3)).toString(); 
-                    int tRow = 0;
-                    if (tabNameFromData == tabWidget->tabText(tabIndex)) {
-                        for (int col = 0; col < columnCount; ++col) {
-                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
-                            table->setItem(tRow, col, item);
-                        }  
-                        ++tRow; 
+                    else {
+                        int existingTabIndex = -1;
+                        for (int i = 0; i < tabWidget->count(); ++i) {
+                            if (tabWidget->tabText(i) == tabNameFromData) {
+                                existingTabIndex = i;
+                                break;
+                            }
+                        }
+                        if (existingTabIndex == -1) {
+                            QTableWidget *newTable = new QTableWidget(this);
+                            newTable->setColumnCount(columnCount);
+                            tabWidget->insertTab(tabWidget->count() - 1, newTable, tabNameFromData);
+                            tabWidget->setCurrentIndex(tabWidget->count() - 2); 
+
+                            for (int col = 0; col < columnCount; ++col) {
+                                QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                                newTable->setItem(0, col, item);
+                            }
+                        }
                     }
-                    ++row;
-                }*/
+                }
             } 
             else {
                 qDebug() << "Failed to fetch database contents: " << model.lastError().text();
@@ -153,6 +160,7 @@ void AddressBookInterface::editContact(QTableWidgetItem *item) {
 
 void AddressBookInterface::openAddressBook() {
     logic->openAddressBook();
+    showDatabaseContents();
 }
 
 void AddressBookInterface::searchContacts() {
@@ -179,6 +187,74 @@ QTableWidget* AddressBookInterface::getCurrentTable() const {
     return currentTable;
 }
 
+
+                    /*
+                    void AddressBookInterface::showDatabaseContents() {
+    for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
+        QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
+
+        if (table) {
+            table->clearContents();
+            table->setRowCount(0);
+
+            QSqlTableModel model(nullptr, logic->getDB());
+            model.setTable("contacts");
+
+            if (model.select()) {
+                int rowCount = model.rowCount();
+                int columnCount = model.columnCount();
+
+                qDebug() << rowCount << columnCount;
+
+                table->setRowCount(rowCount);
+                table->setColumnCount(columnCount);
+
+                for (int row = 0; row < rowCount; ++row) {
+                    QString tabNameFromData = model.data(model.index(row, 3)).toString();
+                    if (tabNameFromData == tabWidget->tabText(tabIndex)) {
+                        tabWidget->setCurrentIndex(tabIndex);
+                        for (int col = 0; col < columnCount; ++col) {
+                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                            table->setItem(row, col, item);
+                        }
+                    } else {
+                        // Check if the tab exists, if not, add it
+                        int existingTabIndex = tabWidget->indexOf(tabNameFromData);
+                        if (existingTabIndex == -1) {
+                            QTableWidget *newTable = new QTableWidget(this);
+                            newTable->setColumnCount(columnCount);
+                            tabWidget->insertTab(tabWidget->count() - 1, newTable, tabNameFromData);
+                            tabWidget->setCurrentIndex(tabWidget->count() - 2); // Set the current index to the newly added tab
+
+                            // Populate the new tab with data
+                            for (int col = 0; col < columnCount; ++col) {
+                                QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                                newTable->setItem(0, col, item);
+                            }
+                        }
+                    }
+                }
+            } else {
+                qDebug() << "Failed to fetch database contents: " << model.lastError().text();
+            }
+        }
+    }
+}
+*/
+// }
+/*int row = 0;
+while (row < rowCount) {
+    QString tabNameFromData = model.data(model.index(row, 3)).toString(); 
+    int tRow = 0;
+    if (tabNameFromData == tabWidget->tabText(tabIndex)) {
+        for (int col = 0; col < columnCount; ++col) {
+            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+            table->setItem(tRow, col, item);
+        }  
+        ++tRow; 
+    }
+    ++row;
+}*/
 
 /*void AddressBookInterface::showDatabaseContents() {
     if (currentTable) {
