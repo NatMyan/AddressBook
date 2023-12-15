@@ -19,18 +19,21 @@ void AddressBookLogic::searchContacts(const QString& searchOption, const QString
 
     QList<Contact> contacts = database_.readContacts();
     for (const Contact& contact : contacts) {
-        if (searchOption == "name")
+        if (searchOption == "name") {
             if (contact.name.contains(searchName, Qt::CaseInsensitive)) {
                 searchResults.append(contact);
             }
-        else if (searchOption == "phone")
+        }
+        else if (searchOption == "phone") {
             if (contact.phone.contains(searchName, Qt::CaseInsensitive)) {
                 searchResults.append(contact);
             }
-        else if (searchOption == "email")
+        }
+        else if (searchOption == "email") {
             if (contact.email.contains(searchName, Qt::CaseInsensitive)) {
                 searchResults.append(contact);
             }
+        }
     }
 
     emit updateTable(); // Notify the UI to update the table
