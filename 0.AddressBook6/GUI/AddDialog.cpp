@@ -31,28 +31,20 @@ QString AddDialog::email() const {
     return emailText_->toPlainText();
 }
 
-/*QString AddDialog::tab() const {
-    return tabText_->text();
-}*/
-
 QString AddDialog::selectedTab() const {
     return tabComboBox_->currentText();
-}
-
-/*void AddDialog::updateTabs(const QString& tabText) {
-    tabComboBox_->addItem(tabText);
-}*/
-
-void AddDialog::updateTabs(const TabNames& tabNames) {
-    tabComboBox_->clear();
-    for (const auto& tabName : tabNames.getTabNames()) {
-        tabComboBox_->addItem(tabName);
-    }
 }
 
 void AddDialog::updateTabs2() {
     tabComboBox_->clear();
     for (const auto& tabName : tabNames_.getTabNames()) {
+        tabComboBox_->addItem(tabName);
+    }
+}
+
+void AddDialog::updateTabs(const TabNames& tabNames) {
+    tabComboBox_->clear();
+    for (const auto& tabName : tabNames.getTabNames()) {
         tabComboBox_->addItem(tabName);
     }
 }
@@ -140,6 +132,14 @@ void AddDialog::setupUi() {
 
     // setWindowTitle(tr("Add a Contact"));
 }
+
+/*void AddDialog::updateTabs(const QString& tabText) {
+    tabComboBox_->addItem(tabText);
+}*/
+
+/*QString AddDialog::tab() const {
+    return tabText_->text();
+}*/
 
 /*void AddDialog::updateTabs(const QTabWidget *tabs) {
     if (!tabs) {

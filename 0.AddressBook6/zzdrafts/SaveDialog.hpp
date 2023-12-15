@@ -1,4 +1,4 @@
-#ifndef SAVE_DIALOG_HPP
+/*#ifndef SAVE_DIALOG_HPP
 #define SAVE_DIALOG_HPP
 
 #include <QFileDialog>
@@ -23,7 +23,7 @@ class SaveDialog : public QDialog {
 };
 
 #endif // SAVE_DIALOG_HPP
-
+*/
 
 
 /*SaveDialog saveDialog;

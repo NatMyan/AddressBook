@@ -1,4 +1,4 @@
-#include "SaveDialog.hpp"
+/*#include "SaveDialog.hpp"
 
 #include <QMessageBox>
 #include <QLabel>
@@ -44,7 +44,7 @@ void SaveDialog::setupUi() {
     mainLayout->addWidget(cancelButton, 0, Qt::AlignHCenter);
 
     setLayout(mainLayout);
-}
+}*/
 
 /*SaveDialog::SaveDialog(QWidget *parent) : 
     QFileDialog(parent) 

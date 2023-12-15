@@ -41,9 +41,9 @@ class AddDialog : public QDialog {
         QLineEdit *nameText_;
         QTextEdit *phoneText_;
         QTextEdit *emailText_;
-        // QLineEdit *tabText_;
         QComboBox *tabComboBox_;
         TabNames tabNames_;
+        // QLineEdit *tabText_;
         // Tables tables_;
 };
 
