@@ -38,7 +38,7 @@ bool SignUpMenuLogic::signUp(const QString& username, const QString& password) {
 
 bool SignUpMenuLogic::openDatabase() {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("users.db");
+    db.setDatabaseName("../zinfo/users.db");
 
     if (!db.open()) {
         qDebug() << "Database connection failed:" << db.lastError().text();
