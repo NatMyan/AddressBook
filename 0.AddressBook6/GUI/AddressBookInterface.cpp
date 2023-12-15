@@ -1,5 +1,74 @@
 #include "AddressBookInterface.hpp"
 
+AddressBookInterface::AddressBookInterface(AddressBookLogic* logic, QWidget* parent) :
+    QWidget(parent), 
+    logic_(logic) 
+{
+    setupUi();
+}
+
+void AddressBookInterface::onAddContactClicked() {
+    // Add contact button clicked, show a dialog or perform related actions
+
+}
+
+void AddressBookInterface::onSearchClicked(const QString& searchOption, const QString& searchName) {
+    // Search button clicked, trigger logic for searching contacts
+    logic_->searchContacts(searchOption, searchName);
+}
+
+void AddressBookInterface::setupUi() {
+    // Initialize UI components
+    QVBoxLayout* mainLayout = new QVBoxLayout(this);
+
+    // Table for displaying contacts
+    contactTable_ = new QTableWidget(this);
+
+    // Search components
+    QHBoxLayout* searchLayout = new QHBoxLayout;
+    searchNameLineEdit_ = new QLineEdit(this);
+    searchOptionComboBox_ = new QComboBox(this);
+    QPushButton* searchButton = new QPushButton("Search", this);
+    connect(searchButton, &QPushButton::clicked, this, &AddressBookInterface::onSearchClicked);
+
+    // Add components to layouts
+    searchLayout->addWidget(searchNameLineEdit_);
+    searchLayout->addWidget(searchOptionComboBox_);
+    searchLayout->addWidget(searchButton);
+
+    // Add components to the main layout
+    mainLayout->addWidget(contactTable_);
+    mainLayout->addLayout(searchLayout);
+
+    // Connect signals and slots
+    connect(logic_, &AddressBookLogic::updateTable, this, [this] { /* Update UI when the table changes */ });
+
+    // Initialize the tab widget
+    tabWidget_ = new QTabWidget(this);
+    connect(tabWidget_, &QTabWidget::currentChanged, this, &AddressBookInterface::onTabChanged);
+    mainLayout->addWidget(tabWidget_);
+
+    // Initialize tabs
+    updateTabNames();
+}
+
+void AddressBookInterface::updateTabNames() {
+    QVector<QString> tabNames = tabNames_.getTabNames();
+    for (const auto& tabName : tabNames) {
+        auto tab = new QWidget(tabWidget_);
+        tabWidget_->addTab(tab, tabName);
+    }
+}
+
+void AddressBookInterface::onTabChanged(int index) {
+    // Handle tab change, update the displayed contacts based on the selected tab
+    // You can use the tab index to filter the contacts from the database
+    // and update the table accordingly
+    logic_->filterContactsByTab(tabWidget_->tabText(index));
+}
+
+/*#include "AddressBookInterface.hpp"
+
 AddressBookInterface::AddressBookInterface(const QString& username, QWidget* parent) : 
     QWidget(parent), 
     username_(username),
@@ -138,7 +207,7 @@ void AddressBookInterface::onContactAdded(const QString& name, const QString& ph
     // Handle contact added signal (if needed)
     // For example, update the table
     updateTable();
-}
+}*/
 
 /*
 // ... (previous code)

@@ -1,6 +1,48 @@
 #ifndef ADDRESS_BOOK_INTERFACE_HPP
 #define ADDRESS_BOOK_INTERFACE_HPP
 
+#include "../Logic/AddressBookLogic.hpp"
+#include "TabNames.hpp"
+
+#include <QWidget>
+#include <QTableWidget>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QLineEdit>
+#include <QComboBox>
+#include <QTabWidget>
+
+class AddressBookInterface : public QWidget {
+    Q_OBJECT
+
+    public:
+        AddressBookInterface(AddressBookLogic* logic, QWidget* parent = nullptr);
+
+    private slots:
+        void onAddContactClicked();
+        void onSearchClicked(const QString& searchOption, const QString& searchName);
+        void onTabChanged(int index);
+
+    private:
+        void setupUi();
+        void updateTabNames();
+        void updateContactTable(const QList<Contact>& contacts);
+
+    private:
+        AddressBookLogic* logic_;
+        QTableWidget* contactTable_;
+        QTabWidget* tabWidget_;
+        QLineEdit* searchNameLineEdit_;
+        QComboBox* searchOptionComboBox_;
+        TabNames tabNames_;
+};
+
+#endif // ADDRESS_BOOK_INTERFACE_HPP
+
+
+/*#ifndef ADDRESS_BOOK_INTERFACE_HPP
+#define ADDRESS_BOOK_INTERFACE_HPP
+
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
@@ -37,4 +79,4 @@ private:
     Database database_;
 };
 
-#endif // ADDRESS_BOOK_INTERFACE_HPP
+#endif // ADDRESS_BOOK_INTERFACE_HPP*/
