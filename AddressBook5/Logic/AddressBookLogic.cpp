@@ -95,6 +95,19 @@ void AddressBookLogic::addContact() {
     }
 }
 
+/*
+QSqlQuery query;
+QString updateQuery = "UPDATE " + tableName + " SET " + columnName + " = :newValue WHERE " + condition;
+query.prepare(updateQuery);
+query.bindValue(":newValue", newValue);
+
+if (query.exec()) {
+    qDebug() << "Update successful";
+}
+else {
+    qDebug() << "Update failed:" << query.lastError().text();
+}
+*/
 void AddressBookLogic::editContact(QTableWidgetItem *item) {
     int tabIndex = item->tableWidget()->property("TabIndex").toInt();
     int rowIndex = item->row();
