@@ -36,7 +36,7 @@ void Database::openDatabase(const QString &filePath) {
 
         if (db.open()) {
             qDebug() << "Database opened successfully";
-
+            setDatabase(db);
             QSqlQuery query(db_);
             if (!query.exec("SELECT * FROM contacts")) {
                 if (!query.exec("CREATE TABLE contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)")) {
@@ -69,9 +69,14 @@ void Database::makeDatabase(const QString &fileName) {
     db_ = QSqlDatabase::addDatabase("QSQLITE");
 
     if (!fileName.isEmpty()) {
-        fileName_ = fileName;
+        qDebug() << "File doesn't exist";
+        db_.setDatabaseName(fileName);
+        // fileName_ = fileName;
     } 
     else {
+        qDebug() << "This shouldn't happen now, should it?";
+    }
+    /*else {
         fileName_ = "../untitled.db";
 
         QFileInfo fileInfo(fileName_);
@@ -83,9 +88,7 @@ void Database::makeDatabase(const QString &fileName) {
                 fileName_ = "../untitled" + QString::number(i) + ".db";
             }
         }
-    }
-
-    db_.setDatabaseName(fileName_);
+    }*/
 
     if (!db_.open()) {
         qDebug() << "Failed to open database:" << db_.lastError().text();

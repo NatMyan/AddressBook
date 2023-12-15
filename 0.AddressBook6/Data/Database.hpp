@@ -28,7 +28,6 @@ class Database : public QSqlDatabase {
 
     private:
         QSqlDatabase db_;
-        QString fileName_;
 };
 
 #endif // DATABASE_HPP

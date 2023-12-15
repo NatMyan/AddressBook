@@ -88,7 +88,7 @@ bool SignUpMenuLogic::insertUser(const QString& username, const QByteArray& hash
         qDebug() << "Failed to insert user:" << insertUserQuery.lastError().text();
         return false;
     }
-
+    
     return true;
 }
 
