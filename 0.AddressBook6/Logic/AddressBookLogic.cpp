@@ -1,8 +1,8 @@
 #include "AddressBookLogic.hpp"
 
-AddressBookLogic::AddressBookLogic(Database& database) : database_(database) 
-{
+AddressBookLogic::AddressBookLogic(const QString& username) {
     // Additional initialization if needed
+    database_ = Database("../zinfo/" + username + ".db");
 }
 
 void AddressBookLogic::addContact(const QString& name, const QString& phone, const QString& email, const QString& belonging) {
@@ -14,7 +14,7 @@ void AddressBookLogic::addContact(const QString& name, const QString& phone, con
     emit updateTable(); // Notify the UI to update the table
 }
 
-void AddressBookLogic::searchContacts(const QString& searchOption, const QString& searchName) {
+QList<Contact> AddressBookLogic::searchContacts(const QString& searchOption, const QString& searchName) {
     QList<Contact> searchResults;
 
     QList<Contact> contacts = database_.readContacts();
@@ -37,6 +37,7 @@ void AddressBookLogic::searchContacts(const QString& searchOption, const QString
     }
 
     emit updateTable(); // Notify the UI to update the table
+    return searchResults;
 }
 
 void AddressBookLogic::filterContactsByTab(const QString& tabName) {

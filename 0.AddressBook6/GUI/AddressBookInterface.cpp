@@ -1,4 +1,6 @@
 #include "AddressBookInterface.hpp"
+#include "AddDialog.hpp"
+#include "SearchResultDialog.hpp"
 
 AddressBookInterface::AddressBookInterface(AddressBookLogic* logic, QWidget* parent) :
     QWidget(parent), 
@@ -9,12 +11,15 @@ AddressBookInterface::AddressBookInterface(AddressBookLogic* logic, QWidget* par
 
 void AddressBookInterface::onAddContactClicked() {
     // Add contact button clicked, show a dialog or perform related actions
-
+    AddDialog aDialog;
+    aDialog.exec();
 }
 
 void AddressBookInterface::onSearchClicked(const QString& searchOption, const QString& searchName) {
     // Search button clicked, trigger logic for searching contacts
-    logic_->searchContacts(searchOption, searchName);
+    auto searchResults = logic_->searchContacts(searchOption, searchName);
+    SearchResultDialog resultDialog(searchResults, this);
+    resultDialog.showSearchResultDialog();
 }
 
 void AddressBookInterface::setupUi() {

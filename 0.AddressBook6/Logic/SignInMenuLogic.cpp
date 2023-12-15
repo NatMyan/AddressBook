@@ -1,4 +1,5 @@
 #include "SignInMenuLogic.hpp"
+#include <QSqlError>
 
 SignInMenuLogic::SignInMenuLogic(QObject *parent) : QObject(parent) {}
 

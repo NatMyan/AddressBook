@@ -1,5 +1,96 @@
 #include "MainWindow.hpp"
 
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent) {
+    setupUi();
+}
+
+void MainWindow::setupUi() {
+    stackedWidget_ = new QStackedWidget(this);
+    startMenu_ = new StartMenu(this);
+    signInMenu_ = new SignInMenu(this);
+    signUpMenu_ = new SignUpMenu(this);
+    addressBookLogic_ = new AddressBookLogic; // Provide necessary dependencies
+    addressBookInterface_ = new AddressBookInterface(addressBookLogic_);
+
+    stackedWidget_->addWidget(startMenu_);
+    stackedWidget_->addWidget(signInMenu_);
+    stackedWidget_->addWidget(signUpMenu_);
+    stackedWidget_->addWidget(addressBookInterface_);
+
+    connect(startMenu_, &StartMenu::sigSignInClicked, this, &MainWindow::onSignInClicked);
+    connect(startMenu_, &StartMenu::sigSignUpClicked, this, &MainWindow::onSignUpClicked);
+    connect(signInMenu_, &SignInMenu::sigSignIn, addressBookLogic_, &AddressBookLogic::onSignIn);
+    connect(signUpMenu_, &SignUpMenu::sigSignUp, addressBookLogic_, &AddressBookLogic::onSignUp);
+    connect(addressBookInterface_, &AddressBookInterface::sigSignOutClicked, this, [=]() {
+        stackedWidget_->setCurrentWidget(startMenu_);
+    });
+
+    setCentralWidget(stackedWidget_);
+    stackedWidget_->setCurrentWidget(startMenu_);
+}
+
+void MainWindow::onSignInClicked() {
+    stackedWidget_->setCurrentWidget(signInMenu_);
+}
+
+void MainWindow::onSignUpClicked() {
+    stackedWidget_->setCurrentWidget(signUpMenu_);
+}
+
+void MainWindow::onSignInSuccess(QString username) {
+    addressBookInterface_->setUsername(username);
+    stackedWidget_->setCurrentWidget(addressBookInterface_);
+}
+
+/*#include "MainWindow.hpp"
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent) {
+    setupUi();
+}
+
+void MainWindow::setupUi() {
+    stackedWidget_ = new QStackedWidget(this);
+    startMenu_ = new StartMenu(this);
+    signInMenu_ = new SignInMenu(this);
+    signUpMenu_ = new SignUpMenu(this);
+    addressBookInterface_ = new AddressBookInterface(this);
+
+    stackedWidget_->addWidget(startMenu_);
+    stackedWidget_->addWidget(signInMenu_);
+    stackedWidget_->addWidget(signUpMenu_);
+    stackedWidget_->addWidget(addressBookInterface_);
+
+    connect(startMenu_, &StartMenu::sigSignInClicked, this, &MainWindow::onSignInClicked);
+    connect(startMenu_, &StartMenu::sigSignUpClicked, this, &MainWindow::onSignUpClicked);
+    connect(signInMenu_, &SignInMenu::sigSignIn, addressBookInterface_, &AddressBookInterface::onSignIn);
+    connect(signUpMenu_, &SignUpMenu::sigSignUp, addressBookInterface_, &AddressBookInterface::onSignUp);
+    connect(signInMenu_->getCancelButton(), &QPushButton::clicked, this, &MainWindow::onSignInClicked);
+    connect(signUpMenu_->getCancelButton(), &QPushButton::clicked, this, &MainWindow::onSignUpClicked);
+    connect(addressBookInterface_, &AddressBookInterface::sigSignOutClicked, this, [=]() {
+        stackedWidget_->setCurrentWidget(startMenu_);
+    });
+
+    setCentralWidget(stackedWidget_);
+    stackedWidget_->setCurrentWidget(startMenu_);
+}
+
+void MainWindow::onSignInClicked() {
+    stackedWidget_->setCurrentWidget(signInMenu_);
+}
+
+void MainWindow::onSignUpClicked() {
+    stackedWidget_->setCurrentWidget(signUpMenu_);
+}
+
+void MainWindow::onSignInSuccess(QString username) {
+    addressBookInterface_->setUsername(username);
+    stackedWidget_->setCurrentWidget(addressBookInterface_);
+}*/
+
+/*#include "MainWindow.hpp"
+
 MainWindow::MainWindow(QWidget *parent) : 
     QMainWindow(parent) 
 {
@@ -60,7 +151,7 @@ void MainWindow::onContactEdited(int tabIndex, int rowIndex, const QString &name
             tabItem->setText(tab);
         }
     }
-}
+}*/
 
 
 /*MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
