@@ -918,4 +918,5 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SignInMenu.cpp.o: \
   /opt/homebrew/include/QtWidgets/qlayout.h \
   /opt/homebrew/include/QtWidgets/qlayoutitem.h \
   /opt/homebrew/include/QtWidgets/qboxlayout.h \
-  /opt/homebrew/include/QtWidgets/qgridlayout.h
+  /opt/homebrew/include/QtWidgets/qgridlayout.h \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/StartMenu.hpp

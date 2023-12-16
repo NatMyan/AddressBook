@@ -56,6 +56,7 @@ class AddressBookLogic : public QObject {
 
     private:
         Database *db;
+        Database *userDB;
         AddDialog *addDialog; 
         SearchDialog *searchDialog;
         // OpenDialog *openDialog;

@@ -12,13 +12,13 @@ AddressBookLogic::AddressBookLogic(QObject *parent) :
     QObject(parent),
     addDialog(new AddDialog),
     // openDialog(new OpenDialog),
-    searchDialog(new SearchDialog)
+    searchDialog(new SearchDialog),
     // saveDialog(new SaveDialog),
-    // db (new Database(""))
+    db (new Database(""))
 {   
-    db->openDatabase("../zinfo/users.db");
-    // connect(addDialog, &AddDialog::accepted, this, &AddressBookLogic::handleAddContactRequest);
-    // createTable();
+    userDB = new Database("../zinfo/users.db");
+    QSqlQuery query(*userDB);
+    query.exec("CREATE TABLE IF NOT EXISTS users (username TEXT, password TEXT)");
 }
 
 void AddressBookLogic::signIn(QString username, QString password) {
@@ -26,7 +26,8 @@ void AddressBookLogic::signIn(QString username, QString password) {
 
     if (checkCredentials(username, hashedPassword)) {
         emit sigSignInSuccess(username);
-    } else {
+    } 
+    else {
         emit sigSignInFailed();
     }
 }
@@ -48,7 +49,7 @@ void AddressBookLogic::signUp(QString username, QString password) {
 }
 
 bool AddressBookLogic::checkCredentials(const QString &username, const QByteArray &hashedPassword) {
-    QSqlQuery query(getDB());
+    QSqlQuery query(*userDB);
     query.prepare("SELECT COUNT(*) FROM users WHERE username = ? AND password = ?");
     query.addBindValue(username);
     query.addBindValue(hashedPassword);
@@ -61,7 +62,7 @@ bool AddressBookLogic::checkCredentials(const QString &username, const QByteArra
 }
 
 bool AddressBookLogic::checkUsernameExists(const QString &username) {
-    QSqlQuery query(getDB());
+    QSqlQuery query(*userDB);
     query.prepare("SELECT COUNT(*) FROM users WHERE username = ?");
     query.addBindValue(username);
 
@@ -77,7 +78,7 @@ QByteArray AddressBookLogic::hashPassword(const QString &password) {
 }
 
 bool AddressBookLogic::insertUser(const QString &username, const QByteArray &hashedPassword) {
-    QSqlQuery query(getDB());
+    QSqlQuery query(*userDB);
     query.prepare("INSERT INTO users (username, password) VALUES (?, ?)");
     query.addBindValue(username);
     query.addBindValue(QString::fromUtf8(hashedPassword));

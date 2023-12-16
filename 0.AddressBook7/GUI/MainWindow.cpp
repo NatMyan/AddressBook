@@ -9,8 +9,8 @@ void MainWindow::setupUi() {
     startMenu_ = new StartMenu(this);
     signInMenu_ = new SignInMenu(this);
     signUpMenu_ = new SignUpMenu(this);
+    addressBookLogic_ = new AddressBookLogic(this);
     addressBookInterface_ = new AddressBookInterface(addressBookLogic_, this);
-    addressBookLogic_ = new AddressBookLogic(this); // Provide necessary dependencies
 
     stackedWidget_->addWidget(startMenu_);
     stackedWidget_->addWidget(signInMenu_);
@@ -22,7 +22,8 @@ void MainWindow::setupUi() {
     connect(signInMenu_, &SignInMenu::sigSignIn, addressBookLogic_, &AddressBookLogic::signIn);
     connect(signUpMenu_, &SignUpMenu::sigSignUp, addressBookLogic_, &AddressBookLogic::signUp);
     connect(addressBookLogic_, &AddressBookLogic::sigSignInSuccess, this, &MainWindow::onSignInSuccess);
-    // connect(addressBookInterface_, &AddressBookInterface::sigSignOutClicked, this, &MainWindow::onSignOutClicked);
+    connect(addressBookLogic_, &AddressBookLogic::sigSignUpSuccess, this, &MainWindow::onSignUpSuccess);
+    connect(addressBookInterface_, &AddressBookInterface::signOutClicked, this, &MainWindow::onSignOutClicked);
 
     setCentralWidget(stackedWidget_);
     stackedWidget_->setCurrentWidget(startMenu_);
@@ -30,15 +31,29 @@ void MainWindow::setupUi() {
 
 void MainWindow::onSignInClicked() {
     stackedWidget_->setCurrentWidget(signInMenu_);
+    connect(signInMenu_, &SignInMenu::sigCancelClicked, this, &MainWindow::onCancelClicked);
+}
+
+void MainWindow::onCancelClicked() {
+    stackedWidget_->setCurrentWidget(startMenu_);
 }
 
 void MainWindow::onSignUpClicked() {
     stackedWidget_->setCurrentWidget(signUpMenu_);
+    connect(signUpMenu_, &SignUpMenu::sigCancelClicked, this, &MainWindow::onCancelClicked);
 }
 
 void MainWindow::onSignInSuccess(QString username) {
     // addressBookInterface_->setUsername(username);
     stackedWidget_->setCurrentWidget(addressBookInterface_);
+}
+
+void MainWindow::onSignUpSuccess() {
+    stackedWidget_->setCurrentWidget(addressBookInterface_);
+}
+
+void MainWindow::onSignOutClicked() {
+    stackedWidget_->setCurrentWidget(startMenu_);
 }
 
 /*void MainWindow::onSignOutClicked() {

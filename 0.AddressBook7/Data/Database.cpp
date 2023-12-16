@@ -4,7 +4,7 @@
 #include <QTimer>
 
 /// NOTE: back to this when DBManager is DB somehow
-Database::Database(const QString &fileName) {
+Database::Database(const QString& fileName) {
     makeDatabase(fileName);
     createTable();
 }

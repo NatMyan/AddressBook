@@ -20,6 +20,9 @@ class MainWindow : public QMainWindow {
         void onSignInClicked();
         void onSignUpClicked();
         void onSignInSuccess(QString username);
+        void onSignUpSuccess();
+        void onCancelClicked();
+        void onSignOutClicked();
         // void onSignOutClicked();
 
     private:

@@ -10,6 +10,7 @@ AddressBookInterface::AddressBookInterface(AddressBookLogic *logic, QWidget *par
     tabWidget(new QTabWidget),
     addTabButton(new QPushButton("Add Tab")),
     addContactButton(new QPushButton("Add")),
+    signOutButton(new QPushButton("Sign Out")),
     // openButton(new QPushButton("Open")),
     searchButton(new QPushButton("Search")),
     // saveButton(new QPushButton("Save")),
@@ -51,7 +52,8 @@ void AddressBookInterface::setupUi() {
     connect(addContactButton, &QPushButton::clicked, this, &AddressBookInterface::addContactClicked);
     // connect(openButton, &QPushButton::clicked, this, &AddressBookInterface::openAddressBook);
     connect(searchButton, &QPushButton::clicked, this, &AddressBookInterface::searchContacts);
-    // connect(saveButton, &QPushButton::clicked, this, &AddressBookInterface::saveAddressBook);   
+    // connect(saveButton, &QPushButton::clicked, this, &AddressBookInterface::saveAddressBook);  
+    connect(signOutButton, &QPushButton::clicked, this, &AddressBookInterface::signOutClicked); 
 }
 
 void AddressBookInterface::setupTabs() {
@@ -73,6 +75,10 @@ void AddressBookInterface::setupTabs() {
 
     connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addTabClicked);
     connect(currentTable, &QTableWidget::itemDoubleClicked, this, &AddressBookInterface::editContact);
+}
+
+void AddressBookInterface::signOutClicked() {
+    emit sigSignOutClicked();
 }
 
 void AddressBookInterface::addTabClicked() {

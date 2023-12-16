@@ -22,10 +22,12 @@ class AddressBookInterface : public QWidget {
 
     signals:
         void tabAdded(const QString& tabName);
+        void sigSignOutClicked();
 
     public slots:
         void addTabClicked();
         void addContactClicked();
+        void signOutClicked();
         void editContact(QTableWidgetItem *item);
         // void openAddressBook();
         void searchContacts();
@@ -43,6 +45,7 @@ class AddressBookInterface : public QWidget {
         QPushButton *addTabButton;
         QPushButton *addContactButton;
         QPushButton *searchButton;
+        QPushButton *signOutButton;
         QTableWidget *currentTable;
         QVector<QTableWidget*> currTables;
         TabNames tabNames; 

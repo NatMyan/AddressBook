@@ -772,4 +772,9 @@
   /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
   /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
-  /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h
+  /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
+  /opt/homebrew/Cellar/qt/6.5.2/lib/QtSql.framework/Versions/A/Headers/QSqlDatabase \
+  /opt/homebrew/Cellar/qt/6.5.2/lib/QtSql.framework/Versions/A/Headers/qsqldatabase.h \
+  /opt/homebrew/Cellar/qt/6.5.2/lib/QtSql.framework/Versions/A/Headers/qtsql-config.h \
+  /opt/homebrew/Cellar/qt/6.5.2/lib/QtSql.framework/Versions/A/Headers/qtsqlexports.h \
+  /opt/homebrew/Cellar/qt/6.5.2/lib/QtSql.framework/Versions/A/Headers/qtsqlglobal.h

@@ -1,4 +1,5 @@
 #include "SignInMenu.hpp"
+#include "StartMenu.hpp"
 
 SignInMenu::SignInMenu(QWidget *parent) : QWidget(parent) {
     setupUi();
@@ -21,6 +22,7 @@ void SignInMenu::setupUi() {
 
     connect(signInButton, &QPushButton::clicked, this, &SignInMenu::onSignInButtonClicked);
     connect(cancelButton, &QPushButton::clicked, this, &SignInMenu::onCancelButtonClicked);
+    // connect(cancelButton, &QPushButton::clicked, this, &StartMenu::onCancelButtonClicked);
 
     auto mainLayout = new QVBoxLayout;
     mainLayout->addWidget(usernameLabel);

@@ -92,6 +92,7 @@
         "utility": "cpp",
         "qstring": "cpp",
         "qhboxlayout": "cpp",
-        "qstackedwidget": "cpp"
+        "qstackedwidget": "cpp",
+        "qtimer": "cpp"
     }
 }

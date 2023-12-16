@@ -24,6 +24,9 @@ class SignInMenuLogic : public QObject {
         bool checkCredentials(const QString &username, const QString &hashedPassword);
         QString hashPassword(const QString &password);
         bool openDatabase();
+    
+    private:
+        QSqlDatabase db;
 };
 
 #endif // SIGN_IN_MENU_LOGIC_HPP

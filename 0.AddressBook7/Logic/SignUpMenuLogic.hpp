@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QSqlDatabase>
 
 class SignUpMenuLogic : public QObject {
     Q_OBJECT
@@ -23,6 +24,9 @@ class SignUpMenuLogic : public QObject {
         bool checkUsernameExists(const QString& username);
         QByteArray hashPassword(const QString& password);
         bool insertUser(const QString& username, const QByteArray& hashedPassword);
+    
+    private:
+        QSqlDatabase db;
 };
 
 #endif // SIGN_UP_MENU_LOGIC_HPP

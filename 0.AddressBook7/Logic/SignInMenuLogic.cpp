@@ -1,7 +1,9 @@
 #include "SignInMenuLogic.hpp"
 #include <QSqlError>
 
-SignInMenuLogic::SignInMenuLogic(QObject *parent) : QObject(parent) {}
+SignInMenuLogic::SignInMenuLogic(QObject *parent) : QObject(parent) {
+    openDatabase();
+}
 
 void SignInMenuLogic::signIn(QString username, QString password) {
     QString hashedPassword = hashPassword(password);
@@ -42,7 +44,7 @@ QString SignInMenuLogic::hashPassword(const QString &password) {
 }
 
 bool SignInMenuLogic::openDatabase() {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("../zinfo/users.db");
 
     if (!db.open()) {
