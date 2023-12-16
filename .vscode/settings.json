@@ -91,6 +91,7 @@
         "random": "cpp",
         "utility": "cpp",
         "qstring": "cpp",
-        "qhboxlayout": "cpp"
+        "qhboxlayout": "cpp",
+        "qstackedwidget": "cpp"
     }
 }
