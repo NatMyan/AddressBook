@@ -34,7 +34,6 @@ void Database::openDatabase(const QString &filePath, const QString &dbName, cons
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
         db.setDatabaseName(filePath);
 
-
         if (db.open()) {
             qDebug() << "Database opened successfully";
 

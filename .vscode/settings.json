@@ -96,6 +96,8 @@
         "qtimer": "cpp",
         "qcryptographichash": "cpp",
         "csetjmp": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "qtnetwork": "cpp",
+        "qmainwindow": "cpp"
     }
 }
