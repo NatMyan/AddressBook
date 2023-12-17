@@ -94,6 +94,8 @@
         "qhboxlayout": "cpp",
         "qstackedwidget": "cpp",
         "qtimer": "cpp",
-        "qcryptographichash": "cpp"
+        "qcryptographichash": "cpp",
+        "csetjmp": "cpp",
+        "iostream": "cpp"
     }
 }
