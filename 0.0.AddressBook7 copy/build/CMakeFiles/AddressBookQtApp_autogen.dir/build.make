@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7
+CMAKE_SOURCE_DIR = "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build
+CMAKE_BINARY_DIR = "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build"
 
 # Utility rule file for AddressBookQtApp_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/AddressBookQtApp_autogen.dir/compiler_depend.make
 include CMakeFiles/AddressBookQtApp_autogen.dir/progress.make
 
 CMakeFiles/AddressBookQtApp_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target AddressBookQtApp"
-	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E cmake_autogen /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build/CMakeFiles/AddressBookQtApp_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target AddressBookQtApp"
+	/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E cmake_autogen "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles/AddressBookQtApp_autogen.dir/AutogenInfo.json" ""
 
 AddressBookQtApp_autogen: CMakeFiles/AddressBookQtApp_autogen
 AddressBookQtApp_autogen: CMakeFiles/AddressBookQtApp_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/AddressBookQtApp_autogen.dir/clean:
 .PHONY : CMakeFiles/AddressBookQtApp_autogen.dir/clean
 
 CMakeFiles/AddressBookQtApp_autogen.dir/depend:
-	cd /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7 /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7 /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build/CMakeFiles/AddressBookQtApp_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy" "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy" "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build" "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build" "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles/AddressBookQtApp_autogen.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/AddressBookQtApp_autogen.dir/depend
 

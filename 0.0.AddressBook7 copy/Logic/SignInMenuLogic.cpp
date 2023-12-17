@@ -5,12 +5,12 @@ SignInMenuLogic::SignInMenuLogic(QObject *parent) : QObject(parent) {
     openDatabase();
 }
 
-void SignInMenuLogic::signIn(QString username, QString password) {
+void SignInMenuLogic::signIn(QString &username, QString &password) {
     QString hashedPassword = hashPassword(password);
 
     if (checkCredentials(username, hashedPassword)) {
         qDebug() << "Sign in successful!";
-        emit sigSignInSuccess(username);
+        emit sigSignInSuccess(username, password);
     } 
     else {
         qDebug() << "Sign in failed. Please try again.";
@@ -53,4 +53,8 @@ bool SignInMenuLogic::openDatabase() {
     }
 
     return true;
+}
+
+QSqlDatabase SignInMenuLogic::getUserDB() {
+    return db;
 }

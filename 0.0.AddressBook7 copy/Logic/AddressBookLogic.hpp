@@ -2,11 +2,11 @@
 #define ADDRESS_BOOK_LOGIC_HPP
 
 #include "../GUI/AddDialog.hpp"
-// #include "../GUI/OpenDialog.hpp"
 #include "../GUI/SearchDialog.hpp"
-// #include "../GUI/SaveDialog.hpp"
 #include "../GUI/SearchResultDialog.hpp"
 #include "../Data/Database.hpp"
+// #include "../GUI/SaveDialog.hpp"
+// #include "../GUI/OpenDialog.hpp"
 
 #include <QObject>
 #include <QTableWidget>
@@ -27,19 +27,19 @@ class AddressBookLogic : public QObject {
     public slots:
         void addContact();
         void editContact(QTableWidgetItem *item);
-        void openAddressBook();
         void searchContacts();
-        void saveAddressBook();
-        void signIn(QString username, QString password);
-        void signUp(QString username, QString password);
+        void signIn(QString &username, QString &password);
+        void signUp(QString &username, QString &password);
         // void addContactToDatabase(const QString &name, const QString &phone, const QString &email, const QString &tab);
+        // void openAddressBook();
+        // void saveAddressBook();
 
     signals:
         void contactAdded(const QString &name, const QString &phone, const QString &email, const QString &tab);
         void contactEdited(int tabIndex, int rowIndex, const QString &name, const QString &phone, const QString &email, const QString &tab);
-        void sigSignInSuccess(QString username);
+        void sigSignInSuccess(QString &username);
         void sigSignInFailed();
-        void sigSignUpSuccess();
+        void sigSignUpSuccess(QString &username);
         void sigSignUpFailed(const QString& errorMessage);
 
     /*private slots:

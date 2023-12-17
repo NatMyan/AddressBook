@@ -1,7 +1,7 @@
 CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Data/Database.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Data/Database.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/include/QtCore/qchar.h \

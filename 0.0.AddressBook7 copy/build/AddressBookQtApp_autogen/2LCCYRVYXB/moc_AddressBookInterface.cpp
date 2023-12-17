@@ -40,67 +40,67 @@ namespace {
 struct qt_meta_stringdata_CLASSAddressBookInterfaceENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSAddressBookInterfaceENDCLASS = QtMocHelpers::stringData(
     "AddressBookInterface",
-    "tabAdded",
+    "sigTabAdded",
     "",
     "tabName",
     "sigSignOutClicked",
-    "addTabClicked",
-    "addContactClicked",
-    "signOutClicked",
-    "editContact",
+    "onAddTabClicked",
+    "onAddContactClicked",
+    "onSignOutClicked",
+    "onEditContact",
     "QTableWidgetItem*",
     "item",
-    "searchContacts",
-    "showDatabaseContents"
+    "onSearchContacts",
+    "onShowDatabaseContents"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSAddressBookInterfaceENDCLASS_t {
     uint offsetsAndSizes[26];
     char stringdata0[21];
-    char stringdata1[9];
+    char stringdata1[12];
     char stringdata2[1];
     char stringdata3[8];
     char stringdata4[18];
-    char stringdata5[14];
-    char stringdata6[18];
-    char stringdata7[15];
-    char stringdata8[12];
+    char stringdata5[16];
+    char stringdata6[20];
+    char stringdata7[17];
+    char stringdata8[14];
     char stringdata9[18];
     char stringdata10[5];
-    char stringdata11[15];
-    char stringdata12[21];
+    char stringdata11[17];
+    char stringdata12[23];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSAddressBookInterfaceENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSAddressBookInterfaceENDCLASS_t qt_meta_stringdata_CLASSAddressBookInterfaceENDCLASS = {
     {
         QT_MOC_LITERAL(0, 20),  // "AddressBookInterface"
-        QT_MOC_LITERAL(21, 8),  // "tabAdded"
-        QT_MOC_LITERAL(30, 0),  // ""
-        QT_MOC_LITERAL(31, 7),  // "tabName"
-        QT_MOC_LITERAL(39, 17),  // "sigSignOutClicked"
-        QT_MOC_LITERAL(57, 13),  // "addTabClicked"
-        QT_MOC_LITERAL(71, 17),  // "addContactClicked"
-        QT_MOC_LITERAL(89, 14),  // "signOutClicked"
-        QT_MOC_LITERAL(104, 11),  // "editContact"
-        QT_MOC_LITERAL(116, 17),  // "QTableWidgetItem*"
-        QT_MOC_LITERAL(134, 4),  // "item"
-        QT_MOC_LITERAL(139, 14),  // "searchContacts"
-        QT_MOC_LITERAL(154, 20)   // "showDatabaseContents"
+        QT_MOC_LITERAL(21, 11),  // "sigTabAdded"
+        QT_MOC_LITERAL(33, 0),  // ""
+        QT_MOC_LITERAL(34, 7),  // "tabName"
+        QT_MOC_LITERAL(42, 17),  // "sigSignOutClicked"
+        QT_MOC_LITERAL(60, 15),  // "onAddTabClicked"
+        QT_MOC_LITERAL(76, 19),  // "onAddContactClicked"
+        QT_MOC_LITERAL(96, 16),  // "onSignOutClicked"
+        QT_MOC_LITERAL(113, 13),  // "onEditContact"
+        QT_MOC_LITERAL(127, 17),  // "QTableWidgetItem*"
+        QT_MOC_LITERAL(145, 4),  // "item"
+        QT_MOC_LITERAL(150, 16),  // "onSearchContacts"
+        QT_MOC_LITERAL(167, 22)   // "onShowDatabaseContents"
     },
     "AddressBookInterface",
-    "tabAdded",
+    "sigTabAdded",
     "",
     "tabName",
     "sigSignOutClicked",
-    "addTabClicked",
-    "addContactClicked",
-    "signOutClicked",
-    "editContact",
+    "onAddTabClicked",
+    "onAddContactClicked",
+    "onSignOutClicked",
+    "onEditContact",
     "QTableWidgetItem*",
     "item",
-    "searchContacts",
-    "showDatabaseContents"
+    "onSearchContacts",
+    "onShowDatabaseContents"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -155,23 +155,23 @@ Q_CONSTINIT const QMetaObject AddressBookInterface::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSAddressBookInterfaceENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<AddressBookInterface, std::true_type>,
-        // method 'tabAdded'
+        // method 'sigTabAdded'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'sigSignOutClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'addTabClicked'
+        // method 'onAddTabClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'addContactClicked'
+        // method 'onAddContactClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'signOutClicked'
+        // method 'onSignOutClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'editContact'
+        // method 'onEditContact'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QTableWidgetItem *, std::false_type>,
-        // method 'searchContacts'
+        // method 'onSearchContacts'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'showDatabaseContents'
+        // method 'onShowDatabaseContents'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -183,21 +183,21 @@ void AddressBookInterface::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
         auto *_t = static_cast<AddressBookInterface *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->tabAdded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 0: _t->sigTabAdded((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->sigSignOutClicked(); break;
-        case 2: _t->addTabClicked(); break;
-        case 3: _t->addContactClicked(); break;
-        case 4: _t->signOutClicked(); break;
-        case 5: _t->editContact((*reinterpret_cast< std::add_pointer_t<QTableWidgetItem*>>(_a[1]))); break;
-        case 6: _t->searchContacts(); break;
-        case 7: _t->showDatabaseContents(); break;
+        case 2: _t->onAddTabClicked(); break;
+        case 3: _t->onAddContactClicked(); break;
+        case 4: _t->onSignOutClicked(); break;
+        case 5: _t->onEditContact((*reinterpret_cast< std::add_pointer_t<QTableWidgetItem*>>(_a[1]))); break;
+        case 6: _t->onSearchContacts(); break;
+        case 7: _t->onShowDatabaseContents(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (AddressBookInterface::*)(const QString & );
-            if (_t _q_method = &AddressBookInterface::tabAdded; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &AddressBookInterface::sigTabAdded; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
@@ -243,7 +243,7 @@ int AddressBookInterface::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void AddressBookInterface::tabAdded(const QString & _t1)
+void AddressBookInterface::sigTabAdded(const QString & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

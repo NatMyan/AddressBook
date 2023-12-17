@@ -41,21 +41,23 @@ static constexpr auto qt_meta_stringdata_CLASSSignInMenuLogicENDCLASS = QtMocHel
     "SignInMenuLogic",
     "sigSignInSuccess",
     "",
+    "QString&",
     "username",
+    "password",
     "sigSignInFailed",
-    "signIn",
-    "password"
+    "signIn"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSSignInMenuLogicENDCLASS_t {
-    uint offsetsAndSizes[14];
+    uint offsetsAndSizes[16];
     char stringdata0[16];
     char stringdata1[17];
     char stringdata2[1];
     char stringdata3[9];
-    char stringdata4[16];
-    char stringdata5[7];
-    char stringdata6[9];
+    char stringdata4[9];
+    char stringdata5[9];
+    char stringdata6[16];
+    char stringdata7[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSSignInMenuLogicENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -64,18 +66,20 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSignInMenuLogicENDCLASS_t qt_me
         QT_MOC_LITERAL(0, 15),  // "SignInMenuLogic"
         QT_MOC_LITERAL(16, 16),  // "sigSignInSuccess"
         QT_MOC_LITERAL(33, 0),  // ""
-        QT_MOC_LITERAL(34, 8),  // "username"
-        QT_MOC_LITERAL(43, 15),  // "sigSignInFailed"
-        QT_MOC_LITERAL(59, 6),  // "signIn"
-        QT_MOC_LITERAL(66, 8)   // "password"
+        QT_MOC_LITERAL(34, 8),  // "QString&"
+        QT_MOC_LITERAL(43, 8),  // "username"
+        QT_MOC_LITERAL(52, 8),  // "password"
+        QT_MOC_LITERAL(61, 15),  // "sigSignInFailed"
+        QT_MOC_LITERAL(77, 6)   // "signIn"
     },
     "SignInMenuLogic",
     "sigSignInSuccess",
     "",
+    "QString&",
     "username",
+    "password",
     "sigSignInFailed",
-    "signIn",
-    "password"
+    "signIn"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -95,18 +99,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSignInMenuLogicENDCLASS[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x06,    1 /* Public */,
-       4,    0,   35,    2, 0x06,    3 /* Public */,
+       1,    2,   32,    2, 0x06,    1 /* Public */,
+       6,    0,   37,    2, 0x06,    4 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    2,   36,    2, 0x0a,    4 /* Public */,
+       7,    2,   38,    2, 0x0a,    5 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 3,    4,    5,
     QMetaType::Void,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    3,    6,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 3,    4,    5,
 
        0        // eod
 };
@@ -122,13 +126,14 @@ Q_CONSTINIT const QMetaObject SignInMenuLogic::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<SignInMenuLogic, std::true_type>,
         // method 'sigSignInSuccess'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
         // method 'sigSignInFailed'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'signIn'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>
     >,
     nullptr
 } };
@@ -139,15 +144,15 @@ void SignInMenuLogic::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<SignInMenuLogic *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->sigSignInSuccess((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 0: _t->sigSignInSuccess((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString&>>(_a[2]))); break;
         case 1: _t->sigSignInFailed(); break;
-        case 2: _t->signIn((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 2: _t->signIn((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString&>>(_a[2]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (SignInMenuLogic::*)(QString );
+            using _t = void (SignInMenuLogic::*)(QString & , QString & );
             if (_t _q_method = &SignInMenuLogic::sigSignInSuccess; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
@@ -194,9 +199,9 @@ int SignInMenuLogic::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void SignInMenuLogic::sigSignInSuccess(QString _t1)
+void SignInMenuLogic::sigSignInSuccess(QString & _t1, QString & _t2)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 

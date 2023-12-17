@@ -1,7 +1,7 @@
 CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/AddressBookLogic.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/../GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/../GUI/AddDialog.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
@@ -925,13 +925,13 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: \
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/../GUI/../Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/../GUI/../Data/Contact.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/../GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/../GUI/TabNames.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QVector \
   /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/../GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/../GUI/SearchDialog.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qlayout.h \
@@ -945,8 +945,8 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/../GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/../Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/../GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/../Data/Database.hpp \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
   /opt/homebrew/include/QtSql/qtsqlglobal.h \

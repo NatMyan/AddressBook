@@ -21,18 +21,18 @@ class AddressBookInterface : public QWidget {
         QTableWidget* getCurrentTable() const;
 
     signals:
-        void tabAdded(const QString& tabName);
+        void sigTabAdded(const QString& tabName);
         void sigSignOutClicked();
 
     public slots:
-        void addTabClicked();
-        void addContactClicked();
-        void signOutClicked();
-        void editContact(QTableWidgetItem *item);
+        void onAddTabClicked();
+        void onAddContactClicked();
+        void onSignOutClicked();
+        void onEditContact(QTableWidgetItem *item);
+        void onSearchContacts();
+        void onShowDatabaseContents();
         // void openAddressBook();
-        void searchContacts();
         // void saveAddressBook();
-        void showDatabaseContents();
         
     private:
         void setupUi();

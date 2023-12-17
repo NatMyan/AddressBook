@@ -8,6 +8,8 @@
 #include "SignInMenu.hpp"
 #include "SignUpMenu.hpp"
 #include "AddressBookInterface.hpp"
+#include "../Logic/SignInMenuLogic.hpp"
+#include "../Logic/SignUpMenuLogic.hpp"
 #include "../Logic/AddressBookLogic.hpp"
 
 class MainWindow : public QMainWindow {
@@ -19,11 +21,15 @@ class MainWindow : public QMainWindow {
     private slots:
         void onSignInClicked();
         void onSignUpClicked();
-        void onSignInSuccess(QString username);
-        void onSignUpSuccess();
+        void onSignInSuccess(QString &username, QString &password);
+        void onSignUpSuccess(QString &username, QString &password);
         void onCancelClicked();
         void onSignOutClicked();
         // void onSignOutClicked();
+    
+    signals:
+        void sigSignInToAddressBook(QString &username, QString &password);
+        void sigSignUpToAddressBook(QString &username, QString &password);
 
     private:
         void setupUi();
@@ -34,6 +40,8 @@ class MainWindow : public QMainWindow {
         SignInMenu *signInMenu_;
         SignUpMenu *signUpMenu_;
         AddressBookInterface *addressBookInterface_;
+        SignInMenuLogic *signInMenuLogic_;
+        SignUpMenuLogic *signUpMenuLogic_;
         AddressBookLogic *addressBookLogic_;
 };
 

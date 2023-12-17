@@ -7,9 +7,10 @@
 
 SignUpMenuLogic::SignUpMenuLogic(QObject* parent) : QObject(parent) {
     openDatabase();
+    createUsersTable();
 }
 
-bool SignUpMenuLogic::signUp(const QString& username, const QString& password) {
+bool SignUpMenuLogic::signUp(QString& username, QString& password) {
     if (!openDatabase()) {
         emit signUpError("Database connection failed.");
         return false;
@@ -29,7 +30,7 @@ bool SignUpMenuLogic::signUp(const QString& username, const QString& password) {
 
     if (insertUser(username, hashedPassword)) {
         qDebug() << "User signed up successfully.";
-        emit signUpSuccess();
+        emit sigSignUpSuccess(username, password);
         return true;
     }
 
@@ -49,8 +50,12 @@ bool SignUpMenuLogic::openDatabase() {
     return true;
 }
 
+QSqlDatabase SignUpMenuLogic::getUserDB() {
+    return db;
+}
+
 bool SignUpMenuLogic::createUsersTable() {
-    QSqlQuery createTableQuery;
+    QSqlQuery createTableQuery(db);
     if (!createTableQuery.exec("CREATE TABLE IF NOT EXISTS users (username TEXT, password TEXT)")) {
         qDebug() << "Failed to create the users table:" << createTableQuery.lastError().text();
         return false;
@@ -89,7 +94,6 @@ bool SignUpMenuLogic::insertUser(const QString& username, const QByteArray& hash
         qDebug() << "Failed to insert user:" << insertUserQuery.lastError().text();
         return false;
     }
-    
     return true;
 }
 

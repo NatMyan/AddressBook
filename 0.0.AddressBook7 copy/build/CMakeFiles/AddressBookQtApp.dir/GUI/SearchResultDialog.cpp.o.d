@@ -1,7 +1,7 @@
 CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/SearchResultDialog.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/../Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Data/Contact.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/include/QtCore/qchar.h \

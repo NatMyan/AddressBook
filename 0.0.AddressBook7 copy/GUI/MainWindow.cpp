@@ -9,6 +9,8 @@ void MainWindow::setupUi() {
     startMenu_ = new StartMenu(this);
     signInMenu_ = new SignInMenu(this);
     signUpMenu_ = new SignUpMenu(this);
+    signInMenuLogic_ = new SignInMenuLogic(this);
+    signUpMenuLogic_ = new SignUpMenuLogic(this);
     addressBookLogic_ = new AddressBookLogic(this);
     addressBookInterface_ = new AddressBookInterface(addressBookLogic_, this);
 
@@ -19,11 +21,17 @@ void MainWindow::setupUi() {
 
     connect(startMenu_, &StartMenu::sigSignInClicked, this, &MainWindow::onSignInClicked);
     connect(startMenu_, &StartMenu::sigSignUpClicked, this, &MainWindow::onSignUpClicked);
-    connect(signInMenu_, &SignInMenu::sigSignIn, addressBookLogic_, &AddressBookLogic::signIn);
-    connect(signUpMenu_, &SignUpMenu::sigSignUp, addressBookLogic_, &AddressBookLogic::signUp);
-    connect(addressBookLogic_, &AddressBookLogic::sigSignInSuccess, this, &MainWindow::onSignInSuccess);
-    connect(addressBookLogic_, &AddressBookLogic::sigSignUpSuccess, this, &MainWindow::onSignUpSuccess);
-    connect(addressBookInterface_, &AddressBookInterface::signOutClicked, this, &MainWindow::onSignOutClicked);
+    connect(signInMenuLogic_, &SignInMenuLogic::sigSignInSuccess, this, &MainWindow::onSignInSuccess);
+    connect(signUpMenuLogic_, &SignUpMenuLogic::sigSignUpSuccess, this, &MainWindow::onSignUpSuccess);
+    // connect(signInMenu_, &SignInMenu::sigSignIn, this, &MainWindow::onSignInSuccess);
+    // connect(signUpMenu_, &SignUpMenu::sigSignUp, this, &MainWindow::onSignUpSuccess);
+    // connect(signInMenu_, &SignInMenu::sigSignIn, addressBookLogic_, &AddressBookLogic::signIn);
+    // connect(signUpMenu_, &SignUpMenu::sigSignUp, addressBookLogic_, &AddressBookLogic::signUp);
+    // connect(addressBookLogic_, &AddressBookLogic::sigSignInSuccess, this, &MainWindow::onSignInSuccess);
+    // connect(addressBookLogic_, &AddressBookLogic::sigSignUpSuccess, this, &MainWindow::onSignUpSuccess);
+    connect(this, &MainWindow::sigSignInToAddressBook, addressBookLogic_, &AddressBookLogic::signIn);
+    connect(this, &MainWindow::sigSignUpToAddressBook, addressBookLogic_, &AddressBookLogic::signUp);
+    connect(addressBookInterface_, &AddressBookInterface::sigSignOutClicked, this, &MainWindow::onSignOutClicked);
 
     setCentralWidget(stackedWidget_);
     stackedWidget_->setCurrentWidget(startMenu_);
@@ -43,23 +51,25 @@ void MainWindow::onSignUpClicked() {
     connect(signUpMenu_, &SignUpMenu::sigCancelClicked, this, &MainWindow::onCancelClicked);
 }
 
-void MainWindow::onSignInSuccess(QString username) {
+void MainWindow::onSignInSuccess(QString &username, QString &password) {
     // addressBookInterface_->setUsername(username);
     stackedWidget_->setCurrentWidget(addressBookInterface_);
+    emit sigSignInToAddressBook(username, password);
 }
 
-void MainWindow::onSignUpSuccess() {
+void MainWindow::onSignUpSuccess(QString &username, QString &password) {
     stackedWidget_->setCurrentWidget(addressBookInterface_);
+    emit sigSignUpToAddressBook(username, password);
 }
 
 void MainWindow::onSignOutClicked() {
     stackedWidget_->setCurrentWidget(startMenu_);
 }
 
+
 /*void MainWindow::onSignOutClicked() {
     stackedWidget_->setCurrentWidget(startMenu_);
 }*/
-
 
 /*#include "MainWindow.hpp"
 

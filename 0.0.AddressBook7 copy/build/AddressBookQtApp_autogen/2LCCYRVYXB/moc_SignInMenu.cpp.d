@@ -1,5 +1,5 @@
-/Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignInMenu.cpp: /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/SignInMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build/AddressBookQtApp_autogen/moc_predefs.h \
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignInMenu.cpp: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \

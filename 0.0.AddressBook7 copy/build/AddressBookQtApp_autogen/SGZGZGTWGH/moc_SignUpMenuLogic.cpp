@@ -39,47 +39,51 @@ namespace {
 struct qt_meta_stringdata_CLASSSignUpMenuLogicENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSSignUpMenuLogicENDCLASS = QtMocHelpers::stringData(
     "SignUpMenuLogic",
-    "signUpSuccess",
+    "sigSignUpSuccess",
     "",
+    "QString&",
+    "username",
+    "password",
     "signUpError",
     "errorMessage",
-    "signUp",
-    "username",
-    "password"
+    "signUp"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSSignUpMenuLogicENDCLASS_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[18];
     char stringdata0[16];
-    char stringdata1[14];
+    char stringdata1[17];
     char stringdata2[1];
-    char stringdata3[12];
-    char stringdata4[13];
-    char stringdata5[7];
-    char stringdata6[9];
-    char stringdata7[9];
+    char stringdata3[9];
+    char stringdata4[9];
+    char stringdata5[9];
+    char stringdata6[12];
+    char stringdata7[13];
+    char stringdata8[7];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSSignUpMenuLogicENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSSignUpMenuLogicENDCLASS_t qt_meta_stringdata_CLASSSignUpMenuLogicENDCLASS = {
     {
         QT_MOC_LITERAL(0, 15),  // "SignUpMenuLogic"
-        QT_MOC_LITERAL(16, 13),  // "signUpSuccess"
-        QT_MOC_LITERAL(30, 0),  // ""
-        QT_MOC_LITERAL(31, 11),  // "signUpError"
-        QT_MOC_LITERAL(43, 12),  // "errorMessage"
-        QT_MOC_LITERAL(56, 6),  // "signUp"
-        QT_MOC_LITERAL(63, 8),  // "username"
-        QT_MOC_LITERAL(72, 8)   // "password"
+        QT_MOC_LITERAL(16, 16),  // "sigSignUpSuccess"
+        QT_MOC_LITERAL(33, 0),  // ""
+        QT_MOC_LITERAL(34, 8),  // "QString&"
+        QT_MOC_LITERAL(43, 8),  // "username"
+        QT_MOC_LITERAL(52, 8),  // "password"
+        QT_MOC_LITERAL(61, 11),  // "signUpError"
+        QT_MOC_LITERAL(73, 12),  // "errorMessage"
+        QT_MOC_LITERAL(86, 6)   // "signUp"
     },
     "SignUpMenuLogic",
-    "signUpSuccess",
+    "sigSignUpSuccess",
     "",
+    "QString&",
+    "username",
+    "password",
     "signUpError",
     "errorMessage",
-    "signUp",
-    "username",
-    "password"
+    "signUp"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -99,18 +103,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSignUpMenuLogicENDCLASS[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   32,    2, 0x06,    1 /* Public */,
-       3,    1,   33,    2, 0x06,    2 /* Public */,
+       1,    2,   32,    2, 0x06,    1 /* Public */,
+       6,    1,   37,    2, 0x06,    4 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    2,   36,    2, 0x0a,    4 /* Public */,
+       8,    2,   40,    2, 0x0a,    6 /* Public */,
 
  // signals: parameters
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 3,    4,    5,
+    QMetaType::Void, QMetaType::QString,    7,
 
  // slots: parameters
-    QMetaType::Bool, QMetaType::QString, QMetaType::QString,    6,    7,
+    QMetaType::Bool, 0x80000000 | 3, 0x80000000 | 3,    4,    5,
 
        0        // eod
 };
@@ -124,15 +128,17 @@ Q_CONSTINIT const QMetaObject SignUpMenuLogic::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSSignUpMenuLogicENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<SignUpMenuLogic, std::true_type>,
-        // method 'signUpSuccess'
+        // method 'sigSignUpSuccess'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
         // method 'signUpError'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'signUp'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>
     >,
     nullptr
 } };
@@ -143,17 +149,17 @@ void SignUpMenuLogic::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<SignUpMenuLogic *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->signUpSuccess(); break;
+        case 0: _t->sigSignUpSuccess((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString&>>(_a[2]))); break;
         case 1: _t->signUpError((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 2: { bool _r = _t->signUp((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 2: { bool _r = _t->signUp((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString&>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (SignUpMenuLogic::*)();
-            if (_t _q_method = &SignUpMenuLogic::signUpSuccess; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            using _t = void (SignUpMenuLogic::*)(QString & , QString & );
+            if (_t _q_method = &SignUpMenuLogic::sigSignUpSuccess; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
@@ -199,9 +205,10 @@ int SignUpMenuLogic::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void SignUpMenuLogic::signUpSuccess()
+void SignUpMenuLogic::sigSignUpSuccess(QString & _t1, QString & _t2)
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1

@@ -29,6 +29,7 @@ void AddressBookInterface::setupUi() {
     buttonLayout->addWidget(addContactButton);
     // buttonLayout->addWidget(openButton);
     buttonLayout->addWidget(searchButton);
+    buttonLayout->addWidget(signOutButton);
     // buttonLayout->addWidget(saveButton);
     
     mainLayout->addLayout(buttonLayout);
@@ -96,6 +97,73 @@ void AddressBookInterface::addTabClicked() {
 void AddressBookInterface::showDatabaseContents() {
     for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
         QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
+        if (table) {
+            table->clearContents();
+            table->setRowCount(0);
+
+            QSqlTableModel model(nullptr, logic->getDB());
+            model.setTable("contacts");
+
+            if (model.select()) {
+                int rowCount = model.rowCount();
+                int columnCount = model.columnCount();
+
+                qDebug() << rowCount << columnCount;
+                
+                auto currTableRowCount = 0;
+                QList<int> rows;
+                int existingTabIndex = -1;
+                QString tabNameFromData;
+
+                for (int row = 0; row < rowCount; ++row) {
+                    tabNameFromData = model.data(model.index(row, 3)).toString(); 
+                    if (tabNameFromData == tabWidget->tabText(tabIndex)) {
+                        ++currTableRowCount;
+                        rows.append(row);
+                    }
+                    else {
+                        existingTabIndex = -2;
+                        for (int i = 0; i < tabWidget->count(); ++i) {
+                            if (tabWidget->tabText(i) == tabNameFromData) {
+                                existingTabIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                }
+                table->setRowCount(currTableRowCount);
+                table->setColumnCount(columnCount);
+
+                for (int row = 0; row < currTableRowCount; ++row) {
+                    if (existingTabIndex == -1) {
+                        tabWidget->setCurrentIndex(tabIndex);
+                        for (int col = 0; col < columnCount; ++col) {
+                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                            table->setItem(row, col, item);
+                        }
+                    }
+                    else if (existingTabIndex == -2) {
+                        QTableWidget *newTable = new QTableWidget(this);
+                        newTable->setColumnCount(columnCount);
+                        tabWidget->insertTab(tabWidget->count() - 1, newTable, tabNameFromData);
+                        tabWidget->setCurrentIndex(tabWidget->count() - 2);
+                        for (int col = 0; col < columnCount; ++col) {
+                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                            newTable->setItem(0, col, item);
+                        }
+                    }
+                }
+            }
+            else {
+                qDebug() << "Failed to fetch database contents: " << model.lastError().text();
+            }
+        }
+    }
+}
+
+/*void AddressBookInterface::showDatabaseContents() {
+    for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
+        QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
 
         if (table) {
             table->clearContents();
@@ -150,7 +218,7 @@ void AddressBookInterface::showDatabaseContents() {
             }
         }
     }
-}
+}*/
 
 void AddressBookInterface::addContactClicked() {
     if (currentTable) {

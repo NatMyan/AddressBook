@@ -10,12 +10,13 @@ class SignUpMenuLogic : public QObject {
 
     public:
         explicit SignUpMenuLogic(QObject* parent = nullptr);
+        QSqlDatabase getUserDB();
 
     public slots:
-        bool signUp(const QString& username, const QString& password);
+        bool signUp(QString& username, QString& password);
 
     signals:
-        void signUpSuccess();
+        void sigSignUpSuccess(QString &username, QString &password);
         void signUpError(const QString& errorMessage);
 
     private:

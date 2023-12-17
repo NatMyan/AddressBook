@@ -11,15 +11,15 @@ AddressBookInterface::AddressBookInterface(AddressBookLogic *logic, QWidget *par
     addTabButton(new QPushButton("Add Tab")),
     addContactButton(new QPushButton("Add")),
     signOutButton(new QPushButton("Sign Out")),
-    // openButton(new QPushButton("Open")),
     searchButton(new QPushButton("Search")),
+    // openButton(new QPushButton("Open")),
     // saveButton(new QPushButton("Save")),
     currentTable(new QTableWidget),
     logic(logic)
 {
     setupUi();
     setupTabs();
-    showDatabaseContents();
+    onShowDatabaseContents();
 }
 
 void AddressBookInterface::setupUi() {
@@ -27,8 +27,9 @@ void AddressBookInterface::setupUi() {
 
     QHBoxLayout *buttonLayout = new QHBoxLayout;
     buttonLayout->addWidget(addContactButton);
-    // buttonLayout->addWidget(openButton);
     buttonLayout->addWidget(searchButton);
+    buttonLayout->addWidget(signOutButton);
+    // buttonLayout->addWidget(openButton);
     // buttonLayout->addWidget(saveButton);
     
     mainLayout->addLayout(buttonLayout);
@@ -40,20 +41,15 @@ void AddressBookInterface::setupUi() {
         // tables.addTable(table);
     }
     tabWidget->addTab(addTabButton, "+");
-
-    // currentTable = qobject_cast<QTableWidget*>(tabWidget->widget(0));
-
-    // tabWidget->addTab(currentTable, "I am table");
-    // tabWidget->addTab(tabW);
     
     mainLayout->addWidget(tabWidget);
 
-    connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addTabClicked);
-    connect(addContactButton, &QPushButton::clicked, this, &AddressBookInterface::addContactClicked);
+    connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::onAddTabClicked);
+    connect(addContactButton, &QPushButton::clicked, this, &AddressBookInterface::onAddContactClicked);
+    connect(searchButton, &QPushButton::clicked, this, &AddressBookInterface::onSearchContacts);
+    connect(signOutButton, &QPushButton::clicked, this, &AddressBookInterface::onSignOutClicked);
+    // connect(saveButton, &QPushButton::clicked, this, &AddressBookInterface::saveAddressBook);   
     // connect(openButton, &QPushButton::clicked, this, &AddressBookInterface::openAddressBook);
-    connect(searchButton, &QPushButton::clicked, this, &AddressBookInterface::searchContacts);
-    // connect(saveButton, &QPushButton::clicked, this, &AddressBookInterface::saveAddressBook);  
-    connect(signOutButton, &QPushButton::clicked, this, &AddressBookInterface::signOutClicked); 
 }
 
 void AddressBookInterface::setupTabs() {
@@ -64,7 +60,7 @@ void AddressBookInterface::setupTabs() {
 
     connect(tabWidget, &QTabWidget::currentChanged, [this](int index) {
         if (index == tabWidget->count() - 1) {
-            addTabClicked();
+            onAddTabClicked();
             logic->addContact();
         } 
         else {
@@ -73,15 +69,15 @@ void AddressBookInterface::setupTabs() {
         }
     });
 
-    connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::addTabClicked);
-    connect(currentTable, &QTableWidget::itemDoubleClicked, this, &AddressBookInterface::editContact);
+    connect(addTabButton, &QPushButton::clicked, this, &AddressBookInterface::onAddTabClicked);
+    connect(currentTable, &QTableWidget::itemDoubleClicked, this, &AddressBookInterface::onEditContact);
 }
 
-void AddressBookInterface::signOutClicked() {
+void AddressBookInterface::onSignOutClicked() {
     emit sigSignOutClicked();
 }
 
-void AddressBookInterface::addTabClicked() {
+void AddressBookInterface::onAddTabClicked() {
     bool ok;
     QString tabName = QInputDialog::getText(this, "New Tab", "Enter tab name:", QLineEdit::Normal, QString(), &ok);
 
@@ -93,7 +89,74 @@ void AddressBookInterface::addTabClicked() {
     }
 }
 
-void AddressBookInterface::showDatabaseContents() {
+void AddressBookInterface::onShowDatabaseContents() {
+    for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
+        QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
+        if (table) {
+            table->clearContents();
+            table->setRowCount(0);
+
+            QSqlTableModel model(nullptr, logic->getDB());
+            model.setTable("contacts");
+
+            if (model.select()) {
+                int rowCount = model.rowCount();
+                int columnCount = model.columnCount();
+
+                qDebug() << rowCount << columnCount;
+                
+                auto currTableRowCount = 0;
+                QList<int> rows;
+                int existingTabIndex = -1;
+                QString tabNameFromData;
+
+                for (int row = 0; row < rowCount; ++row) {
+                    tabNameFromData = model.data(model.index(row, 3)).toString(); 
+                    if (tabNameFromData == tabWidget->tabText(tabIndex)) {
+                        ++currTableRowCount;
+                        rows.append(row);
+                    }
+                    else {
+                        existingTabIndex = -2;
+                        for (int i = 0; i < tabWidget->count(); ++i) {
+                            if (tabWidget->tabText(i) == tabNameFromData) {
+                                existingTabIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                }
+                table->setRowCount(currTableRowCount);
+                table->setColumnCount(columnCount);
+
+                for (int row = 0; row < currTableRowCount; ++row) {
+                    if (existingTabIndex == -1) {
+                        tabWidget->setCurrentIndex(tabIndex);
+                        for (int col = 0; col < columnCount; ++col) {
+                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                            table->setItem(row, col, item);
+                        }
+                    }
+                    else if (existingTabIndex == -2) {
+                        QTableWidget *newTable = new QTableWidget(this);
+                        newTable->setColumnCount(columnCount);
+                        tabWidget->insertTab(tabWidget->count() - 1, newTable, tabNameFromData);
+                        tabWidget->setCurrentIndex(tabWidget->count() - 2);
+                        for (int col = 0; col < columnCount; ++col) {
+                            QTableWidgetItem *item = new QTableWidgetItem(model.data(model.index(row, col)).toString());
+                            newTable->setItem(0, col, item);
+                        }
+                    }
+                }
+            }
+            else {
+                qDebug() << "Failed to fetch database contents: " << model.lastError().text();
+            }
+        }
+    }
+}
+
+/*void AddressBookInterface::onShowDatabaseContents() {
     for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
         QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
 
@@ -150,33 +213,23 @@ void AddressBookInterface::showDatabaseContents() {
             }
         }
     }
-}
+}*/
 
-void AddressBookInterface::addContactClicked() {
+void AddressBookInterface::onAddContactClicked() {
     if (currentTable) {
         logic->addContact();
-        showDatabaseContents();
+        onShowDatabaseContents();
     }
 }
 
-void AddressBookInterface::editContact(QTableWidgetItem *item) {
+void AddressBookInterface::onEditContact(QTableWidgetItem *item) {
     if (currentTable)
         logic->editContact(item);
 }
 
-/*void AddressBookInterface::openAddressBook() {
-    logic->openAddressBook();
-    showDatabaseContents();
-}*/
-
-void AddressBookInterface::searchContacts() {
+void AddressBookInterface::onSearchContacts() {
     logic->searchContacts();
 }
-
-/*void AddressBookInterface::saveAddressBook() {
-    qDebug() << "Save button clicked";
-    logic->saveAddressBook();
-}*/
 
 QTableWidget* AddressBookInterface::createEditableTable() {
     QTableWidget *table = new QTableWidget(this);
@@ -184,7 +237,7 @@ QTableWidget* AddressBookInterface::createEditableTable() {
     table->setHorizontalHeaderLabels({"Name", "Phone", "Email"});
     table->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
-    connect(table, &QTableWidget::itemDoubleClicked, this, &AddressBookInterface::editContact);
+    connect(table, &QTableWidget::itemDoubleClicked, this, &AddressBookInterface::onEditContact);
 
     return table;
 }
@@ -193,6 +246,16 @@ QTableWidget* AddressBookInterface::getCurrentTable() const {
     return currentTable;
 }
 
+
+/*void AddressBookInterface::openAddressBook() {
+    logic->openAddressBook();
+    showDatabaseContents();
+}*/
+
+/*void AddressBookInterface::saveAddressBook() {
+    qDebug() << "Save button clicked";
+    logic->saveAddressBook();
+}*/
 
                     /*
                     void AddressBookInterface::showDatabaseContents() {

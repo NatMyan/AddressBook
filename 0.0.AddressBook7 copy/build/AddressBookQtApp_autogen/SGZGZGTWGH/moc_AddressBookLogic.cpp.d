@@ -1,5 +1,5 @@
-/Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_AddressBookLogic.cpp: /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/build/AddressBookQtApp_autogen/moc_predefs.h \
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_AddressBookLogic.cpp: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -683,12 +683,12 @@
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/qos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/time.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdarg.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/Data/Database.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
   /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/QList \
   /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/QObject \
   /opt/homebrew/Cellar/qt/6.5.2/lib/QtCore.framework/Versions/A/Headers/QString \

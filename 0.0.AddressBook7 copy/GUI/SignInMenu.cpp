@@ -5,7 +5,12 @@ SignInMenu::SignInMenu(QWidget *parent) : QWidget(parent) {
     setupUi();
     connect(usernameEdit, &QLineEdit::returnPressed, this, &SignInMenu::onSignInButtonClicked);
     connect(passwordEdit, &QLineEdit::returnPressed, this, &SignInMenu::onSignInButtonClicked);
-    connect(signInButton, &QPushButton::clicked, this, &SignInMenu::onSignInButtonClicked);
+    // connect(signInButton, &QPushButton::clicked, this, &SignInMenu::onSignInButtonClicked);
+    connect(signInButton, &QPushButton::clicked, this, [this] {
+        QString username = usernameEdit->text();
+        QString password = passwordEdit->text();
+        emit sigSignIn(username, password);
+    });
     connect(cancelButton, &QPushButton::clicked, this, &SignInMenu::onCancelButtonClicked);
 }
 

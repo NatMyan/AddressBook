@@ -38,9 +38,9 @@ void Database::openDatabase(const QString &filePath, const QString &dbName, cons
             qDebug() << "Database opened successfully";
 
             QSqlQuery query(db_);
-            if (!query.exec("SELECT * FROM contacts")) {
+            if (!query.exec("SELECT * FROM" + dbName)) {
                 if (!query.exec("CREATE TABLE " + dbName + " " + fields)) {
-                    qDebug() << "Failed to create 'contacts' table: " << query.lastError().text();
+                    qDebug() << "Failed to create '" + dbName + "' table: " << query.lastError().text();
                 }
             }
         } 

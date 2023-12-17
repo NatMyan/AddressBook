@@ -11,20 +11,184 @@
 AddressBookLogic::AddressBookLogic(QObject *parent) : 
     QObject(parent),
     addDialog(new AddDialog),
-    // openDialog(new OpenDialog),
     searchDialog(new SearchDialog),
-    // saveDialog(new SaveDialog),
-    db (new Database(""))
+    // saveDialog(new SaveDialog),    
+    // openDialog(new OpenDialog),
+    userDB(new Database("../zinfo/users.db")),
+    db(new Database("../zinfo/username.db"))
 {   
-    userDB = new Database("../zinfo/users.db");
-    QSqlQuery query(*userDB);
-    query.exec("CREATE TABLE IF NOT EXISTS users (username TEXT, password TEXT)");
+    
 }
 
-void AddressBookLogic::signIn(QString username, QString password) {
+QSqlDatabase AddressBookLogic::getDB() {
+    return db->getDatabase();
+}
+
+void AddressBookLogic::addContact() {
+    addDialog->updateTabs2();
+    int result = addDialog->exec();
+
+    if (result == QDialog::Accepted) {
+        QString name = addDialog->name();
+        QString phone = addDialog->phone();
+        QString email = addDialog->email();
+        QString tab = addDialog->selectedTab();
+        // addDialog->updateTabNames();
+
+        QSqlQuery query(getDB());
+        query.prepare("INSERT INTO contacts (name, phone, email, belonging) VALUES (:name, :phone, :email, :belonging)");
+        query.bindValue(":name", name);
+        query.bindValue(":phone", phone);
+        query.bindValue(":email", email);
+        query.bindValue(":belonging", tab);
+
+        //qDebug() << "Test: " << name;          
+        // qDebug() << "Last query: " << query.lastQuery();
+        if (query.exec()) {
+            emit contactAdded(name, phone, email, tab);
+            qDebug() << "Contact added to the database";
+        } 
+        else {
+            qDebug() << "Failed to add contact to the database: " << query.lastError().text();
+        }
+        // QSqlQuery query2(db);
+        // qDebug() <<"DB query"<< query2.lastQuery();
+    } 
+    else {
+        qDebug() << "User canceled adding a contact.";
+    }
+}
+
+/*
+QSqlQuery query;
+QString updateQuery = "UPDATE " + tableName + " SET " + columnName + " = :newValue WHERE " + condition;
+query.prepare(updateQuery);
+query.bindValue(":newValue", newValue);
+
+if (query.exec()) {
+    qDebug() << "Update successful";
+}
+else {
+    qDebug() << "Update failed:" << query.lastError().text();
+}
+*/
+
+void AddressBookLogic::editContact(QTableWidgetItem *item) {
+    int tabIndex = item->tableWidget()->property("TabIndex").toInt();
+    int rowIndex = item->row();
+
+    QString name = item->tableWidget()->item(rowIndex, 0)->text();
+    QString phone = item->tableWidget()->item(rowIndex, 1)->text();
+    QString email = item->tableWidget()->item(rowIndex, 2)->text();
+    QString tab = item->tableWidget()->item(rowIndex, 3)->text();
+
+    bool ok;
+    name = QInputDialog::getText(nullptr, "Edit Contact", "Name:", QLineEdit::Normal, name, &ok);
+    if (!ok) return;
+
+    phone = QInputDialog::getText(nullptr, "Edit Contact", "Phone:", QLineEdit::Normal, phone, &ok);
+    if (!ok) return;
+
+    email = QInputDialog::getText(nullptr, "Edit Contact", "Email:", QLineEdit::Normal, email, &ok);
+    if (!ok) return;
+
+    tab = QInputDialog::getText(nullptr, "Edit Contact", "Tab:", QLineEdit::Normal, tab, &ok);
+    if (!ok) return;
+
+    emit contactEdited(tabIndex, rowIndex, name, phone, email, tab);
+}
+
+/*void AddressBookLogic::openAddressBook() {
+    qDebug() << "Open button clicked";
+
+    QString filePath = QFileDialog::getOpenFileName(nullptr, "Open Address Book", "", "SQLite Database (*.db *.sqlite)");
+
+    db->openDatabase(filePath);*/
+
+    /*if (!filePath.isEmpty()) {
+        qDebug() << "Selected File: " << filePath;
+
+        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+        db.setDatabaseName(filePath);
+
+        if (db.open()) {
+            qDebug() << "Database opened successfully";
+
+            QSqlQuery query;
+            if (!query.exec("SELECT * FROM contacts")) {
+                if (!query.exec("CREATE TABLE contacts (name TEXT, phone TEXT, email TEXT)")) {
+                    qDebug() << "Failed to create 'contacts' table: " << query.lastError().text();
+                }
+            }
+        } 
+        else {
+            qDebug() << "Failed to open database: " << db.lastError().text();
+        }
+    }*/
+// }
+
+void AddressBookLogic::showSearchResult(const QVector<Contact>& qVec) {
+    SearchResultDialog searchResultDialog(qVec);
+    if (searchResultDialog.exec()) {
+        qDebug() << "Contact found";
+    }
+    else {
+        qDebug() << "Contact not found";
+    }
+}
+
+void AddressBookLogic::searchContacts() {
+    qDebug() << "Search button clicked";
+
+    SearchDialog searchDialog;
+    if (searchDialog.exec()) {
+        QString searchName = searchDialog.getSearchName();
+        QString searchOption = searchDialog.getSearchOption();
+
+        qDebug() << "Search Criteria: " << searchName << ", Option: " << searchOption;
+
+        QSqlQuery query;
+        QString queryString = "SELECT * FROM contacts WHERE " + searchOption + " LIKE '%" + searchName + "%'";
+        if (query.exec(queryString)) {
+            QVector<Contact> qVec;
+            while (query.next()) {
+                QString name = query.value("name").toString();
+                QString phone = query.value("phone").toString();
+                QString email = query.value("email").toString();
+                QString tab = query.value("belonging").toString();
+                qDebug() << "Result: Name = " << name << ", Phone = " << phone << ", Email = " << email << ", Tab = " << tab;
+                Contact contact = {name, phone, email, tab};
+                qVec.append(contact);
+                // showSearchResult(name, phone, email, tab);
+            }
+            showSearchResult(qVec);
+        } 
+        else {
+            qDebug() << "Search failed: " << query.lastError().text();
+        }
+    }
+}
+
+void AddressBookLogic::signIn(QString &username, QString &password) {
     QByteArray hashedPassword = hashPassword(password);
 
     if (checkCredentials(username, hashedPassword)) {
+        Database *newDB = new Database("../zinfo/" + username + ".db");
+        // db->changeDatabaseName("../zinfo/" + username + ".db");
+        /*QSqlQuery attachQuery(*db);
+        if (!attachQuery.exec("ATTACH DATABASE ':memory:' AS old_db")) {
+            qDebug() << "Failed to attach new database: " << attachQuery.lastError().text();
+        }
+
+        QSqlQuery copyQuery(*db);
+        if (!copyQuery.exec("INSERT INTO new_db.table_name SELECT * FROM old_db.table_name")) {
+            qDebug() << "Failed to copy data:" << copyQuery.lastError().text();
+            return;
+        }*/
+
+        std::swap(db, newDB);
+
+        db->openDatabase("../zinfo/" + username + ".db", "contacts", "(name TEXT, phone TEXT, email TEXT, belonging TEXT)");
         emit sigSignInSuccess(username);
     } 
     else {
@@ -32,7 +196,7 @@ void AddressBookLogic::signIn(QString username, QString password) {
     }
 }
 
-void AddressBookLogic::signUp(QString username, QString password) {
+void AddressBookLogic::signUp(QString &username, QString &password) {
     QByteArray hashedPassword = hashPassword(password);
 
     if (checkUsernameExists(username)) {
@@ -41,7 +205,10 @@ void AddressBookLogic::signUp(QString username, QString password) {
     }
 
     if (insertUser(username, hashedPassword)) {
-        emit sigSignUpSuccess();
+        // db = new Database("../zinfo/" + username + ".db");
+        db->changeDatabaseName("../zinfo/" + username + ".db");
+        db->openDatabase("../zinfo/" + username + ".db", "contacts", "(name TEXT, phone TEXT, email TEXT, belonging TEXT)");
+        emit sigSignUpSuccess(username);
     } 
     else {
         emit sigSignUpFailed("Sign-up failed. Please try again.");
@@ -86,159 +253,7 @@ bool AddressBookLogic::insertUser(const QString &username, const QByteArray &has
     return query.exec();
 }
 
-
-QSqlDatabase AddressBookLogic::getDB() {
-    return db->getDatabase();
-}
-
-/*AddDialog* AddressBookLogic::getAddDialog() {
-    return addDialog;
-}*/
-
-void AddressBookLogic::addContact() {
-    addDialog->updateTabs2();
-    int result = addDialog->exec();
-
-    if (result == QDialog::Accepted) {
-        QString name = addDialog->name();
-        QString phone = addDialog->phone();
-        QString email = addDialog->email();
-        // addDialog->updateTabNames();
-        QString tab = addDialog->selectedTab();
-
-        QSqlQuery query(getDB());
-        query.prepare("INSERT INTO contacts (name, phone, email, belonging) VALUES (:name, :phone, :email, :belonging)");
-        query.bindValue(":name", name);
-        query.bindValue(":phone", phone);
-        query.bindValue(":email", email);
-        query.bindValue(":belonging", tab);
-
-        //qDebug() << "Test: " << name;          
-        // qDebug() << "Last query: " << query.lastQuery();
-        if (query.exec()) {
-            emit contactAdded(name, phone, email, tab);
-            qDebug() << "Contact added to the database";
-        } 
-        else {
-            qDebug() << "Failed to add contact to the database: " << query.lastError().text();
-        }
-        // QSqlQuery query2(db);
-        // qDebug() <<"DB query"<< query2.lastQuery();
-    } 
-    else {
-        qDebug() << "User canceled adding a contact.";
-    }
-}
-
-/*
-QSqlQuery query;
-QString updateQuery = "UPDATE " + tableName + " SET " + columnName + " = :newValue WHERE " + condition;
-query.prepare(updateQuery);
-query.bindValue(":newValue", newValue);
-
-if (query.exec()) {
-    qDebug() << "Update successful";
-}
-else {
-    qDebug() << "Update failed:" << query.lastError().text();
-}
-*/
-void AddressBookLogic::editContact(QTableWidgetItem *item) {
-    int tabIndex = item->tableWidget()->property("TabIndex").toInt();
-    int rowIndex = item->row();
-
-    QString name = item->tableWidget()->item(rowIndex, 0)->text();
-    QString phone = item->tableWidget()->item(rowIndex, 1)->text();
-    QString email = item->tableWidget()->item(rowIndex, 2)->text();
-    QString tab = item->tableWidget()->item(rowIndex, 3)->text();
-
-    bool ok;
-    name = QInputDialog::getText(nullptr, "Edit Contact", "Name:", QLineEdit::Normal, name, &ok);
-    if (!ok) return;
-
-    phone = QInputDialog::getText(nullptr, "Edit Contact", "Phone:", QLineEdit::Normal, phone, &ok);
-    if (!ok) return;
-
-    email = QInputDialog::getText(nullptr, "Edit Contact", "Email:", QLineEdit::Normal, email, &ok);
-    if (!ok) return;
-
-    tab = QInputDialog::getText(nullptr, "Edit Contact", "Tab:", QLineEdit::Normal, tab, &ok);
-    if (!ok) return;
-
-    emit contactEdited(tabIndex, rowIndex, name, phone, email, tab);
-}
-
-void AddressBookLogic::openAddressBook() {
-    qDebug() << "Open button clicked";
-
-    QString filePath = QFileDialog::getOpenFileName(nullptr, "Open Address Book", "", "SQLite Database (*.db *.sqlite)");
-
-    db->openDatabase(filePath);
-    /*if (!filePath.isEmpty()) {
-        qDebug() << "Selected File: " << filePath;
-
-        QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-        db.setDatabaseName(filePath);
-
-        if (db.open()) {
-            qDebug() << "Database opened successfully";
-
-            QSqlQuery query;
-            if (!query.exec("SELECT * FROM contacts")) {
-                if (!query.exec("CREATE TABLE contacts (name TEXT, phone TEXT, email TEXT)")) {
-                    qDebug() << "Failed to create 'contacts' table: " << query.lastError().text();
-                }
-            }
-        } 
-        else {
-            qDebug() << "Failed to open database: " << db.lastError().text();
-        }
-    }*/
-}
-
-void AddressBookLogic::showSearchResult(const QVector<Contact>& qVec) {
-    SearchResultDialog searchResultDialog(qVec);
-    if (searchResultDialog.exec()) {
-        qDebug() << "Contact found";
-    }
-    else {
-        qDebug() << "Contact not found";
-    }
-}
-
-void AddressBookLogic::searchContacts() {
-    qDebug() << "Search button clicked";
-
-    SearchDialog searchDialog;
-    if (searchDialog.exec()) {
-        QString searchName = searchDialog.getSearchName();
-        QString searchOption = searchDialog.getSearchOption();
-
-        qDebug() << "Search Criteria: " << searchName << ", Option: " << searchOption;
-
-        QSqlQuery query;
-        QString queryString = "SELECT * FROM contacts WHERE " + searchOption + " LIKE '%" + searchName + "%'";
-        if (query.exec(queryString)) {
-            QVector<Contact> qVec;
-            while (query.next()) {
-                QString name = query.value("name").toString();
-                QString phone = query.value("phone").toString();
-                QString email = query.value("email").toString();
-                QString tab = query.value("belonging").toString();
-                qDebug() << "Result: Name = " << name << ", Phone = " << phone << ", Email = " << email << ", Tab = " << tab;
-                Contact contact = {name, phone, email, tab};
-                qVec.append(contact);
-                // showSearchResult(name, phone, email, tab);
-            }
-            showSearchResult(qVec);
-        } 
-        else {
-            qDebug() << "Search failed: " << query.lastError().text();
-        }
-    }
-}
-
-void AddressBookLogic::saveAddressBook() {
+/*void AddressBookLogic::saveAddressBook() {
     qDebug() << "Save button clicked";
 
     QString saveFilePath = QFileDialog::getSaveFileName(nullptr, "Save Address Book", "", "SQLite Database (*.db *.sqlite)");
@@ -246,17 +261,17 @@ void AddressBookLogic::saveAddressBook() {
     if (!saveFilePath.isEmpty()) {
         qDebug() << "Save File Path: " << saveFilePath;
 
-        /*QSqlDatabase db22 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
-        Database db2; // = new Database;
-        db2.makeDatabase(saveFilePath);
-        db2.createTable();
-        db2.setDatabase(db->getDatabase());*/
+        // QSqlDatabase db22 = QSqlDatabase::addDatabase("QSQLITE", "saveConnection");
+        // Database db2; // = new Database;
+        // db2.makeDatabase(saveFilePath);
+        // db2.createTable();
+        // db2.setDatabase(db->getDatabase());
 
         // db->setDatabaseName(saveFilePath);
-        /*Database db2(saveFilePath);
-        db2.addDatabase("QSQLITE", "saveConnection");
-        db2.setDatabase(db->getDatabase());
-        copyDatabaseContents(*db, saveFilePath);*/
+        //Database db2(saveFilePath);
+        //db2.addDatabase("QSQLITE", "saveConnection");
+        //db2.setDatabase(db->getDatabase());
+        //copyDatabaseContents(*db, saveFilePath);
         // db->changeDatabaseName(saveFilePath);
         qDebug() << saveFilePath;
         
@@ -296,10 +311,10 @@ void AddressBookLogic::saveAddressBook() {
             }
         }
 
-        /*db->closeDatabase();
-        Database* db2 = new Database;
-        db2->setDatabase(db->getDatabase().addDatabase("QSQLITE", "saveConnection"));
-        db2->setDatabaseName(saveFilePath);*/
+        // db->closeDatabase();
+        // Database* db2 = new Database;
+        // db2->setDatabase(db->getDatabase().addDatabase("QSQLITE", "saveConnection"));
+        // db2->setDatabaseName(saveFilePath);
         // db->makeDatabase();
         // db->createTable();
         // db->setDatabase(QSqlDatabase::addDatabase("QSQLITE", "saveConnection"));
@@ -315,7 +330,7 @@ void AddressBookLogic::saveAddressBook() {
             qDebug() << "Failed to open database for saving: " << db2.lastError().text();
         }
     }
-}
+}*/
 
 // void AddressBookLogic::createTable() {
     // db.makeDatabase();
@@ -563,3 +578,7 @@ void AddressBookLogic::saveAddressBook() {
     }
 }
 */
+
+/*AddDialog* AddressBookLogic::getAddDialog() {
+    return addDialog;
+}*/

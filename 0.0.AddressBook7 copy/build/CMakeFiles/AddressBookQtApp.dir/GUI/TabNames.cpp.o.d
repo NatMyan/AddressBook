@@ -1,6 +1,6 @@
 CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/TabNames.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.AddressBook7/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QVector \
   /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
   /opt/homebrew/include/QtCore/qlist.h \
