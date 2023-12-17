@@ -15,20 +15,20 @@ void MainWindow::setupUi() {
     startMenu_ = new StartMenu(this);
     signInMenu_ = new SignInMenu(this);
     signUpMenu_ = new SignUpMenu(this);
-    addressBookInterface_ = new AddressBookInterface(this);
+    tableInterface_ = new TableInterface(this);
 
     stackedWidget_->addWidget(startMenu_);
     stackedWidget_->addWidget(signInMenu_);
     stackedWidget_->addWidget(signUpMenu_);
-    stackedWidget_->addWidget(addressBookInterface_);
+    stackedWidget_->addWidget(tableInterface_);
 
     connect(startMenu_, &StartMenu::sigSignInClicked, this, &MainWindow::onSignInClicked);
     connect(startMenu_, &StartMenu::sigSignUpClicked, this, &MainWindow::onSignUpClicked);
     connect(signInMenu_, &SignInMenu::sigCancelClicked, this, &MainWindow::onCancelClicked);
     connect(signUpMenu_, &SignUpMenu::sigCancelClicked, this, &MainWindow::onCancelClicked);
-    connect(signInMenu_, &SignInMenu::sigSignInClicked, this, &MainWindow::onSignInSuccess);
-    connect(signUpMenu_, &SignUpMenu::sigSignUpClicked, this, &MainWindow::onSignUpSuccess);
-    connect(addressBookInterface_, &AddressBookInterface::sigSignOutClicked, this, &MainWindow::onSignOutClicked);
+    connect(signInMenu_, &SignInMenu::sigSignIn, this, &MainWindow::onSignInSuccess);
+    connect(signUpMenu_, &SignUpMenu::sigSignUp, this, &MainWindow::onSignUpSuccess);
+    connect(tableInterface_, &TableInterface::sigSignOutClicked, this, &MainWindow::onSignOutClicked);
 
     setCentralWidget(stackedWidget_);
     stackedWidget_->setCurrentWidget(startMenu_);
@@ -47,14 +47,14 @@ void MainWindow::onSignUpClicked() {
 }
 
 void MainWindow::onSignInSuccess(QString& username, QString& password) {
-    addressBookInterface_->setUsername(username);
-    stackedWidget_->setCurrentWidget(addressBookInterface_);
+    // tableInterface_->setUsername(username);
+    stackedWidget_->setCurrentWidget(tableInterface_);
     emit sigSignInToAddressBook(username, password);
 }
 
 void MainWindow::onSignUpSuccess(QString& username, QString& password) {
-    addressBookInterface_->setUsername(username);
-    stackedWidget_->setCurrentWidget(addressBookInterface_);
+    // tableInterface_->setUsername(username);
+    stackedWidget_->setCurrentWidget(tableInterface_);
     emit sigSignUpToAddressBook(username, password);
 }
 

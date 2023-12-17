@@ -4,7 +4,7 @@
 #include "StartMenu.hpp"
 #include "SignInMenu.hpp"
 #include "SignUpMenu.hpp"
-#include "AddressBookInterface.hpp"
+#include "TableInterface.hpp"
 
 #include <QMainWindow>
 #include <QStackedWidget>
@@ -31,17 +31,16 @@ class MainWindow : public QMainWindow {
         void setupUi();
 
     private:
-        QStackedWidget *stackedWidget_;
-        StartMenu *startMenu_;
-        SignInMenu *signInMenu_;
-        SignUpMenu *signUpMenu_;
-        AddressBookInterface *addressBookInterface_;
-        // SignInMenuLogic *signInMenuLogic_;
-        // SignUpMenuLogic *signUpMenuLogic_;
-        // AddressBookLogic *addressBookLogic_;
+        QStackedWidget* stackedWidget_;
+        StartMenu* startMenu_;
+        SignInMenu* signInMenu_;
+        SignUpMenu* signUpMenu_;
+        TableInterface* tableInterface_;
 };
 
 #endif // MAIN_WINDOW_HPP
+
+
 
 /*
 // MainWindow.hpp

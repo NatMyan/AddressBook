@@ -21,7 +21,7 @@ void Database::makeDB() {
     db_ = QSqlDatabase::addDatabase("QSQLITE");
 
     if (!name_.isEmpty()) {
-        db_.setDatabaseName(name_);
+        db_.setDatabaseName("../zinfo/users.db");
     }
     else {
         qDebug() << "Database name is empty, isn't set: " << db_.lastError().text();
@@ -100,6 +100,8 @@ QSqlDatabase Database::getDatabase() {
 void Database::setDatabase(const QSqlDatabase& db) {
     db_ = db;
 }
+
+
 
 /*void Database::openDB(const QString& path, const QString &name, const QString &fields) {
     if (!path.isEmpty()) {

@@ -8,7 +8,6 @@
 #include <QSqlQuery>
 #include <QList>
 
-
 class Database {
     public:
         Database(const QString& name);
