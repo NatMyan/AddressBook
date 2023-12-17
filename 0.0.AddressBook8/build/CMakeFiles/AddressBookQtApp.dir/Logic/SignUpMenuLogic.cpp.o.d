@@ -1,6 +1,6 @@
 CMakeFiles/AddressBookQtApp.dir/Logic/SignUpMenuLogic.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/include/QtCore/qobjectdefs.h \

@@ -1,6 +1,6 @@
 CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
@@ -901,7 +901,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStackedWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstackedwidget.h \
   /opt/homebrew/include/QtWidgets/qframe.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
@@ -919,17 +919,17 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: \
   /opt/homebrew/include/QtCore/qiodevice.h \
   /opt/homebrew/include/QtGui/qtextdocument.h \
   /opt/homebrew/include/QtCore/qurl.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
   /opt/homebrew/include/QtGui/qtextcursor.h \
   /opt/homebrew/include/QtGui/qtextformat.h \
   /opt/homebrew/include/QtGui/qpen.h \
   /opt/homebrew/include/QtGui/qtextoption.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Logic/../GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Logic/../GUI/AddDialog.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QTextEdit \
@@ -949,15 +949,15 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: \
   /opt/homebrew/include/QtWidgets/qtabbar.h \
   /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Data/Contact.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QVector \
   /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Logic/../GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Logic/../GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Logic/../Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Logic/../GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Logic/../GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Logic/../Data/Database.hpp \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
   /opt/homebrew/include/QtSql/qtsqlglobal.h \
@@ -984,9 +984,9 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlTableModel \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqltablemodel.h \
   /opt/homebrew/include/QtSql/qsqlquerymodel.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Logic/SignInMenuLogic.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QCryptographicHash \
   /opt/homebrew/lib/QtCore.framework/Headers/qcryptographichash.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
   /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Logic/SignUpMenuLogic.hpp
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Logic/SignUpMenuLogic.hpp

@@ -29,7 +29,12 @@ void SignUpMenu::setupUi() {
     signUpButton = new QPushButton(tr("Sign Up"));
     cancelButton = new QPushButton(tr("Cancel"));
 
-    connect(signUpButton, &QPushButton::clicked, this, &SignUpMenu::onSignUpButtonClicked);
+    // connect(signUpButton, &QPushButton::clicked, this, &SignUpMenu::onSignUpButtonClicked);
+    connect(signUpButton, &QPushButton::clicked, this, [this] {
+        QString username = usernameEdit->text();
+        QString password = passwordEdit->text();
+        emit sigSignUp(username, password);
+    });
     connect(cancelButton, &QPushButton::clicked, this, &SignUpMenu::onCancelButtonClicked);
 
     auto mainLayout = new QVBoxLayout;

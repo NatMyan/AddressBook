@@ -34,11 +34,12 @@ void Database::openDatabase(const QString &filePath, const QString &dbName, cons
         QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
         db.setDatabaseName(filePath);
 
+
         if (db.open()) {
             qDebug() << "Database opened successfully";
 
             QSqlQuery query(db_);
-            if (!query.exec("SELECT * FROM" + dbName)) {
+            if (!query.exec("SELECT * FROM " + dbName)) {
                 if (!query.exec("CREATE TABLE " + dbName + " " + fields)) {
                     qDebug() << "Failed to create '" + dbName + "' table: " << query.lastError().text();
                 }
@@ -66,6 +67,7 @@ void Database::closeDatabase() {
 }
 
 void Database::makeDatabase(const QString &fileName) {
+    closeDatabase();
     db_ = QSqlDatabase::addDatabase("QSQLITE");
 
     if (!fileName.isEmpty()) {
@@ -117,7 +119,7 @@ bool Database::createTable() {
     
     query.exec("CREATE TABLE IF NOT EXISTS contacts (name TEXT, phone TEXT, email TEXT, belonging TEXT)");
 
-    if (query.exec()) {
+    if (query.isActive()) {
         qDebug() << "Table created successfully";
         return true;
     } 

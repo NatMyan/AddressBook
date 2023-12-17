@@ -1,6 +1,6 @@
 CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
@@ -924,10 +924,10 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: \
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/../Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/../Data/Contact.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QVector \
   /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QLabel \

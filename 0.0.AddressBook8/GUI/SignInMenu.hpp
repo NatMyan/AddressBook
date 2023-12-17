@@ -14,7 +14,7 @@ class SignInMenu : public QWidget {
         explicit SignInMenu(QWidget *parent = nullptr);
 
     signals:
-        void sigSignIn(QString username, QString password);
+        void sigSignIn(QString& username, QString& password);
         void sigCancelClicked();
 
     private slots:

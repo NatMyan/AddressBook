@@ -1,17 +1,17 @@
 {
-	"BUILD_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/AddressBookQtApp_autogen",
-	"CMAKE_BINARY_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy",
+	"BUILD_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen",
+	"CMAKE_BINARY_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8",
 	"CMAKE_EXECUTABLE" : "/opt/homebrew/Cellar/cmake/3.27.7/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/CMakeLists.txt",
-		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles/3.27.7/CMakeSystem.cmake",
+		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/CMakeLists.txt",
+		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/CMakeFiles/3.27.7/CMakeSystem.cmake",
 		"/opt/homebrew/Cellar/cmake/3.27.7/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/opt/homebrew/Cellar/cmake/3.27.7/share/cmake/Modules/Platform/Darwin-Initialize.cmake",
-		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles/3.27.7/CMakeCCompiler.cmake",
-		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake",
+		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/CMakeFiles/3.27.7/CMakeCCompiler.cmake",
+		"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/CMakeFiles/3.27.7/CMakeCXXCompiler.cmake",
 		"/opt/homebrew/Cellar/cmake/3.27.7/share/cmake/Modules/CMakeSystemSpecificInformation.cmake",
 		"/opt/homebrew/Cellar/cmake/3.27.7/share/cmake/Modules/CMakeGenericSystem.cmake",
 		"/opt/homebrew/Cellar/cmake/3.27.7/share/cmake/Modules/CMakeInitializeConfigs.cmake",
@@ -351,93 +351,93 @@
 		"/opt/homebrew/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-release.cmake",
 		"/opt/homebrew/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy",
+	"CMAKE_SOURCE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8",
 	"DEP_FILE" : "",
 	"DEP_FILE_RULE_NAME" : "",
 	"HEADERS" : 
 	[
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Data/Database.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp",
 			"MU",
 			"M5WLY3B75D/moc_Database.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/AddDialog.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_AddDialog.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/AddressBookInterface.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_AddressBookInterface.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/MainWindow.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_MainWindow.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SearchDialog.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_SearchDialog.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SearchResultDialog.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_SearchResultDialog.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SignInMenu.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_SignInMenu.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SignUpMenu.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_SignUpMenu.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/StartMenu.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_StartMenu.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/TabNames.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp",
 			"MU",
 			"2LCCYRVYXB/moc_TabNames.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Logic/AddressBookLogic.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp",
 			"MU",
 			"SGZGZGTWGH/moc_AddressBookLogic.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Logic/SignInMenuLogic.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.hpp",
 			"MU",
 			"SGZGZGTWGH/moc_SignInMenuLogic.cpp",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Logic/SignUpMenuLogic.hpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp",
 			"MU",
 			"SGZGZGTWGH/moc_SignUpMenuLogic.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/AddressBookQtApp_autogen/include",
-	"MOC_COMPILATION_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/AddressBookQtApp_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/include",
+	"MOC_COMPILATION_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"QT_CORE_LIB",
@@ -489,86 +489,86 @@
 		"-c",
 		"/opt/homebrew/Cellar/cmake/3.27.7/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/AddressBookQtApp_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles/AddressBookQtApp_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/CMakeFiles/AddressBookQtApp_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/opt/homebrew/share/qt/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/opt/homebrew/share/qt/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 5,
-	"SETTINGS_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/build/CMakeFiles/AddressBookQtApp_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/CMakeFiles/AddressBookQtApp_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Data/Database.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/AddDialog.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/AddressBookInterface.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/MainWindow.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SearchDialog.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SearchResultDialog.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SignInMenu.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/SignUpMenu.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/StartMenu.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/GUI/TabNames.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Logic/AddressBookLogic.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Logic/SignInMenuLogic.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/Logic/SignUpMenuLogic.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7 copy/main.cpp",
+			"/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/main.cpp",
 			"MU",
 			null
 		]

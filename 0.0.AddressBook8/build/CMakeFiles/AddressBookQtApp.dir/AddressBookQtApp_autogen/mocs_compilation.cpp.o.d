@@ -1,7 +1,7 @@
 CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/mocs_compilation.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddDialog.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/mocs_compilation.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddDialog.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/AddDialog.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \
@@ -925,18 +925,18 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /opt/homebrew/include/QtWidgets/qtabwidget.h \
   /opt/homebrew/include/QtWidgets/qrubberband.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Data/Contact.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QString \
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/TabNames.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QVector \
   /opt/homebrew/lib/QtCore.framework/Headers/qvector.h \
   /opt/homebrew/include/QtCore/qtmochelpers.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/AddressBookInterface.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/AddressBookInterface.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/SearchDialog.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qboxlayout.h \
   /opt/homebrew/include/QtWidgets/qlayout.h \
@@ -950,8 +950,8 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /opt/homebrew/lib/QtWidgets.framework/Headers/QPushButton \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/include/QtWidgets/qabstractbutton.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/../Data/Database.hpp \
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqldatabase.h \
   /opt/homebrew/include/QtSql/qtsqlglobal.h \
@@ -980,29 +980,29 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /opt/homebrew/lib/QtSql.framework/Headers/QSqlTableModel \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqltablemodel.h \
   /opt/homebrew/include/QtSql/qsqlquerymodel.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_MainWindow.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/MainWindow.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_MainWindow.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/MainWindow.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QStackedWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qstackedwidget.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/StartMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/SignInMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/SignUpMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/StartMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/SignInMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/SignUpMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/SignInMenuLogic.hpp \
   /opt/homebrew/lib/QtCore.framework/Headers/QCryptographicHash \
   /opt/homebrew/lib/QtCore.framework/Headers/qcryptographichash.h \
   /opt/homebrew/lib/QtCore.framework/Headers/QDebug \
   /opt/homebrew/lib/QtCore.framework/Headers/qdebug.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/SignUpMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SearchDialog.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignInMenu.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_AddressBookLogic.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/SGZGZGTWGH/../../../Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignInMenuLogic.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/SGZGZGTWGH/../../../Logic/SignInMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/build/AddressBookQtApp_autogen/SGZGZGTWGH/../../../Logic/SignUpMenuLogic.hpp
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/../Logic/SignUpMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SearchDialog.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/../../../GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignInMenu.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_AddressBookLogic.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/SGZGZGTWGH/../../../Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignInMenuLogic.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/SGZGZGTWGH/../../../Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/build/AddressBookQtApp_autogen/SGZGZGTWGH/../../../Logic/SignUpMenuLogic.hpp

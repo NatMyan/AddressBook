@@ -1,6 +1,6 @@
 CMakeFiles/AddressBookQtApp.dir/GUI/SignUpMenu.cpp.o: \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.cpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp \
   /opt/homebrew/lib/QtWidgets.framework/Headers/QWidget \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h \
   /opt/homebrew/include/QtWidgets/qtwidgetsglobal.h \

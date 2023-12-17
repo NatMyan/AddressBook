@@ -42,6 +42,7 @@ static constexpr auto qt_meta_stringdata_CLASSSignUpMenuENDCLASS = QtMocHelpers:
     "SignUpMenu",
     "sigSignUp",
     "",
+    "QString&",
     "username",
     "password",
     "sigCancelClicked",
@@ -50,15 +51,16 @@ static constexpr auto qt_meta_stringdata_CLASSSignUpMenuENDCLASS = QtMocHelpers:
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSSignUpMenuENDCLASS_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[18];
     char stringdata0[11];
     char stringdata1[10];
     char stringdata2[1];
     char stringdata3[9];
     char stringdata4[9];
-    char stringdata5[17];
-    char stringdata6[22];
+    char stringdata5[9];
+    char stringdata6[17];
     char stringdata7[22];
+    char stringdata8[22];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSSignUpMenuENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -67,15 +69,17 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSSignUpMenuENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(0, 10),  // "SignUpMenu"
         QT_MOC_LITERAL(11, 9),  // "sigSignUp"
         QT_MOC_LITERAL(21, 0),  // ""
-        QT_MOC_LITERAL(22, 8),  // "username"
-        QT_MOC_LITERAL(31, 8),  // "password"
-        QT_MOC_LITERAL(40, 16),  // "sigCancelClicked"
-        QT_MOC_LITERAL(57, 21),  // "onSignUpButtonClicked"
-        QT_MOC_LITERAL(79, 21)   // "onCancelButtonClicked"
+        QT_MOC_LITERAL(22, 8),  // "QString&"
+        QT_MOC_LITERAL(31, 8),  // "username"
+        QT_MOC_LITERAL(40, 8),  // "password"
+        QT_MOC_LITERAL(49, 16),  // "sigCancelClicked"
+        QT_MOC_LITERAL(66, 21),  // "onSignUpButtonClicked"
+        QT_MOC_LITERAL(88, 21)   // "onCancelButtonClicked"
     },
     "SignUpMenu",
     "sigSignUp",
     "",
+    "QString&",
     "username",
     "password",
     "sigCancelClicked",
@@ -101,14 +105,14 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSSignUpMenuENDCLASS[] = {
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
        1,    2,   38,    2, 0x06,    1 /* Public */,
-       5,    0,   43,    2, 0x06,    4 /* Public */,
+       6,    0,   43,    2, 0x06,    4 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       6,    0,   44,    2, 0x08,    5 /* Private */,
-       7,    0,   45,    2, 0x08,    6 /* Private */,
+       7,    0,   44,    2, 0x08,    5 /* Private */,
+       8,    0,   45,    2, 0x08,    6 /* Private */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QString,    3,    4,
+    QMetaType::Void, 0x80000000 | 3, 0x80000000 | 3,    4,    5,
     QMetaType::Void,
 
  // slots: parameters
@@ -129,8 +133,8 @@ Q_CONSTINIT const QMetaObject SignUpMenu::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<SignUpMenu, std::true_type>,
         // method 'sigSignUp'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
         // method 'sigCancelClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onSignUpButtonClicked'
@@ -147,7 +151,7 @@ void SignUpMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<SignUpMenu *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->sigSignUp((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 0: _t->sigSignUp((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString&>>(_a[2]))); break;
         case 1: _t->sigCancelClicked(); break;
         case 2: _t->onSignUpButtonClicked(); break;
         case 3: _t->onCancelButtonClicked(); break;
@@ -156,7 +160,7 @@ void SignUpMenu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (SignUpMenu::*)(QString , QString );
+            using _t = void (SignUpMenu::*)(QString & , QString & );
             if (_t _q_method = &SignUpMenu::sigSignUp; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
@@ -203,7 +207,7 @@ int SignUpMenu::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void SignUpMenu::sigSignUp(QString _t1, QString _t2)
+void SignUpMenu::sigSignUp(QString & _t1, QString & _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

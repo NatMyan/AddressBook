@@ -21,6 +21,8 @@ void MainWindow::setupUi() {
 
     connect(startMenu_, &StartMenu::sigSignInClicked, this, &MainWindow::onSignInClicked);
     connect(startMenu_, &StartMenu::sigSignUpClicked, this, &MainWindow::onSignUpClicked);
+    connect(signInMenu_, &SignInMenu::sigSignIn, signInMenuLogic_, &SignInMenuLogic::signIn);
+    connect(signUpMenu_, &SignUpMenu::sigSignUp, signUpMenuLogic_, &SignUpMenuLogic::signUp);
     connect(signInMenuLogic_, &SignInMenuLogic::sigSignInSuccess, this, &MainWindow::onSignInSuccess);
     connect(signUpMenuLogic_, &SignUpMenuLogic::sigSignUpSuccess, this, &MainWindow::onSignUpSuccess);
     // connect(signInMenu_, &SignInMenu::sigSignIn, this, &MainWindow::onSignInSuccess);

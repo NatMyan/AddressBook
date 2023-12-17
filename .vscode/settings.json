@@ -93,6 +93,7 @@
         "qstring": "cpp",
         "qhboxlayout": "cpp",
         "qstackedwidget": "cpp",
-        "qtimer": "cpp"
+        "qtimer": "cpp",
+        "qcryptographichash": "cpp"
     }
 }

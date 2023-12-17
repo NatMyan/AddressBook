@@ -760,22 +760,22 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddDialog.cpp \
   AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp \
   AddressBookQtApp_autogen/2LCCYRVYXB/moc_MainWindow.cpp \
@@ -783,9 +783,9 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignInMenu.cpp \
   AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp \
   AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp \
   AddressBookQtApp_autogen/SGZGZGTWGH/moc_AddressBookLogic.cpp \
   AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignInMenuLogic.cpp \
   AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp \
@@ -1009,7 +1009,7 @@ CMakeFiles/AddressBookQtApp.dir/AddressBookQtApp_autogen/mocs_compilation.cpp.o:
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtextedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
 
-CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.cpp \
+CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -1840,8 +1840,8 @@ CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o: /Users/nataliemanukyan/Desk
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
@@ -1970,7 +1970,7 @@ CMakeFiles/AddressBookQtApp.dir/Data/Database.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -2729,9 +2729,9 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desk
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
@@ -2915,7 +2915,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddDialog.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtextedit.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -3674,14 +3674,14 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliema
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
@@ -3901,7 +3901,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/AddressBookInterface.cpp.o: /Users/nataliema
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtextedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -4660,20 +4660,20 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: /Users/nataliemanukyan/Des
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
@@ -4893,7 +4893,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/MainWindow.cpp.o: /Users/nataliemanukyan/Des
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtextedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -5652,7 +5652,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o: /Users/nataliemanukyan/D
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
@@ -5829,7 +5829,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SearchDialog.cpp.o: /Users/nataliemanukyan/D
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlineedit.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -6588,8 +6588,8 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o: /Users/nataliemanu
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
@@ -6747,7 +6747,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SearchResultDialog.cpp.o: /Users/nataliemanu
   /opt/homebrew/lib/QtWidgets.framework/Headers/qdialog.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qlabel.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/SignInMenu.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/SignInMenu.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -7506,8 +7506,8 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SignInMenu.cpp.o: /Users/nataliemanukyan/Des
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
@@ -7669,7 +7669,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SignInMenu.cpp.o: /Users/nataliemanukyan/Des
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/SignUpMenu.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/SignUpMenu.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -8428,7 +8428,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SignUpMenu.cpp.o: /Users/nataliemanukyan/Des
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
@@ -8590,7 +8590,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/SignUpMenu.cpp.o: /Users/nataliemanukyan/Des
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -9349,7 +9349,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desk
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
@@ -9505,7 +9505,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/StartMenu.cpp.o: /Users/nataliemanukyan/Desk
   /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h
 
-CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.cpp \
+CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -10261,7 +10261,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o: /Users/nataliemanukyan/Deskt
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
   /opt/homebrew/include/QtCore/qanystringview.h \
@@ -10338,7 +10338,7 @@ CMakeFiles/AddressBookQtApp.dir/GUI/TabNames.cpp.o: /Users/nataliemanukyan/Deskt
   /opt/homebrew/lib/QtCore.framework/Headers/qstring.h \
   /opt/homebrew/lib/QtCore.framework/Headers/qvector.h
 
-CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.cpp \
+CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -11169,13 +11169,13 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: /Users/nataliemanu
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
@@ -11395,7 +11395,7 @@ CMakeFiles/AddressBookQtApp.dir/Logic/AddressBookLogic.cpp.o: /Users/nataliemanu
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h \
   /opt/homebrew/lib/QtWidgets.framework/Headers/qtextedit.h
 
-CMakeFiles/AddressBookQtApp.dir/Logic/SignInMenuLogic.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.cpp \
+CMakeFiles/AddressBookQtApp.dir/Logic/SignInMenuLogic.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -12154,7 +12154,7 @@ CMakeFiles/AddressBookQtApp.dir/Logic/SignInMenuLogic.cpp.o: /Users/nataliemanuk
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
@@ -12274,7 +12274,7 @@ CMakeFiles/AddressBookQtApp.dir/Logic/SignInMenuLogic.cpp.o: /Users/nataliemanuk
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h
 
-CMakeFiles/AddressBookQtApp.dir/Logic/SignUpMenuLogic.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.cpp \
+CMakeFiles/AddressBookQtApp.dir/Logic/SignUpMenuLogic.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -13033,7 +13033,7 @@ CMakeFiles/AddressBookQtApp.dir/Logic/SignUpMenuLogic.cpp.o: /Users/nataliemanuk
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qalgorithms.h \
@@ -13155,7 +13155,7 @@ CMakeFiles/AddressBookQtApp.dir/Logic/SignUpMenuLogic.cpp.o: /Users/nataliemanuk
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlerror.h \
   /opt/homebrew/lib/QtSql.framework/Headers/qsqlquery.h
 
-CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/main.cpp \
+CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/main.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/AvailabilityInternalLegacy.h \
@@ -13914,20 +13914,20 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdint.h \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.hpp \
-  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp \
+  /Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp \
   /opt/homebrew/include/QtCore/q20memory.h \
   /opt/homebrew/include/QtCore/q20type_traits.h \
   /opt/homebrew/include/QtCore/qabstractitemmodel.h \
@@ -14172,9 +14172,7 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /opt/homebrew/include/QtCore/qcoreapplication.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/main.cpp:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.cpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.cpp:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qfiledialog.h:
 
@@ -14184,11 +14182,17 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /opt/homebrew/include/QtCore/qdir.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.cpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.cpp:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.cpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.cpp:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.cpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.cpp:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.cpp:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.cpp:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.cpp:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qinputdialog.h:
 
@@ -14198,7 +14202,7 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qgridlayout.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.cpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.cpp:
 
 /opt/homebrew/lib/QtCore.framework/Headers/qfileinfo.h:
 
@@ -14268,8 +14272,6 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/perm_options.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.cpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/path.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/file_time_type.h:
@@ -14290,8 +14292,6 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/_types/_nl_item.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.cpp:
-
 /opt/homebrew/lib/QtWidgets.framework/Headers/qwidget.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qtextedit.h:
@@ -14299,6 +14299,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 /opt/homebrew/lib/QtWidgets.framework/Headers/qtabwidget.h:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qtablewidget.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.cpp:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/qstackedwidget.h:
 
@@ -14318,6 +14320,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidgetItem:
 
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.cpp:
+
 /opt/homebrew/lib/QtWidgets.framework/Headers/QTabWidget:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QStackedWidget:
@@ -14327,10 +14331,6 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 /opt/homebrew/lib/QtWidgets.framework/Headers/QMainWindow:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QLineEdit:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QDialog:
 
@@ -14343,6 +14343,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 /opt/homebrew/lib/QtSql.framework/Headers/QSqlQuery:
 
 /opt/homebrew/lib/QtSql.framework/Headers/QSqlDatabase:
+
+/opt/homebrew/lib/QtCore.framework/Headers/qstring.h:
 
 /opt/homebrew/lib/QtCore.framework/Headers/qlist.h:
 
@@ -14367,6 +14369,8 @@ CMakeFiles/AddressBookQtApp.dir/main.cpp.o: /Users/nataliemanukyan/Desktop/Addre
 /opt/homebrew/include/QtWidgets/qstyleoption.h:
 
 /opt/homebrew/include/QtWidgets/qstyle.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.cpp:
 
 /opt/homebrew/include/QtWidgets/qslider.h:
 
@@ -14624,17 +14628,25 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_MainWindow.cpp:
 
 AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.hpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bit/bit_log2.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cerrno:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.hpp:
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/new:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.hpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignUpMenu.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/construct_at.h:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/AddressBookLogic.hpp:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignUpMenuLogic.hpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchDialog.hpp:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddDialog.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h:
+
+/opt/homebrew/lib/QtWidgets.framework/Headers/QHBoxLayout:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Contact.hpp:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/stdbool.h:
 
@@ -14665,6 +14677,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/signal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/resource.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/TabNames.hpp:
 
 /opt/homebrew/include/QtGui/qtextcursor.h:
 
@@ -14707,6 +14721,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_mbstate_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_mach_port_t.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SearchResultDialog.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_int8_t.h:
 
@@ -14762,8 +14778,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/malloc/_malloc.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchResultDialog.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_unsigned_integer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/machine/limits.h:
@@ -14780,15 +14794,11 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/ctype.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.cpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_polymorphic.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/version:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/vector:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Database.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/type_traits:
 
@@ -14815,10 +14825,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/numeric:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/unordered_map:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/cerrno:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/new:
 
 /opt/homebrew/include/QtCore/qstringview.h:
 
@@ -14924,8 +14930,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/negation.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignUpMenu.cpp:
-
 /opt/homebrew/include/QtGui/qtransform.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
@@ -14950,11 +14954,7 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_AddressBookInterface.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_trivially_default_constructible.h:
 
-/opt/homebrew/include/QtGui/qtguiglobal.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/system_clock.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/AddressBookLogic.hpp:
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/AddressBookInterface.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/common_reference_with.h:
 
@@ -15136,8 +15136,6 @@ AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SearchDialog.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/conjunction.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_sigset_t.h:
@@ -15145,6 +15143,8 @@ AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp:
 /opt/homebrew/lib/QtWidgets.framework/Headers/qapplication.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/remove_extent.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignUpMenuLogic.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_find_first_of.h:
 
@@ -15262,9 +15262,17 @@ AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/inner_product.h:
 
+/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/in_out_result.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/SignInMenu.hpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/StartMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/access.h:
 
@@ -15297,8 +15305,6 @@ AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_equal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_unsigned.h:
 
@@ -15420,10 +15426,6 @@ AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/istream_iterator.h:
 
-/opt/homebrew/lib/QtCore.framework/Headers/qstring.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/SignInMenu.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/empty.h:
 
 /opt/homebrew/include/QtCore/qlocale.h:
@@ -15484,8 +15486,6 @@ AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/indirectly_comparable.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.cpp:
-
 /opt/homebrew/lib/QtWidgets.framework/Headers/qpushbutton.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_constructible.h:
@@ -15501,8 +15501,6 @@ AddressBookQtApp_autogen/SGZGZGTWGH/moc_SignUpMenuLogic.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_generate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/unary_negate.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddressBookInterface.cpp:
 
 /opt/homebrew/lib/QtWidgets.framework/Headers/QGridLayout:
 
@@ -15572,6 +15570,10 @@ AddressBookQtApp_autogen/mocs_compilation.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/binary_negate.h:
 
+/opt/homebrew/include/QtGui/qtguiglobal.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/system_clock.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/destructible.h:
@@ -15583,6 +15585,8 @@ AddressBookQtApp_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_partition_copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__format/enable_insertable.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/GUI/MainWindow.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
 
@@ -15631,8 +15635,6 @@ AddressBookQtApp_autogen/mocs_compilation.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_adjacent_find.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/size.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Data/Contact.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__compare/strong_order.h:
 
@@ -15732,12 +15734,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/convert_to_tm.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/MainWindow.cpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_prev_permutation.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/StartMenu.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/constructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/uses_allocator.h:
@@ -15754,6 +15750,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__concepts/copyable.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/construct_at.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bit/rotate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/extent.h:
@@ -15763,6 +15761,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bit/bit_floor.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/remove_copy.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Data/Database.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
@@ -15848,8 +15848,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/sys/_types/_ssize_t.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/TabNames.hpp:
-
 /opt/homebrew/include/QtCore/qtconfigmacros.h:
 
 /opt/homebrew/include/QtCore/qpoint.h:
@@ -15857,10 +15855,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_SignUpMenu.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/make_projected.h:
-
-/opt/homebrew/lib/QtWidgets.framework/Headers/QTableWidget:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/in_out_result.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__functional/mem_fn.h:
 
@@ -15976,6 +15970,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__iterator/ostreambuf_iterator.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_prev_permutation.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_replace.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_transform.h:
@@ -16088,6 +16084,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/arm/signal.h:
 
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.cpp:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/equal_range.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_inplace_merge.h:
@@ -16114,8 +16112,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_find_if_not.h:
 
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/Logic/SignInMenuLogic.hpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_find.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__config_site:
@@ -16139,6 +16135,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_clamp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_binary_search.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/main.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_any_of.h:
 
@@ -16266,6 +16264,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/find.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__bit/bit_log2.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__chrono/file_clock.h:
 
 /opt/homebrew/include/QtGui/qcursor.h:
@@ -16291,6 +16291,8 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/ranges_minmax_element.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
+
+/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook8/Logic/SignInMenuLogic.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__memory/voidify.h:
 
@@ -16391,8 +16393,6 @@ AddressBookQtApp_autogen/2LCCYRVYXB/moc_StartMenu.cpp:
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/arm/_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/__algorithm/for_each.h:
-
-/Users/nataliemanukyan/Desktop/AddressBook/0.0.AddressBook7\ copy/GUI/AddDialog.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk/usr/include/c++/v1/stdlib.h:
 
