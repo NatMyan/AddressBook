@@ -1,3 +1,0 @@
-/// add login, sign up (instead of add, open)
-/// phone, email-checking
-

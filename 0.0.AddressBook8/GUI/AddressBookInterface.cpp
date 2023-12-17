@@ -89,7 +89,7 @@ void AddressBookInterface::onAddTabClicked() {
     }
 }
 
-void AddressBookInterface::onShowDatabaseContents() {
+/*void AddressBookInterface::onShowDatabaseContents() {
     for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
         QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
         if (table) {
@@ -129,7 +129,7 @@ void AddressBookInterface::onShowDatabaseContents() {
                 table->setRowCount(currTableRowCount);
                 table->setColumnCount(columnCount);
 
-                for (int row = 0; row < currTableRowCount; ++row) {
+                for (auto row : rows) {
                     if (existingTabIndex == -1) {
                         tabWidget->setCurrentIndex(tabIndex);
                         for (int col = 0; col < columnCount; ++col) {
@@ -154,9 +154,9 @@ void AddressBookInterface::onShowDatabaseContents() {
             }
         }
     }
-}
+}*/
 
-/*void AddressBookInterface::onShowDatabaseContents() {
+void AddressBookInterface::onShowDatabaseContents() {
     for (int tabIndex = 0; tabIndex < tabWidget->count() - 1; ++tabIndex) {
         QTableWidget *table = qobject_cast<QTableWidget*>(tabWidget->widget(tabIndex));
 
@@ -166,7 +166,6 @@ void AddressBookInterface::onShowDatabaseContents() {
 
             QSqlTableModel model(nullptr, logic->getDB());
             model.setTable("contacts");
-            // model.setFilter("tab = '" + tabWidget->tabText(tabIndex) + "'");
 
             if (model.select()) {
                 int rowCount = model.rowCount();
@@ -213,7 +212,7 @@ void AddressBookInterface::onShowDatabaseContents() {
             }
         }
     }
-}*/
+}
 
 void AddressBookInterface::onAddContactClicked() {
     if (currentTable) {
