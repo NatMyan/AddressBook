@@ -98,6 +98,8 @@
         "csetjmp": "cpp",
         "iostream": "cpp",
         "qtnetwork": "cpp",
-        "qmainwindow": "cpp"
+        "qmainwindow": "cpp",
+        "qlist": "cpp",
+        "qdialog": "cpp"
     }
 }
